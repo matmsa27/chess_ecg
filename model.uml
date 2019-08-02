@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks" xmlns:CHESSViews="http://CHESS/Core/Views" xmlns:ComponentModel="http://CHESS/ComponentModel" xmlns:Core="http://CHESS/Core" xmlns:GCM="http://www.eclipse.org/papyrus/GCM/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks http://www.eclipse.org/papyrus/0.7.0/SysML#//blocks http://CHESS/Core/Views http://CHESS#//Core/CHESSViews http://CHESS/ComponentModel http://CHESS#//ComponentModel http://CHESS/Core http://CHESS#//Core http://www.eclipse.org/papyrus/GCM/1 http://www.eclipse.org/papyrus/MARTE/1#//GCM">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks" xmlns:CHESSViews="http://CHESS/Core/Views" xmlns:ComponentModel="http://CHESS/ComponentModel" xmlns:Core="http://CHESS/Core" xmlns:GCM="http://www.eclipse.org/papyrus/GCM/1" xmlns:PortAndFlows="http://www.eclipse.org/papyrus/0.7.0/SysML/PortAndFlows" xmlns:StateBasedAnalysis="http://CHESS/Dependability/StateBased/StateBasedAnalysis" xmlns:StateBasedComponents="http://CHESS/Dependability/StateBased/StateBasedComponents" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks http://www.eclipse.org/papyrus/0.7.0/SysML#//blocks http://CHESS/Core/Views http://CHESS#//Core/CHESSViews http://CHESS/ComponentModel http://CHESS#//ComponentModel http://CHESS/Core http://CHESS#//Core http://www.eclipse.org/papyrus/GCM/1 http://www.eclipse.org/papyrus/MARTE/1#//GCM http://www.eclipse.org/papyrus/0.7.0/SysML/PortAndFlows http://www.eclipse.org/papyrus/0.7.0/SysML#//portandflows http://CHESS/Dependability/StateBased/StateBasedAnalysis http://CHESS#//StateBasedAnalysis http://CHESS/Dependability/StateBased/StateBasedComponents http://CHESS#//StateBasedComponents">
   <uml:Model xmi:id="_owE9ALMlEem2e4FYdO03Mg" name="model">
     <packagedElement xmi:type="uml:Package" xmi:id="_pfV2wLMlEem2e4FYdO03Mg" name="modelRequirementView">
       <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_pg0dcLMlEem2e4FYdO03Mg">
@@ -16,7 +16,31 @@
       </profileApplication>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_pfavQLMlEem2e4FYdO03Mg" name="modelSystemView">
-      <packagedElement xmi:type="uml:Class" xmi:id="_0mdNwLMoEem2e4FYdO03Mg" name="Battery"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_0mdNwLMoEem2e4FYdO03Mg" name="Battery">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_C4mGcLTFEem2e4FYdO03Mg" name="level_battery_port" visibility="package" type="_oXjtMLTDEem2e4FYdO03Mg" aggregation="composite"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_NJkykLS7Eem2e4FYdO03Mg" name="Controler">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_kLd4gLTJEem2e4FYdO03Mg" name="get_level_battery_port" visibility="private" type="_oXjtMLTDEem2e4FYdO03Mg" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_OMHaYLTLEem2e4FYdO03Mg" name="send_level_ecg_port" visibility="package" type="_oXjtMLTDEem2e4FYdO03Mg" aggregation="composite"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_oXjtMLTDEem2e4FYdO03Mg" name="Voltage"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_9MT04LTLEem2e4FYdO03Mg" name="ECG">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_IMPGILTMEem2e4FYdO03Mg" name="part" type="_0mdNwLMoEem2e4FYdO03Mg" aggregation="composite" association="_IMSJcLTMEem2e4FYdO03Mg"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_KJom8LTMEem2e4FYdO03Mg" name="part1" type="_NJkykLS7Eem2e4FYdO03Mg" aggregation="composite" association="_KJp1ELTMEem2e4FYdO03Mg"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_4zN7cLTQEem1WO5RPSTMXw" name="level_battery_port" type="_oXjtMLTDEem2e4FYdO03Mg" aggregation="composite"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_IMSJcLTMEem2e4FYdO03Mg" name="Association" memberEnd="_IMPGILTMEem2e4FYdO03Mg _IMSJc7TMEem2e4FYdO03Mg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_IMSJcbTMEem2e4FYdO03Mg" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_IMSJcrTMEem2e4FYdO03Mg" key="nature" value="SysML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_IMSJc7TMEem2e4FYdO03Mg" name="ecg" type="_9MT04LTLEem2e4FYdO03Mg" association="_IMSJcLTMEem2e4FYdO03Mg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_KJp1ELTMEem2e4FYdO03Mg" name="Association1" memberEnd="_KJom8LTMEem2e4FYdO03Mg _KJp1E7TMEem2e4FYdO03Mg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KJp1EbTMEem2e4FYdO03Mg" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KJp1ErTMEem2e4FYdO03Mg" key="nature" value="SysML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_KJp1E7TMEem2e4FYdO03Mg" name="ecg" type="_9MT04LTLEem2e4FYdO03Mg" association="_KJp1ELTMEem2e4FYdO03Mg"/>
+      </packagedElement>
       <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_pffAsLMlEem2e4FYdO03Mg">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pffAsbMlEem2e4FYdO03Mg" source="http://www.eclipse.org/uml2/2.0.0/UML">
           <references xmi:type="ecore:EPackage" href="http://CHESS#//StateBasedComponents"/>
@@ -710,4 +734,13 @@
   <GCM:ClientServerPort xmi:id="_Z9wtcLQQEem2e4FYdO03Mg" kind="required"/>
   <GCM:ClientServerPort xmi:id="_bR0WULQQEem2e4FYdO03Mg" kind="required"/>
   <GCM:ClientServerPort xmi:id="_cQY3YLQQEem2e4FYdO03Mg" base_Port="_cQLcALQQEem2e4FYdO03Mg" kind="required" reqInterface="_01GBcLP-Eem2e4FYdO03Mg"/>
+  <StateBasedComponents:SimpleStochasticBehavior xmi:id="_j2-NALS6Eem2e4FYdO03Mg" base_Class="_0mdNwLMoEem2e4FYdO03Mg" repairDelay="" failureModesDistribution=""/>
+  <Blocks:Block xmi:id="_NJmnwLS7Eem2e4FYdO03Mg" base_Class="_NJkykLS7Eem2e4FYdO03Mg"/>
+  <PortAndFlows:FlowPort xmi:id="_C4oisLTFEem2e4FYdO03Mg" base_Port="_C4mGcLTFEem2e4FYdO03Mg" direction="out"/>
+  <PortAndFlows:FlowPort xmi:id="_kLgUwLTJEem2e4FYdO03Mg" base_Port="_kLd4gLTJEem2e4FYdO03Mg" direction="in"/>
+  <StateBasedComponents:SimpleStochasticBehavior xmi:id="_weZpwLTJEem2e4FYdO03Mg" base_Class="_NJkykLS7Eem2e4FYdO03Mg"/>
+  <PortAndFlows:FlowPort xmi:id="_OMJ2oLTLEem2e4FYdO03Mg" base_Port="_OMHaYLTLEem2e4FYdO03Mg" direction="out"/>
+  <Blocks:Block xmi:id="_9MVqELTLEem2e4FYdO03Mg" base_Class="_9MT04LTLEem2e4FYdO03Mg"/>
+  <PortAndFlows:FlowPort xmi:id="_4zUpILTQEem1WO5RPSTMXw" base_Port="_4zN7cLTQEem1WO5RPSTMXw" direction="in"/>
+  <StateBasedAnalysis:StateBasedAnalysis xmi:id="_fPQfYLTYEem1WO5RPSTMXw" base_NamedElement="_BuJmULM1Eem2e4FYdO03Mg"/>
 </xmi:XMI>
