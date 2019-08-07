@@ -39,7 +39,7 @@
       </ErrorsGeneratesFailures>
     </components>
     <measures xsi:type="Reliability" Name="ECG_Analysis" target="ECG.cont_level_out_controller.failure">
-      <evaluations xsi:type="InstantOfTime" timePoint="720.0"/>
+      <evaluations xsi:type="InstantOfTime" timePoint="21600.0"/>
     </measures>
   </Sistema>
   <RepairActivity Name="ECG.cont_repair" SuccessProbability="1.0" Target="ECG.cont">

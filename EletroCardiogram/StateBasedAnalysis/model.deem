@@ -5,7 +5,7 @@ COLORS:White,Black,Black,Black,Black,Black;
 
 VARIABLE:"Time","Real";
 
-STUDY:"DefaultStudy",1,"{720.0}",0;
+STUDY:"DefaultStudy",1,"{21600.0}",0;
 
 PLACE:"ECG__bat_doreset",1500,1500,0,0;
 PLACE:"ECG__cont_doreset",1500,1500,0,0;

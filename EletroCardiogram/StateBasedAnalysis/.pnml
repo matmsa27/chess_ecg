@@ -479,7 +479,7 @@
   <ptnet:EvaluationList>
     <studies name="DefaultStudy">
       <vars variable="Time">
-        <values>720.0</values>
+        <values>21600.0</values>
       </vars>
     </studies>
     <measures name="ECG_Analysis">

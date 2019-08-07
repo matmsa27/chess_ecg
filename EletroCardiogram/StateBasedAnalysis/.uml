@@ -720,5 +720,5 @@
   <GRM:Resource xmi:id="_fzhcALinEem0EpkRGXzNFg" base_InstanceSpecification="_fzb8crinEem0EpkRGXzNFg"/>
   <StateBasedComponents:SimpleStochasticBehavior xmi:id="_9Pw3kLinEem0EpkRGXzNFg" base_Class="_CzWyELifEem0EpkRGXzNFg" failureOccurrence="exp(1.0E-6)"/>
   <StateBasedComponents:SimpleStochasticBehavior xmi:id="_-ngtoLinEem0EpkRGXzNFg" base_Class="_iaErsLigEem0EpkRGXzNFg" failureOccurrence="exp(1.0E-6)" repairDelay="" failureModesDistribution=""/>
-  <StateBasedAnalysis:StateBasedAnalysis xmi:id="_9h6FkLipEem0EpkRGXzNFg" base_StructuredClassifier="_9haWULipEem0EpkRGXzNFg" base_NamedElement="_9haWULipEem0EpkRGXzNFg" platform="_fyvY4LinEem0EpkRGXzNFg" measure="Reliability { instantOfTime = 720 }" measureEvaluationResult="9.970000e-01" targetDepComponent="_fyv_8LinEem0EpkRGXzNFg"/>
+  <StateBasedAnalysis:StateBasedAnalysis xmi:id="_9h6FkLipEem0EpkRGXzNFg" base_StructuredClassifier="_9haWULipEem0EpkRGXzNFg" base_NamedElement="_9haWULipEem0EpkRGXzNFg" platform="_fyvY4LinEem0EpkRGXzNFg" measure="Reliability { instantOfTime = 21600 }" measureEvaluationResult="9.970000e-01" targetDepComponent="_fyv_8LinEem0EpkRGXzNFg"/>
 </xmi:XMI>
