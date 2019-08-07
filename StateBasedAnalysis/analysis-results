@@ -1,0 +1,30 @@
+
+FILE_NAME: model
+NET_NAME: ECG_instSpec
+
+
+Simulation parameters:
+
+  - Min number of replications  1000
+  - Max number of replications  1000000
+  - Confidence level  99.00%
+  - Half-lenght confidence interval  10.00%
+
+  - Random number generator seeds:  6657
+
+STUDY_NAME: DefaultStudy 
+
+Variables Setting:
+  Time = {720.0}
+
+
+ VARIABLE CASE #0:
+
+
+ Computation time (real):	0 h : 0 m : 0 s.
+ CPU time (user):		0 h : 0 m : 0 s. 
+
+ Rew measure:
+
+ -> ECG_Analysis  9.970000e-01	 [ 9.929753e-01 , 1.001025e+00 ]  (Half-lenght confidence interval = 0.40%) (Number of samples: 1000)
+

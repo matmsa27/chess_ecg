@@ -1,0 +1,339 @@
+<NDFile-'1.2'>
+
+NET:"ECG_instSpec",2000,2000;
+COLORS:White,Black,Black,Black,Black,Black;
+
+VARIABLE:"Time","Real";
+
+STUDY:"DefaultStudy",1,"{720.0}",0;
+
+PLACE:"ECG__bat_doreset",1500,1500,0,0;
+PLACE:"ECG__cont_doreset",1500,1500,0,0;
+PLACE:"ECG__bat_ECG__bat_ift",1500,1500,0,0;
+PLACE:"ECG__bat_ECG__bat_ift_tmp",1500,1500,0,0;
+PLACE:"ECG__bat_ECG__bat_ift_transient",1500,1500,0,0;
+PLACE:"ECG__cont_ECG__cont_ift",1500,1500,0,0;
+PLACE:"ECG__cont_ECG__cont_ift_tmp",1500,1500,0,0;
+PLACE:"ECG__cont_ECG__cont_ift_transient",1500,1500,0,0;
+PLACE:"ECG__bat_ECG__bat_e_send_level",1500,1500,0,0;
+PLACE:"ECG__bat_ECG__bat_e_send_level_detected",1500,1500,0,0;
+PLACE:"ECG__cont_ECG__cont_e_level_out_controller",1500,1500,0,0;
+PLACE:"ECG__cont_ECG__cont_e_level_out_controller_detected",1500,1500,0,0;
+PLACE:"ECG__bat_ECG__bat_send_level__failure",1500,1500,0,0;
+PLACE:"ECG__cont_ECG__cont_level_out_controller__failure",1500,1500,0,0;
+PLACE:"ECG__bat_ECG__bat_fge_1_tmp",1500,1500,0,0;
+PLACE:"ECG__bat_ECG__bat_fge_1_blocker",1500,1500,0,0;
+PLACE:"ECG__cont_ECG__cont_fge_1_tmp",1500,1500,0,0;
+PLACE:"ECG__cont_ECG__cont_fge_1_blocker",1500,1500,0,0;
+PLACE:"ECG__cont_ECG__cont_fge_2_tmp",1500,1500,0,0;
+PLACE:"ECG__cont_ECG__cont_fge_2_blocker",1500,1500,0,0;
+PLACE:"ECG__bat_ECG__bat_epf_1_tmp",1500,1500,0,0;
+PLACE:"ECG__bat_ECG__bat_epf_1_blocker",1500,1500,0,0;
+PLACE:"ECG__bat_e_send_level_sel_ECG__bat_epf_1",1500,1500,0,0;
+PLACE:"ECG__cont_ECG__cont_epf_1_tmp",1500,1500,0,0;
+PLACE:"ECG__cont_ECG__cont_epf_1_blocker",1500,1500,0,0;
+PLACE:"ECG__cont_e_level_out_controller_sel_ECG__cont_epf_1",1500,1500,0,0;
+PLACE:"ECG__cont_repair_enabled",1500,1500,0,0;
+PLACE:"ECG__cont_repair_completed",1500,1500,0,0;
+PLACE:"ECG_Analysis_memory_pl",1500,1500,0,0;
+
+TRANS:"ECG__bat_reset",1500,1500,V,Immediate,6,1,'TRUE', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__cont_reset",1500,1500,V,Immediate,6,1,'(TRUE)AND(((TRUE)AND(MARK(ECG__bat_ECG__bat_send_level__failure)=0.0))OR(MARK(ECG__bat_doreset)>0.0))', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__bat_ift_FO",1500,1500,V,Timed,1,1,'MARK(ECG__bat_ECG__bat_ift)=0.0', '1.0E-6',
+(
+  1.000000e+00
+);
+TRANS:"ECG__bat_ift_TD",1500,1500,V,Immediate,4,1,'', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__bat_ECG__bat_ift_caseperm",1500,1500,V,Immediate,7,1,'', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__bat_ECG__bat_ift_casetrans",1500,1500,V,Immediate,7,1,'', '0.0',
+ (
+0.0
+  );
+TRANS:"ECG__cont_ift_FO",1500,1500,V,Timed,1,1,'MARK(ECG__cont_ECG__cont_ift)=0.0', '1.0E-6',
+(
+  1.000000e+00
+);
+TRANS:"ECG__cont_ift_TD",1500,1500,V,Immediate,4,1,'', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__cont_ECG__cont_ift_caseperm",1500,1500,V,Immediate,7,1,'', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__cont_ECG__cont_ift_casetrans",1500,1500,V,Immediate,7,1,'', '0.0',
+ (
+0.0
+  );
+TRANS:"ECG__bat_ECG__bat_fge_1",1500,1500,V,Immediate,5,1,'((MARK(ECG__bat_ECG__bat_ift)>0.0)AND((MARK(ECG__bat_ECG__bat_fge_1_tmp)=0.0)AND(MARK(ECG__bat_ECG__bat_send_level__failure)=0.0)))AND(MARK(ECG__bat_ECG__bat_e_send_level)=0.0)', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__bat_ECG__bat_fge_1_caseprop",1500,1500,V,Immediate,7,1,'', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__bat_ECG__bat_fge_1_caseskip",1500,1500,V,Immediate,7,1,'FALSE', '0.0',
+ (
+0.0
+  );
+TRANS:"ECG__cont_ECG__cont_fge_1",1500,1500,V,Immediate,5,1,'((MARK(ECG__cont_ECG__cont_ift)>0.0)AND((MARK(ECG__cont_ECG__cont_fge_1_tmp)=0.0)AND(MARK(ECG__cont_ECG__cont_level_out_controller__failure)=0.0)))AND(MARK(ECG__cont_ECG__cont_e_level_out_controller)=0.0)', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__cont_ECG__cont_fge_1_caseprop",1500,1500,V,Immediate,7,1,'', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__cont_ECG__cont_fge_1_caseskip",1500,1500,V,Immediate,7,1,'FALSE', '0.0',
+ (
+0.0
+  );
+TRANS:"ECG__cont_ECG__cont_fge_2",1500,1500,V,Immediate,5,1,'((MARK(ECG__bat_ECG__bat_send_level__failure)>0.0)AND((MARK(ECG__cont_ECG__cont_fge_2_tmp)=0.0)AND(MARK(ECG__cont_ECG__cont_level_out_controller__failure)=0.0)))AND(MARK(ECG__cont_ECG__cont_e_level_out_controller)=0.0)', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__cont_ECG__cont_fge_2_caseprop",1500,1500,V,Immediate,7,1,'', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__cont_ECG__cont_fge_2_caseskip",1500,1500,V,Immediate,7,1,'FALSE', '0.0',
+ (
+0.0
+  );
+TRANS:"ECG__bat_ECG__bat_epf_1",1500,1500,V,Immediate,5,1,'((MARK(ECG__bat_ECG__bat_e_send_level)>0.0)AND((MARK(ECG__bat_ECG__bat_epf_1_tmp)=0.0)AND(MARK(ECG__bat_ECG__bat_send_level__failure)=0.0)))AND(MARK(ECG__bat_ECG__bat_send_level__failure)=0.0)', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__bat_ECG__bat_epf_1_caseprop",1500,1500,V,Immediate,7,1,'', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__bat_ECG__bat_epf_1_caseskip",1500,1500,V,Immediate,7,1,'', '0.0',
+ (
+0.0
+  );
+TRANS:"ECG__bat_e_send_level_choice_ECG__bat_epf_1",1500,1500,V,Immediate,7,1,'((MARK(ECG__bat_ECG__bat_e_send_level)>0.0)AND((MARK(ECG__bat_ECG__bat_epf_1_tmp)=0.0)AND(MARK(ECG__bat_ECG__bat_send_level__failure)=0.0)))AND(MARK(ECG__bat_ECG__bat_send_level__failure)=0.0)', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__cont_ECG__cont_epf_1",1500,1500,V,Immediate,5,1,'((MARK(ECG__cont_ECG__cont_e_level_out_controller)>0.0)AND((MARK(ECG__cont_ECG__cont_epf_1_tmp)=0.0)AND(MARK(ECG__cont_ECG__cont_level_out_controller__failure)=0.0)))AND(MARK(ECG__cont_ECG__cont_level_out_controller__failure)=0.0)', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__cont_ECG__cont_epf_1_caseprop",1500,1500,V,Immediate,7,1,'', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__cont_ECG__cont_epf_1_caseskip",1500,1500,V,Immediate,7,1,'', '0.0',
+ (
+0.0
+  );
+TRANS:"ECG__cont_e_level_out_controller_choice_ECG__cont_epf_1",1500,1500,V,Immediate,7,1,'((MARK(ECG__cont_ECG__cont_e_level_out_controller)>0.0)AND((MARK(ECG__cont_ECG__cont_epf_1_tmp)=0.0)AND(MARK(ECG__cont_ECG__cont_level_out_controller__failure)=0.0)))AND(MARK(ECG__cont_ECG__cont_level_out_controller__failure)=0.0)', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__cont_repair_schedule_T",1500,1500,V,Immediate,1,1,'(MARK(ECG__cont_ECG__cont_level_out_controller__failure)>0.0)AND(MARK(ECG__cont_repair_enabled)=0.0)', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__cont_repair",1500,1500,V,Timed,1,1,'', '0.0',
+(
+  1.000000e+00
+);
+TRANS:"ECG__cont_repair_outcome_success",1500,1500,V,Immediate,3,1,'', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__cont_repair_outcome_failed",1500,1500,V,Immediate,3,1,'', '0.0',
+ (
+0.0
+  );
+TRANS:"ECG_Analysis_memory_tr",1500,1500,V,Immediate,8,1,'(MARK(ECG__cont_ECG__cont_level_out_controller__failure)>0.0)AND(MARK(ECG_Analysis_memory_pl)=0.0)', '1.0',
+ (
+1.0
+  );
+
+IARC:"ECG__bat_doreset","ECG__bat_reset",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_doreset","ECG__cont_reset",1,0,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__bat_ECG__bat_ift_tmp","ECG__bat_ift_FO",1,1,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__bat_ECG__bat_ift_transient","ECG__bat_ift_TD",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__bat_ECG__bat_ift","ECG__bat_ift_TD",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__bat_ECG__bat_ift_tmp","ECG__bat_ECG__bat_ift_caseperm",1,0,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__bat_ECG__bat_ift","ECG__bat_ECG__bat_ift_caseperm",1,1,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__bat_ECG__bat_ift_tmp","ECG__bat_ECG__bat_ift_casetrans",1,0,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__bat_ECG__bat_ift","ECG__bat_ECG__bat_ift_casetrans",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__bat_ECG__bat_ift_transient","ECG__bat_ECG__bat_ift_casetrans",1,1,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__bat_ECG__bat_ift","ECG__bat_reset",1,0,'MARK(ECG__bat_ECG__bat_ift)',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__bat_ECG__bat_ift_transient","ECG__bat_reset",1,0,'MARK(ECG__bat_ECG__bat_ift_transient)',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__bat_ECG__bat_ift_tmp","ECG__bat_reset",1,0,'MARK(ECG__bat_ECG__bat_ift_tmp)',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_ECG__cont_ift_tmp","ECG__cont_ift_FO",1,1,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_ift_transient","ECG__cont_ift_TD",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_ift","ECG__cont_ift_TD",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_ift_tmp","ECG__cont_ECG__cont_ift_caseperm",1,0,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_ECG__cont_ift","ECG__cont_ECG__cont_ift_caseperm",1,1,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_ift_tmp","ECG__cont_ECG__cont_ift_casetrans",1,0,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_ECG__cont_ift","ECG__cont_ECG__cont_ift_casetrans",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_ECG__cont_ift_transient","ECG__cont_ECG__cont_ift_casetrans",1,1,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_ift","ECG__cont_reset",1,0,'MARK(ECG__cont_ECG__cont_ift)',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_ift_transient","ECG__cont_reset",1,0,'MARK(ECG__cont_ECG__cont_ift_transient)',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_ift_tmp","ECG__cont_reset",1,0,'MARK(ECG__cont_ECG__cont_ift_tmp)',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__bat_ECG__bat_e_send_level","ECG__bat_reset",1,0,'MARK(ECG__bat_ECG__bat_e_send_level)',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__bat_ECG__bat_e_send_level_detected","ECG__bat_reset",1,0,'MARK(ECG__bat_ECG__bat_e_send_level_detected)',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_e_level_out_controller","ECG__cont_reset",1,0,'MARK(ECG__cont_ECG__cont_e_level_out_controller)',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_e_level_out_controller_detected","ECG__cont_reset",1,0,'MARK(ECG__cont_ECG__cont_e_level_out_controller_detected)',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__bat_ECG__bat_send_level__failure","ECG__bat_reset",1,0,'MARK(ECG__bat_ECG__bat_send_level__failure)',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_level_out_controller__failure","ECG__cont_reset",1,0,'MARK(ECG__cont_ECG__cont_level_out_controller__failure)',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__bat_ECG__bat_fge_1_tmp","ECG__bat_ECG__bat_fge_1",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__bat_ECG__bat_fge_1_blocker","ECG__bat_ECG__bat_fge_1",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__bat_ECG__bat_fge_1_blocker","ECG__bat_ECG__bat_fge_1",1,2,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__bat_ECG__bat_fge_1_tmp","ECG__bat_ECG__bat_fge_1_caseprop",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__bat_ECG__bat_fge_1_tmp","ECG__bat_ECG__bat_fge_1_caseskip",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__bat_ECG__bat_fge_1_tmp","ECG__bat_reset",1,0,'MARK(ECG__bat_ECG__bat_fge_1_tmp)',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__bat_ECG__bat_fge_1_blocker","ECG__bat_reset",1,0,'MARK(ECG__bat_ECG__bat_fge_1_blocker)',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__bat_ECG__bat_e_send_level","ECG__bat_ECG__bat_fge_1_caseprop",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_ECG__cont_fge_1_tmp","ECG__cont_ECG__cont_fge_1",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_ECG__cont_fge_1_blocker","ECG__cont_ECG__cont_fge_1",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_ECG__cont_fge_1_blocker","ECG__cont_ECG__cont_fge_1",1,2,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_fge_1_tmp","ECG__cont_ECG__cont_fge_1_caseprop",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_fge_1_tmp","ECG__cont_ECG__cont_fge_1_caseskip",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_fge_1_tmp","ECG__cont_reset",1,0,'MARK(ECG__cont_ECG__cont_fge_1_tmp)',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_fge_1_blocker","ECG__cont_reset",1,0,'MARK(ECG__cont_ECG__cont_fge_1_blocker)',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_ECG__cont_e_level_out_controller","ECG__cont_ECG__cont_fge_1_caseprop",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_ECG__cont_fge_2_tmp","ECG__cont_ECG__cont_fge_2",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_ECG__cont_fge_2_blocker","ECG__cont_ECG__cont_fge_2",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_ECG__cont_fge_2_blocker","ECG__cont_ECG__cont_fge_2",1,2,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_fge_2_tmp","ECG__cont_ECG__cont_fge_2_caseprop",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_fge_2_tmp","ECG__cont_ECG__cont_fge_2_caseskip",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_fge_2_tmp","ECG__cont_reset",1,0,'MARK(ECG__cont_ECG__cont_fge_2_tmp)',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_fge_2_blocker","ECG__cont_reset",1,0,'MARK(ECG__cont_ECG__cont_fge_2_blocker)',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_ECG__cont_e_level_out_controller","ECG__cont_ECG__cont_fge_2_caseprop",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__bat_ECG__bat_epf_1_tmp","ECG__bat_ECG__bat_epf_1",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__bat_ECG__bat_epf_1_blocker","ECG__bat_ECG__bat_epf_1",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__bat_ECG__bat_epf_1_blocker","ECG__bat_ECG__bat_epf_1",1,2,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__bat_ECG__bat_epf_1_tmp","ECG__bat_ECG__bat_epf_1_caseprop",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__bat_ECG__bat_epf_1_tmp","ECG__bat_ECG__bat_epf_1_caseskip",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__bat_ECG__bat_epf_1_tmp","ECG__bat_reset",1,0,'MARK(ECG__bat_ECG__bat_epf_1_tmp)',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__bat_ECG__bat_epf_1_blocker","ECG__bat_reset",1,0,'MARK(ECG__bat_ECG__bat_epf_1_blocker)',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__bat_ECG__bat_send_level__failure","ECG__bat_ECG__bat_epf_1_caseprop",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__bat_e_send_level_sel_ECG__bat_epf_1","ECG__bat_e_send_level_choice_ECG__bat_epf_1",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__bat_e_send_level_sel_ECG__bat_epf_1","ECG__bat_e_send_level_choice_ECG__bat_epf_1",1,2,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__bat_e_send_level_sel_ECG__bat_epf_1","ECG__bat_ECG__bat_epf_1",1,0,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_ECG__cont_epf_1_tmp","ECG__cont_ECG__cont_epf_1",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_ECG__cont_epf_1_blocker","ECG__cont_ECG__cont_epf_1",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_ECG__cont_epf_1_blocker","ECG__cont_ECG__cont_epf_1",1,2,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_epf_1_tmp","ECG__cont_ECG__cont_epf_1_caseprop",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_epf_1_tmp","ECG__cont_ECG__cont_epf_1_caseskip",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_epf_1_tmp","ECG__cont_reset",1,0,'MARK(ECG__cont_ECG__cont_epf_1_tmp)',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_epf_1_blocker","ECG__cont_reset",1,0,'MARK(ECG__cont_ECG__cont_epf_1_blocker)',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_ECG__cont_level_out_controller__failure","ECG__cont_ECG__cont_epf_1_caseprop",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_e_level_out_controller_sel_ECG__cont_epf_1","ECG__cont_e_level_out_controller_choice_ECG__cont_epf_1",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_e_level_out_controller_sel_ECG__cont_epf_1","ECG__cont_e_level_out_controller_choice_ECG__cont_epf_1",1,2,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_e_level_out_controller_sel_ECG__cont_epf_1","ECG__cont_ECG__cont_epf_1",1,0,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_repair_enabled","ECG__cont_repair_schedule_T",1,1,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_repair_enabled","ECG__cont_repair",1,0,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_repair_completed","ECG__cont_repair",1,1,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_repair_completed","ECG__cont_repair_outcome_success",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_repair_completed","ECG__cont_repair_outcome_failed",1,0,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_doreset","ECG__cont_repair_outcome_success",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_doreset","ECG__cont_repair",1,2,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG_Analysis_memory_pl","ECG_Analysis_memory_tr",1,1,'',
+ (1500,1500,1500,1500),1;
+
+RES_FUNC:"ECG_Analysis",'IF(MARK(ECG_Analysis_memory_pl)=0.0)THEN(1.0)ELSE(0.0)',0;
+

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://if.dsi.unifi.it/Modeling/DIM">
+  <Sistema Name="ECG_instSpec">
+    <components Name="ECG.bat">
+      <FailureModes Name="ECG.bat_send_level.failure"/>
+      <Errors Name="ECG.bat_e_send_level"/>
+      <Faults xsi:type="InternalFault" Name="ECG.bat_ift" PermanentProbability="1.0">
+        <Occurrence xsi:type="Exponential" Rate="1.0E-6"/>
+        <TransientDuration xsi:type="Deterministic"/>
+      </Faults>
+      <FaultsGeneratesErrors Source="ECG.bat_ift" Destination="ECG.bat_e_send_level" PropagationProbability="1.0" PropagationLogicStringFormat="ECG.bat_ift" Name="ECG.bat_fge_1">
+        <ActivationDelay xsi:type="Deterministic"/>
+        <PropagationLogic xsi:type="FaultsExpressionFaultNode" faultsGenerateErrors="/0/@components.0/@FaultsGeneratesErrors.0" Fault="ECG.bat_ift"/>
+      </FaultsGeneratesErrors>
+      <ErrorsGeneratesFailures Name="ECG.bat_epf_1" PropagationLogicStringFormat="ECG.bat_e_send_level" Source="ECG.bat_e_send_level" Destination="ECG.bat_send_level.failure">
+        <PropagationLogic xsi:type="ErrorsExpressionErrorNode" errorPropagation="/0/@components.0/@ErrorsGeneratesFailures.0" Error="ECG.bat_e_send_level"/>
+        <PropagationDelay xsi:type="Deterministic"/>
+      </ErrorsGeneratesFailures>
+    </components>
+    <components Name="ECG.cont">
+      <FailureModes Name="ECG.cont_level_out_controller.failure"/>
+      <Errors Name="ECG.cont_e_level_out_controller"/>
+      <Faults xsi:type="InternalFault" Name="ECG.cont_ift" PermanentProbability="1.0">
+        <Occurrence xsi:type="Exponential" Rate="1.0E-6"/>
+        <TransientDuration xsi:type="Deterministic"/>
+      </Faults>
+      <Faults xsi:type="ExternalFault" Name="ECG.cont_xft_level_in_controller.failure" Source="ECG.bat_send_level.failure"/>
+      <FaultsGeneratesErrors Source="ECG.cont_ift" Destination="ECG.cont_e_level_out_controller" PropagationProbability="1.0" PropagationLogicStringFormat="ECG.cont_ift" Name="ECG.cont_fge_1">
+        <ActivationDelay xsi:type="Deterministic"/>
+        <PropagationLogic xsi:type="FaultsExpressionFaultNode" faultsGenerateErrors="/0/@components.1/@FaultsGeneratesErrors.0" Fault="ECG.cont_ift"/>
+      </FaultsGeneratesErrors>
+      <FaultsGeneratesErrors Source="ECG.cont_xft_level_in_controller.failure" Destination="ECG.cont_e_level_out_controller" PropagationProbability="1.0" PropagationLogicStringFormat="ECG.cont_xft_level_in_controller.failure" Name="ECG.cont_fge_2">
+        <ActivationDelay xsi:type="Deterministic"/>
+        <PropagationLogic xsi:type="FaultsExpressionFaultNode" faultsGenerateErrors="/0/@components.1/@FaultsGeneratesErrors.1" Fault="ECG.cont_xft_level_in_controller.failure"/>
+      </FaultsGeneratesErrors>
+      <ErrorsGeneratesFailures Name="ECG.cont_epf_1" PropagationLogicStringFormat="ECG.cont_e_level_out_controller" Source="ECG.cont_e_level_out_controller" Destination="ECG.cont_level_out_controller.failure">
+        <PropagationLogic xsi:type="ErrorsExpressionErrorNode" errorPropagation="/0/@components.1/@ErrorsGeneratesFailures.0" Error="ECG.cont_e_level_out_controller"/>
+        <PropagationDelay xsi:type="Deterministic"/>
+      </ErrorsGeneratesFailures>
+    </components>
+    <measures xsi:type="Reliability" Name="ECG_Analysis" target="ECG.cont_level_out_controller.failure">
+      <evaluations xsi:type="InstantOfTime" timePoint="720.0"/>
+    </measures>
+  </Sistema>
+  <RepairActivity Name="ECG.cont_repair" SuccessProbability="1.0" Target="ECG.cont">
+    <Duration xsi:type="Exponential"/>
+    <When>
+      <T xsi:type="ScheduleExpressionImmediately"/>
+      <EX xsi:type="ScheduleExpressionFailed" failureMode="ECG.cont_level_out_controller.failure"/>
+    </When>
+  </RepairActivity>
+</xmi:XMI>
