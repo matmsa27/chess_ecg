@@ -20,7 +20,7 @@
       <packagedElement xmi:type="uml:Class" xmi:id="_CzWyELifEem0EpkRGXzNFg" name="Battery">
         <ownedAttribute xmi:type="uml:Port" xmi:id="_3dB9kLifEem0EpkRGXzNFg" name="send_level" visibility="public" type="_Bfy4cLifEem0EpkRGXzNFg" aggregation="composite"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_FgOoALifEem0EpkRGXzNFg" name="ECG">
+      <packagedElement xmi:type="uml:Class" xmi:id="_FgOoALifEem0EpkRGXzNFg" name="ECG" visibility="package">
         <ownedAttribute xmi:type="uml:Port" xmi:id="_CTX1ALigEem0EpkRGXzNFg" name="get_level" type="_mXnGALilEem0EpkRGXzNFg" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_cOodILigEem0EpkRGXzNFg" name="bat" type="_CzWyELifEem0EpkRGXzNFg" aggregation="composite" association="_cO6xALigEem0EpkRGXzNFg"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_83NR0LigEem0EpkRGXzNFg" name="cont" type="_iaErsLigEem0EpkRGXzNFg" aggregation="composite" association="_83SKULigEem0EpkRGXzNFg"/>
@@ -720,5 +720,5 @@
   <GRM:Resource xmi:id="_fzhcALinEem0EpkRGXzNFg" base_InstanceSpecification="_fzb8crinEem0EpkRGXzNFg"/>
   <StateBasedComponents:SimpleStochasticBehavior xmi:id="_9Pw3kLinEem0EpkRGXzNFg" base_Class="_CzWyELifEem0EpkRGXzNFg" failureOccurrence="exp(1.0E-6)"/>
   <StateBasedComponents:SimpleStochasticBehavior xmi:id="_-ngtoLinEem0EpkRGXzNFg" base_Class="_iaErsLigEem0EpkRGXzNFg" failureOccurrence="exp(1.0E-6)" repairDelay="" failureModesDistribution=""/>
-  <StateBasedAnalysis:StateBasedAnalysis xmi:id="_9h6FkLipEem0EpkRGXzNFg" base_StructuredClassifier="_9haWULipEem0EpkRGXzNFg" base_NamedElement="_9haWULipEem0EpkRGXzNFg" platform="_fyvY4LinEem0EpkRGXzNFg" measure="Reliability { instantOfTime = 21600 }" measureEvaluationResult="9.970000e-01" targetDepComponent="_fyv_8LinEem0EpkRGXzNFg"/>
+  <StateBasedAnalysis:StateBasedAnalysis xmi:id="_9h6FkLipEem0EpkRGXzNFg" base_StructuredClassifier="_9haWULipEem0EpkRGXzNFg" base_NamedElement="_9haWULipEem0EpkRGXzNFg" platform="_fyvY4LinEem0EpkRGXzNFg" measure="Reliability { instantOfTime = 21600 }" measureEvaluationResult="9.500000e-01" targetDepComponent="_fyv_8LinEem0EpkRGXzNFg"/>
 </xmi:XMI>

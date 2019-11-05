@@ -15,7 +15,7 @@ Simulation parameters:
 STUDY_NAME: DefaultStudy 
 
 Variables Setting:
-  Time = {720.0}
+  Time = {21600.0}
 
 
  VARIABLE CASE #0:
@@ -26,5 +26,5 @@ Variables Setting:
 
  Rew measure:
 
- -> ECG_Analysis  9.970000e-01	 [ 9.929753e-01 , 1.001025e+00 ]  (Half-lenght confidence interval = 0.40%) (Number of samples: 1000)
+ -> ECG_Analysis  9.500000e-01	 [ 9.339611e-01 , 9.660389e-01 ]  (Half-lenght confidence interval = 1.69%) (Number of samples: 1000)
 

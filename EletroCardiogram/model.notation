@@ -298,7 +298,7 @@
   </notation:Diagram>
   <css:ModelStyleSheets xmi:id="_-43ScLieEem0EpkRGXzNFg"/>
   <notation:Diagram xmi:id="_YcPwoLigEem0EpkRGXzNFg" type="InternalBlock" name="Internal Block" measurementUnit="Pixel">
-    <children xmi:type="notation:Shape" xmi:id="_YcPwobigEem0EpkRGXzNFg" type="shape_sysml_block_as_composite">
+    <children xmi:type="notation:Shape" xmi:id="_YcPwobigEem0EpkRGXzNFg" type="shape_sysml_block_as_composite" fillColor="10011046">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bsWLQLinEem0EpkRGXzNFg" source="Stereotype_Annotation">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bsWyULinEem0EpkRGXzNFg" key="StereotypeWithQualifiedNameList" value=""/>
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bsWyUbinEem0EpkRGXzNFg" key="StereotypeList" value="CHESS::Core::CHGaResourcePlatform"/>
@@ -308,7 +308,7 @@
       </eAnnotations>
       <children xmi:type="notation:DecorationNode" xmi:id="_YcPworigEem0EpkRGXzNFg" type="label_sysml_block_name"/>
       <children xmi:type="notation:BasicCompartment" xmi:id="_YcPwo7igEem0EpkRGXzNFg" type="compartment_sysml_structure">
-        <children xmi:type="notation:Shape" xmi:id="_cPlfYLigEem0EpkRGXzNFg" type="shape_sysml_blockproperty_as_composite">
+        <children xmi:type="notation:Shape" xmi:id="_cPlfYLigEem0EpkRGXzNFg" type="shape_sysml_blockproperty_as_composite" fillColor="8047085">
           <children xmi:type="notation:DecorationNode" xmi:id="_cPlfYrigEem0EpkRGXzNFg" type="label_uml_property_label"/>
           <children xmi:type="notation:BasicCompartment" xmi:id="_cPmGcLigEem0EpkRGXzNFg" type="compartment_sysml_blockproperty_structure">
             <styles xmi:type="notation:TitleStyle" xmi:id="_cPmGcbigEem0EpkRGXzNFg"/>
@@ -317,7 +317,7 @@
             <styles xmi:type="notation:TitleStyle" xmi:id="_cP0I4bigEem0EpkRGXzNFg"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cP0I4rigEem0EpkRGXzNFg"/>
           </children>
-          <children xmi:type="notation:Shape" xmi:id="_Glk0kLihEem0EpkRGXzNFg" type="shape_sysml_flowport_as_affixed">
+          <children xmi:type="notation:Shape" xmi:id="_Glk0kLihEem0EpkRGXzNFg" type="shape_sysml_flowport_as_affixed" fillColor="12621752">
             <children xmi:type="notation:DecorationNode" xmi:id="_GllboLihEem0EpkRGXzNFg" type="affixedlabel_sysml_flowport_label">
               <layoutConstraint xmi:type="notation:Location" xmi:id="_GllbobihEem0EpkRGXzNFg" x="30"/>
             </children>
@@ -330,7 +330,7 @@
           <element xmi:type="uml:Property" href="model.uml#_cOodILigEem0EpkRGXzNFg"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cPlfYbigEem0EpkRGXzNFg" x="10" y="7" width="200" height="100"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_83wrcLigEem0EpkRGXzNFg" type="shape_sysml_blockproperty_as_composite">
+        <children xmi:type="notation:Shape" xmi:id="_83wrcLigEem0EpkRGXzNFg" type="shape_sysml_blockproperty_as_composite" fillColor="8047085">
           <children xmi:type="notation:DecorationNode" xmi:id="_83xSgLigEem0EpkRGXzNFg" type="label_uml_property_label"/>
           <children xmi:type="notation:BasicCompartment" xmi:id="_83x5kLigEem0EpkRGXzNFg" type="compartment_sysml_blockproperty_structure">
             <styles xmi:type="notation:TitleStyle" xmi:id="_83x5kbigEem0EpkRGXzNFg"/>
@@ -339,7 +339,7 @@
             <styles xmi:type="notation:TitleStyle" xmi:id="_84AjEbigEem0EpkRGXzNFg"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_84AjErigEem0EpkRGXzNFg"/>
           </children>
-          <children xmi:type="notation:Shape" xmi:id="_Sx7csLihEem0EpkRGXzNFg" type="shape_sysml_flowport_as_affixed">
+          <children xmi:type="notation:Shape" xmi:id="_Sx7csLihEem0EpkRGXzNFg" type="shape_sysml_flowport_as_affixed" fillColor="12621752">
             <children xmi:type="notation:DecorationNode" xmi:id="_Sx8DwLihEem0EpkRGXzNFg" type="affixedlabel_sysml_flowport_label">
               <layoutConstraint xmi:type="notation:Location" xmi:id="_Sx8DwbihEem0EpkRGXzNFg" x="-95" y="20"/>
             </children>
@@ -349,7 +349,7 @@
             <element xmi:type="uml:Port" href="model.uml#_taWiQLigEem0EpkRGXzNFg"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Sx7csbihEem0EpkRGXzNFg" x="190" y="65" width="20" height="20"/>
           </children>
-          <children xmi:type="notation:Shape" xmi:id="_TdlBwLihEem0EpkRGXzNFg" type="shape_sysml_flowport_as_affixed">
+          <children xmi:type="notation:Shape" xmi:id="_TdlBwLihEem0EpkRGXzNFg" type="shape_sysml_flowport_as_affixed" fillColor="12621752">
             <children xmi:type="notation:DecorationNode" xmi:id="_Tdlo0LihEem0EpkRGXzNFg" type="affixedlabel_sysml_flowport_label">
               <layoutConstraint xmi:type="notation:Location" xmi:id="_Tdlo0bihEem0EpkRGXzNFg" x="-84" y="36"/>
             </children>
@@ -368,7 +368,7 @@
         <styles xmi:type="notation:TitleStyle" xmi:id="_YgW0kbigEem0EpkRGXzNFg"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YgW0krigEem0EpkRGXzNFg"/>
       </children>
-      <children xmi:type="notation:Shape" xmi:id="_X-oLELihEem0EpkRGXzNFg" type="shape_sysml_flowport_as_affixed">
+      <children xmi:type="notation:Shape" xmi:id="_X-oLELihEem0EpkRGXzNFg" type="shape_sysml_flowport_as_affixed" fillColor="12621752">
         <children xmi:type="notation:DecorationNode" xmi:id="_X-oyILihEem0EpkRGXzNFg" type="affixedlabel_sysml_flowport_label">
           <layoutConstraint xmi:type="notation:Location" xmi:id="_X-oyIbihEem0EpkRGXzNFg" x="30"/>
         </children>
