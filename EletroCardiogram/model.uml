@@ -126,6 +126,61 @@
         <ownedEnd xmi:type="uml:Property" xmi:id="_1dpi4wA0EeqyFesyy2OlGA" name="electrodes" type="_vDYDkAAzEeqyFesyy2OlGA" association="_1dpi4AA0EeqyFesyy2OlGA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:DataType" xmi:id="_CsLSUAA4EeqyFesyy2OlGA" name="Signal"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_P71u4APYEeq1SckFCqvxvA" name="Amplifier"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_WFxhkAPYEeq1SckFCqvxvA" name="ApplyFilters">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_9Zm34APZEeq1SckFCqvxvA" name="part1" type="_8LlbAAPYEeq1SckFCqvxvA" aggregation="composite" association="_9ZzFIAPZEeq1SckFCqvxvA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="__8uU4APZEeq1SckFCqvxvA" name="part2" type="_ADuxQAPZEeq1SckFCqvxvA" aggregation="composite" association="__80bgAPZEeq1SckFCqvxvA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_CpBjEAPaEeq1SckFCqvxvA" name="part3" type="_qgHCUAPZEeq1SckFCqvxvA" aggregation="composite" association="_CpHCoAPaEeq1SckFCqvxvA"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_KnOTQAPbEeq1SckFCqvxvA" name="flowport1" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_LYszgAPbEeq1SckFCqvxvA" name="flowport2" aggregation="composite"/>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_O4bpwAPbEeq1SckFCqvxvA" name="Connector1">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_O4fUIAPbEeq1SckFCqvxvA" role="_LYszgAPbEeq1SckFCqvxvA"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_O4f7MAPbEeq1SckFCqvxvA" partWithPort="_9Zm34APZEeq1SckFCqvxvA" role="_DeHikAPbEeq1SckFCqvxvA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_PqW18APbEeq1SckFCqvxvA" name="Connector2">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_PqYEEAPbEeq1SckFCqvxvA" partWithPort="_9Zm34APZEeq1SckFCqvxvA" role="_FHUVAAPbEeq1SckFCqvxvA"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_PqYEEQPbEeq1SckFCqvxvA" partWithPort="__8uU4APZEeq1SckFCqvxvA" role="_HSLDAAPbEeq1SckFCqvxvA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_QRiKsAPbEeq1SckFCqvxvA" name="Connector3">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_QRixwAPbEeq1SckFCqvxvA" partWithPort="__8uU4APZEeq1SckFCqvxvA" role="_Id7rgAPbEeq1SckFCqvxvA"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_QRixwQPbEeq1SckFCqvxvA" partWithPort="_CpBjEAPaEeq1SckFCqvxvA" role="_JIgSgAPbEeq1SckFCqvxvA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_Q1P7wAPbEeq1SckFCqvxvA" name="Connector4">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_Q1RJ4APbEeq1SckFCqvxvA" partWithPort="_CpBjEAPaEeq1SckFCqvxvA" role="_J0LFsAPbEeq1SckFCqvxvA"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_Q1Rw8APbEeq1SckFCqvxvA" role="_KnOTQAPbEeq1SckFCqvxvA"/>
+        </ownedConnector>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_aitm8APYEeq1SckFCqvxvA" name="Converter"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_8LlbAAPYEeq1SckFCqvxvA" name="Filter:low_pass">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_DeHikAPbEeq1SckFCqvxvA" name="flowport1" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_FHUVAAPbEeq1SckFCqvxvA" name="flowport2" aggregation="composite"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_ADuxQAPZEeq1SckFCqvxvA" name="Filter:high_pass">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_HSLDAAPbEeq1SckFCqvxvA" name="flowport1" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_Id7rgAPbEeq1SckFCqvxvA" name="flowport2" aggregation="composite"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_qgHCUAPZEeq1SckFCqvxvA" name="Filter:pass_band">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_JIgSgAPbEeq1SckFCqvxvA" name="flowport1" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_J0LFsAPbEeq1SckFCqvxvA" name="flowport2" aggregation="composite"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_9ZzFIAPZEeq1SckFCqvxvA" name="Association5" memberEnd="_9Zm34APZEeq1SckFCqvxvA _9ZzFIwPZEeq1SckFCqvxvA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9ZzFIQPZEeq1SckFCqvxvA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_9ZzFIgPZEeq1SckFCqvxvA" key="nature" value="SysML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_9ZzFIwPZEeq1SckFCqvxvA" name="applyfilters" type="_WFxhkAPYEeq1SckFCqvxvA" association="_9ZzFIAPZEeq1SckFCqvxvA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="__80bgAPZEeq1SckFCqvxvA" name="Association6" memberEnd="__8uU4APZEeq1SckFCqvxvA __80bgwPZEeq1SckFCqvxvA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__80bgQPZEeq1SckFCqvxvA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__80bggPZEeq1SckFCqvxvA" key="nature" value="SysML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="__80bgwPZEeq1SckFCqvxvA" name="applyfilters" type="_WFxhkAPYEeq1SckFCqvxvA" association="__80bgAPZEeq1SckFCqvxvA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_CpHCoAPaEeq1SckFCqvxvA" name="Association7" memberEnd="_CpBjEAPaEeq1SckFCqvxvA _CpHCowPaEeq1SckFCqvxvA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CpHCoQPaEeq1SckFCqvxvA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_CpHCogPaEeq1SckFCqvxvA" key="nature" value="SysML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_CpHCowPaEeq1SckFCqvxvA" name="applyfilters" type="_WFxhkAPYEeq1SckFCqvxvA" association="_CpHCoAPaEeq1SckFCqvxvA"/>
+      </packagedElement>
       <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_x2kg0LieEem0EpkRGXzNFg">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_x2lH4LieEem0EpkRGXzNFg" source="http://www.eclipse.org/uml2/2.0.0/UML">
           <references xmi:type="ecore:EPackage" href="http://CHESS#//StateBasedComponents"/>
@@ -777,4 +832,18 @@
   <PortAndFlows:FlowPort xmi:id="_CR9Q8AA3EeqyFesyy2OlGA" base_Port="_CRzf8gA3EeqyFesyy2OlGA" direction="out"/>
   <PortAndFlows:FlowPort xmi:id="_kWV8UAA3EeqyFesyy2OlGA" base_Port="_kWSR8AA3EeqyFesyy2OlGA" direction="out"/>
   <PortAndFlows:FlowPort xmi:id="_1r89QAA3EeqyFesyy2OlGA" base_Port="_1r6hAAA3EeqyFesyy2OlGA" direction="in"/>
+  <Blocks:Block xmi:id="_P8JQ4APYEeq1SckFCqvxvA" base_Class="_P71u4APYEeq1SckFCqvxvA"/>
+  <Blocks:Block xmi:id="_WF2aEAPYEeq1SckFCqvxvA" base_Class="_WFxhkAPYEeq1SckFCqvxvA"/>
+  <Blocks:Block xmi:id="_ai2w4APYEeq1SckFCqvxvA" base_Class="_aitm8APYEeq1SckFCqvxvA"/>
+  <Blocks:Block xmi:id="_8Lq6kAPYEeq1SckFCqvxvA" base_Class="_8LlbAAPYEeq1SckFCqvxvA"/>
+  <Blocks:Block xmi:id="_ADwmcAPZEeq1SckFCqvxvA" base_Class="_ADuxQAPZEeq1SckFCqvxvA"/>
+  <Blocks:Block xmi:id="_qgO-IAPZEeq1SckFCqvxvA" base_Class="_qgHCUAPZEeq1SckFCqvxvA"/>
+  <PortAndFlows:FlowPort xmi:id="_DeQsgAPbEeq1SckFCqvxvA" base_Port="_DeHikAPbEeq1SckFCqvxvA" direction="in"/>
+  <PortAndFlows:FlowPort xmi:id="_FHZ0kAPbEeq1SckFCqvxvA" base_Port="_FHUVAAPbEeq1SckFCqvxvA" direction="out"/>
+  <PortAndFlows:FlowPort xmi:id="_HSOtYAPbEeq1SckFCqvxvA" base_Port="_HSLDAAPbEeq1SckFCqvxvA" direction="in"/>
+  <PortAndFlows:FlowPort xmi:id="_Id_88APbEeq1SckFCqvxvA" base_Port="_Id7rgAPbEeq1SckFCqvxvA" direction="out"/>
+  <PortAndFlows:FlowPort xmi:id="_JInAMAPbEeq1SckFCqvxvA" base_Port="_JIgSgAPbEeq1SckFCqvxvA" direction="in"/>
+  <PortAndFlows:FlowPort xmi:id="_J0PXIAPbEeq1SckFCqvxvA" base_Port="_J0LFsAPbEeq1SckFCqvxvA" direction="out"/>
+  <PortAndFlows:FlowPort xmi:id="_KnQIcAPbEeq1SckFCqvxvA" base_Port="_KnOTQAPbEeq1SckFCqvxvA" direction="out"/>
+  <PortAndFlows:FlowPort xmi:id="_LYtakAPbEeq1SckFCqvxvA" base_Port="_LYszgAPbEeq1SckFCqvxvA" direction="in"/>
 </xmi:XMI>
