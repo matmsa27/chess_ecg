@@ -24,7 +24,6 @@
         <ownedAttribute xmi:type="uml:Port" xmi:id="_CTX1ALigEem0EpkRGXzNFg" name="get_level" type="_mXnGALilEem0EpkRGXzNFg" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_cOodILigEem0EpkRGXzNFg" name="bat" type="_CzWyELifEem0EpkRGXzNFg" aggregation="composite" association="_cO6xALigEem0EpkRGXzNFg"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_83NR0LigEem0EpkRGXzNFg" name="cont" type="_iaErsLigEem0EpkRGXzNFg" aggregation="composite" association="_83SKULigEem0EpkRGXzNFg"/>
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_IG7YsAT3Eeq1SckFCqvxvA" name="receive_signal_to_show" type="_CsLSUAA4EeqyFesyy2OlGA" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_TthoYAT3Eeq1SckFCqvxvA" name="show_signal" type="_CsLSUAA4EeqyFesyy2OlGA" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_zLqqQAT3Eeq1SckFCqvxvA" name="elec" type="_vDYDkAAzEeqyFesyy2OlGA" aggregation="composite" association="_zLttkAT3Eeq1SckFCqvxvA"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_6RePUAT3Eeq1SckFCqvxvA" name="ampl" type="_P71u4APYEeq1SckFCqvxvA" aggregation="composite" association="_6RmLIAT3Eeq1SckFCqvxvA"/>
@@ -37,6 +36,30 @@
         <ownedConnector xmi:type="uml:Connector" xmi:id="_gYBe8LihEem0EpkRGXzNFg" name="Connector2">
           <end xmi:type="uml:ConnectorEnd" xmi:id="_gYDUILihEem0EpkRGXzNFg" partWithPort="_83NR0LigEem0EpkRGXzNFg" role="_taWiQLigEem0EpkRGXzNFg"/>
           <end xmi:type="uml:ConnectorEnd" xmi:id="_gYD7MLihEem0EpkRGXzNFg" role="_CTX1ALigEem0EpkRGXzNFg"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_OIjckAT6Eeq1SckFCqvxvA" name="Connector3">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_OIkqsAT6Eeq1SckFCqvxvA" partWithPort="_zLqqQAT3Eeq1SckFCqvxvA" role="_kWSR8AA3EeqyFesyy2OlGA"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_OIlRwAT6Eeq1SckFCqvxvA" partWithPort="_83NR0LigEem0EpkRGXzNFg" role="_1r6hAAA3EeqyFesyy2OlGA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_TnM2kAT6Eeq1SckFCqvxvA" name="Connector4">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_TnM2kQT6Eeq1SckFCqvxvA" partWithPort="_83NR0LigEem0EpkRGXzNFg" role="_kLCrEAT0Eeq1SckFCqvxvA"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_TnNdoAT6Eeq1SckFCqvxvA" role="_6RePUAT3Eeq1SckFCqvxvA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_ezskMAT6Eeq1SckFCqvxvA" name="Connector5">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_ezuZYAT6Eeq1SckFCqvxvA" partWithPort="_6RePUAT3Eeq1SckFCqvxvA" role="_ivD_0AT1Eeq1SckFCqvxvA"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_ezvAcAT6Eeq1SckFCqvxvA" partWithPort="_A26SQAT4Eeq1SckFCqvxvA" role="_j-EwoAT1Eeq1SckFCqvxvA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_v4oE0AT6Eeq1SckFCqvxvA" name="Connector6">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_v4pS8AT6Eeq1SckFCqvxvA" partWithPort="_A26SQAT4Eeq1SckFCqvxvA" role="_ktUcQAT1Eeq1SckFCqvxvA"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_v4p6AAT6Eeq1SckFCqvxvA" partWithPort="_Ozyc0AT4Eeq1SckFCqvxvA" role="_lycRQAT1Eeq1SckFCqvxvA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_8ejqkAT6Eeq1SckFCqvxvA" name="Connector7">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_8ek4sAT6Eeq1SckFCqvxvA" partWithPort="_Ozyc0AT4Eeq1SckFCqvxvA" role="_mxFq0AT1Eeq1SckFCqvxvA"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_8elfwAT6Eeq1SckFCqvxvA" partWithPort="_83NR0LigEem0EpkRGXzNFg" role="_nzsXUAT1Eeq1SckFCqvxvA"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_c54GYAT7Eeq1SckFCqvxvA" name="Connector8">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_c54tcAT7Eeq1SckFCqvxvA" partWithPort="_83NR0LigEem0EpkRGXzNFg" role="_tuQRQAT1Eeq1SckFCqvxvA"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_c54tcQT7Eeq1SckFCqvxvA" role="_TthoYAT3Eeq1SckFCqvxvA"/>
         </ownedConnector>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_cO6xALigEem0EpkRGXzNFg" name="Association1" memberEnd="_cOodILigEem0EpkRGXzNFg _cO6xA7igEem0EpkRGXzNFg">
@@ -896,6 +919,5 @@
   <PortAndFlows:FlowPort xmi:id="_mxIuIAT1Eeq1SckFCqvxvA" base_Port="_mxFq0AT1Eeq1SckFCqvxvA" direction="out"/>
   <PortAndFlows:FlowPort xmi:id="_nzvaoAT1Eeq1SckFCqvxvA" base_Port="_nzsXUAT1Eeq1SckFCqvxvA" direction="in"/>
   <PortAndFlows:FlowPort xmi:id="_tuSGcAT1Eeq1SckFCqvxvA" base_Port="_tuQRQAT1Eeq1SckFCqvxvA" direction="out"/>
-  <PortAndFlows:FlowPort xmi:id="_IG_DEAT3Eeq1SckFCqvxvA" base_Port="_IG7YsAT3Eeq1SckFCqvxvA" direction="in"/>
-  <PortAndFlows:FlowPort xmi:id="_TtkEoAT3Eeq1SckFCqvxvA" base_Port="_TthoYAT3Eeq1SckFCqvxvA" direction="out"/>
+  <PortAndFlows:FlowPort xmi:id="_TtkEoAT3Eeq1SckFCqvxvA" base_Port="_TthoYAT3Eeq1SckFCqvxvA"/>
 </xmi:XMI>
