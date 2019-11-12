@@ -1162,17 +1162,17 @@
               <layoutConstraint xmi:type="notation:Location" xmi:id="_HSa6oQPbEeq1SckFCqvxvA" x="30" y="-20"/>
             </children>
             <element xmi:type="uml:Port" href="model.uml#_HSLDAAPbEeq1SckFCqvxvA"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HSZFcAPbEeq1SckFCqvxvA" x="-10" y="57" width="20" height="20"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HSZFcAPbEeq1SckFCqvxvA" x="-10" y="70" width="20" height="20"/>
           </children>
           <children xmi:type="notation:Shape" xmi:id="_IeMxQAPbEeq1SckFCqvxvA" type="shape_sysml_flowport_as_affixed">
             <children xmi:type="notation:DecorationNode" xmi:id="_IeN_YAPbEeq1SckFCqvxvA" type="affixedlabel_sysml_flowport_label">
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_IeN_YQPbEeq1SckFCqvxvA" x="-86" y="26"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_IeN_YQPbEeq1SckFCqvxvA" x="-85" y="20"/>
             </children>
             <children xmi:type="notation:DecorationNode" xmi:id="_IeOmcAPbEeq1SckFCqvxvA" type="affixedlabel_uml_appliedstereotype">
               <layoutConstraint xmi:type="notation:Location" xmi:id="_IeOmcQPbEeq1SckFCqvxvA" x="30" y="-20"/>
             </children>
             <element xmi:type="uml:Port" href="model.uml#_Id7rgAPbEeq1SckFCqvxvA"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IeMxQQPbEeq1SckFCqvxvA" x="190" y="57" width="20" height="20"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IeMxQQPbEeq1SckFCqvxvA" x="190" y="65" width="20" height="20"/>
           </children>
           <element xmi:type="uml:Property" href="model.uml#__8uU4APZEeq1SckFCqvxvA"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="__9GvYQPZEeq1SckFCqvxvA" x="387" y="19" width="200" height="100"/>
@@ -1228,7 +1228,7 @@
           <layoutConstraint xmi:type="notation:Location" xmi:id="_KnUZ4wPbEeq1SckFCqvxvA" x="30" y="-20"/>
         </children>
         <element xmi:type="uml:Port" href="model.uml#_KnOTQAPbEeq1SckFCqvxvA"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KnTy0QPbEeq1SckFCqvxvA" x="1039" y="181" width="20" height="20"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KnTy0QPbEeq1SckFCqvxvA" x="1110" y="181" width="20" height="20"/>
       </children>
       <children xmi:type="notation:Shape" xmi:id="_LYwd4APbEeq1SckFCqvxvA" type="shape_sysml_flowport_as_affixed">
         <children xmi:type="notation:DecorationNode" xmi:id="_LYwd4gPbEeq1SckFCqvxvA" type="affixedlabel_sysml_flowport_label">
@@ -1241,7 +1241,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LYwd4QPbEeq1SckFCqvxvA" x="-10" y="200" width="20" height="20"/>
       </children>
       <element xmi:type="uml:Class" href="model.uml#_WFxhkAPYEeq1SckFCqvxvA"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7VZkdQPZEeq1SckFCqvxvA" x="40" y="40" width="1049" height="395"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7VZkdQPZEeq1SckFCqvxvA" x="-31" y="40" width="1120" height="395"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_7VZkdgPZEeq1SckFCqvxvA"/>
     <styles xmi:type="style:PapyrusViewStyle" xmi:id="_7VZkdwPZEeq1SckFCqvxvA">
