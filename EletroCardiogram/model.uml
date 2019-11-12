@@ -24,6 +24,8 @@
         <ownedAttribute xmi:type="uml:Port" xmi:id="_CTX1ALigEem0EpkRGXzNFg" name="get_level" type="_mXnGALilEem0EpkRGXzNFg" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_cOodILigEem0EpkRGXzNFg" name="bat" type="_CzWyELifEem0EpkRGXzNFg" aggregation="composite" association="_cO6xALigEem0EpkRGXzNFg"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_83NR0LigEem0EpkRGXzNFg" name="cont" type="_iaErsLigEem0EpkRGXzNFg" aggregation="composite" association="_83SKULigEem0EpkRGXzNFg"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_IG7YsAT3Eeq1SckFCqvxvA" name="receive_signal_to_show" type="_CsLSUAA4EeqyFesyy2OlGA" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_TthoYAT3Eeq1SckFCqvxvA" name="show_signal" type="_CsLSUAA4EeqyFesyy2OlGA" aggregation="composite"/>
         <ownedConnector xmi:type="uml:Connector" xmi:id="_fhT5YLihEem0EpkRGXzNFg" name="Connector1">
           <end xmi:type="uml:ConnectorEnd" xmi:id="_fhffkLihEem0EpkRGXzNFg" partWithPort="_cOodILigEem0EpkRGXzNFg" role="_3dB9kLifEem0EpkRGXzNFg"/>
           <end xmi:type="uml:ConnectorEnd" xmi:id="_fhgGoLihEem0EpkRGXzNFg" partWithPort="_83NR0LigEem0EpkRGXzNFg" role="_lUUPQLigEem0EpkRGXzNFg"/>
@@ -50,6 +52,9 @@
           </qualifier>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_1r6hAAA3EeqyFesyy2OlGA" name="receive_electrode_signal" visibility="public" type="_CsLSUAA4EeqyFesyy2OlGA" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_kLCrEAT0Eeq1SckFCqvxvA" name="send_signal_to_amplifier" visibility="public" type="_CsLSUAA4EeqyFesyy2OlGA" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_nzsXUAT1Eeq1SckFCqvxvA" name="receive_signal_from_converter" type="_CsLSUAA4EeqyFesyy2OlGA" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_tuQRQAT1Eeq1SckFCqvxvA" name="send_signal_to_ecg" type="_CsLSUAA4EeqyFesyy2OlGA" aggregation="composite"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_83SKULigEem0EpkRGXzNFg" name="Association2" memberEnd="_83NR0LigEem0EpkRGXzNFg _83SKU7igEem0EpkRGXzNFg">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_83SKUbigEem0EpkRGXzNFg" source="org.eclipse.papyrus">
@@ -126,13 +131,18 @@
         <ownedEnd xmi:type="uml:Property" xmi:id="_1dpi4wA0EeqyFesyy2OlGA" name="electrodes" type="_vDYDkAAzEeqyFesyy2OlGA" association="_1dpi4AA0EeqyFesyy2OlGA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:DataType" xmi:id="_CsLSUAA4EeqyFesyy2OlGA" name="Signal"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_P71u4APYEeq1SckFCqvxvA" name="Amplifier"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_P71u4APYEeq1SckFCqvxvA" name="Amplifier">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_hoL3UAT1Eeq1SckFCqvxvA" name="receive_signal" visibility="public" type="_CsLSUAA4EeqyFesyy2OlGA" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_ivD_0AT1Eeq1SckFCqvxvA" name="send_signal_to_filters" type="_CsLSUAA4EeqyFesyy2OlGA" aggregation="composite"/>
+      </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_WFxhkAPYEeq1SckFCqvxvA" name="ApplyFilters">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_9Zm34APZEeq1SckFCqvxvA" name="part1" type="_8LlbAAPYEeq1SckFCqvxvA" aggregation="composite" association="_9ZzFIAPZEeq1SckFCqvxvA"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="__8uU4APZEeq1SckFCqvxvA" name="part2" type="_ADuxQAPZEeq1SckFCqvxvA" aggregation="composite" association="__80bgAPZEeq1SckFCqvxvA"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_CpBjEAPaEeq1SckFCqvxvA" name="part3" type="_qgHCUAPZEeq1SckFCqvxvA" aggregation="composite" association="_CpHCoAPaEeq1SckFCqvxvA"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_KnOTQAPbEeq1SckFCqvxvA" name="filters_applied" visibility="public" type="_CsLSUAA4EeqyFesyy2OlGA" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_LYszgAPbEeq1SckFCqvxvA" name="apply_filters" visibility="public" type="_CsLSUAA4EeqyFesyy2OlGA" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_j-EwoAT1Eeq1SckFCqvxvA" name="receive_signal" type="_CsLSUAA4EeqyFesyy2OlGA" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_ktUcQAT1Eeq1SckFCqvxvA" name="send_signal_to_converter" type="_CsLSUAA4EeqyFesyy2OlGA" aggregation="composite"/>
         <ownedConnector xmi:type="uml:Connector" xmi:id="_O4bpwAPbEeq1SckFCqvxvA" name="Connector1">
           <end xmi:type="uml:ConnectorEnd" xmi:id="_O4fUIAPbEeq1SckFCqvxvA" role="_LYszgAPbEeq1SckFCqvxvA"/>
           <end xmi:type="uml:ConnectorEnd" xmi:id="_O4f7MAPbEeq1SckFCqvxvA" partWithPort="_9Zm34APZEeq1SckFCqvxvA" role="_DeHikAPbEeq1SckFCqvxvA"/>
@@ -150,7 +160,10 @@
           <end xmi:type="uml:ConnectorEnd" xmi:id="_Q1Rw8APbEeq1SckFCqvxvA" role="_KnOTQAPbEeq1SckFCqvxvA"/>
         </ownedConnector>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_aitm8APYEeq1SckFCqvxvA" name="Converter"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_aitm8APYEeq1SckFCqvxvA" name="Converter">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_lycRQAT1Eeq1SckFCqvxvA" name="receive_signal_to_converter" type="_CsLSUAA4EeqyFesyy2OlGA" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_mxFq0AT1Eeq1SckFCqvxvA" name="send_signal_to_controller" type="_CsLSUAA4EeqyFesyy2OlGA" aggregation="composite"/>
+      </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_8LlbAAPYEeq1SckFCqvxvA" name="Filter:low_pass">
         <ownedAttribute xmi:type="uml:Port" xmi:id="_DeHikAPbEeq1SckFCqvxvA" name="apply_low_pass" type="_CsLSUAA4EeqyFesyy2OlGA" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_FHUVAAPbEeq1SckFCqvxvA" name="send_to_high_pass" visibility="public" type="_CsLSUAA4EeqyFesyy2OlGA" aggregation="composite"/>
@@ -846,4 +859,15 @@
   <PortAndFlows:FlowPort xmi:id="_J0PXIAPbEeq1SckFCqvxvA" base_Port="_J0LFsAPbEeq1SckFCqvxvA" direction="out"/>
   <PortAndFlows:FlowPort xmi:id="_KnQIcAPbEeq1SckFCqvxvA" base_Port="_KnOTQAPbEeq1SckFCqvxvA" direction="out"/>
   <PortAndFlows:FlowPort xmi:id="_LYtakAPbEeq1SckFCqvxvA" base_Port="_LYszgAPbEeq1SckFCqvxvA" direction="in"/>
+  <PortAndFlows:FlowPort xmi:id="_kLGVcAT0Eeq1SckFCqvxvA" base_Port="_kLCrEAT0Eeq1SckFCqvxvA" direction="out"/>
+  <PortAndFlows:FlowPort xmi:id="_hoRW4AT1Eeq1SckFCqvxvA" base_Port="_hoL3UAT1Eeq1SckFCqvxvA" direction="in"/>
+  <PortAndFlows:FlowPort xmi:id="_ivHDIAT1Eeq1SckFCqvxvA" base_Port="_ivD_0AT1Eeq1SckFCqvxvA" direction="out"/>
+  <PortAndFlows:FlowPort xmi:id="_j-Hz8AT1Eeq1SckFCqvxvA" base_Port="_j-EwoAT1Eeq1SckFCqvxvA" direction="in"/>
+  <PortAndFlows:FlowPort xmi:id="_ktXfkAT1Eeq1SckFCqvxvA" base_Port="_ktUcQAT1Eeq1SckFCqvxvA" direction="out"/>
+  <PortAndFlows:FlowPort xmi:id="_lyetgAT1Eeq1SckFCqvxvA" base_Port="_lycRQAT1Eeq1SckFCqvxvA" direction="in"/>
+  <PortAndFlows:FlowPort xmi:id="_mxIuIAT1Eeq1SckFCqvxvA" base_Port="_mxFq0AT1Eeq1SckFCqvxvA" direction="out"/>
+  <PortAndFlows:FlowPort xmi:id="_nzvaoAT1Eeq1SckFCqvxvA" base_Port="_nzsXUAT1Eeq1SckFCqvxvA" direction="in"/>
+  <PortAndFlows:FlowPort xmi:id="_tuSGcAT1Eeq1SckFCqvxvA" base_Port="_tuQRQAT1Eeq1SckFCqvxvA" direction="out"/>
+  <PortAndFlows:FlowPort xmi:id="_IG_DEAT3Eeq1SckFCqvxvA" base_Port="_IG7YsAT3Eeq1SckFCqvxvA" direction="in"/>
+  <PortAndFlows:FlowPort xmi:id="_TtkEoAT3Eeq1SckFCqvxvA" base_Port="_TthoYAT3Eeq1SckFCqvxvA" direction="out"/>
 </xmi:XMI>
