@@ -1677,7 +1677,7 @@
       </children>
       <children xmi:type="notation:Shape" xmi:id="_LYwd4APbEeq1SckFCqvxvA" type="shape_sysml_flowport_as_affixed">
         <children xmi:type="notation:DecorationNode" xmi:id="_LYwd4gPbEeq1SckFCqvxvA" type="affixedlabel_sysml_flowport_label">
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_LYwd4wPbEeq1SckFCqvxvA" x="-81" y="-23"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_LYwd4wPbEeq1SckFCqvxvA" x="-49" y="-24"/>
         </children>
         <children xmi:type="notation:DecorationNode" xmi:id="_LYxE8APbEeq1SckFCqvxvA" type="affixedlabel_uml_appliedstereotype">
           <layoutConstraint xmi:type="notation:Location" xmi:id="_LYxE8QPbEeq1SckFCqvxvA" x="30" y="-20"/>
