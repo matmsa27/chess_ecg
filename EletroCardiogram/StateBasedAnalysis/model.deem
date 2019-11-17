@@ -9,6 +9,15 @@ STUDY:"DefaultStudy",1,"{21600.0}",0;
 
 PLACE:"ECG__bat_doreset",1500,1500,0,0;
 PLACE:"ECG__cont_doreset",1500,1500,0,0;
+PLACE:"ECG__elec__part1_doreset",1500,1500,0,0;
+PLACE:"ECG__elec__part2_doreset",1500,1500,0,0;
+PLACE:"ECG__ampl_doreset",1500,1500,0,0;
+PLACE:"ECG__apfil__part1_doreset",1500,1500,0,0;
+PLACE:"ECG__apfil__part2_doreset",1500,1500,0,0;
+PLACE:"ECG__apfil__part3_doreset",1500,1500,0,0;
+PLACE:"ECG__con_doreset",1500,1500,0,0;
+PLACE:"ECG__elec_doreset",1500,1500,0,0;
+PLACE:"ECG__apfil_doreset",1500,1500,0,0;
 PLACE:"ECG__bat_ECG__bat_ift",1500,1500,0,0;
 PLACE:"ECG__bat_ECG__bat_ift_tmp",1500,1500,0,0;
 PLACE:"ECG__bat_ECG__bat_ift_transient",1500,1500,0,0;
@@ -19,8 +28,14 @@ PLACE:"ECG__bat_ECG__bat_e_send_level",1500,1500,0,0;
 PLACE:"ECG__bat_ECG__bat_e_send_level_detected",1500,1500,0,0;
 PLACE:"ECG__cont_ECG__cont_e_level_out_controller",1500,1500,0,0;
 PLACE:"ECG__cont_ECG__cont_e_level_out_controller_detected",1500,1500,0,0;
+PLACE:"ECG__cont_ECG__cont_e_send_signal_to_amplifier",1500,1500,0,0;
+PLACE:"ECG__cont_ECG__cont_e_send_signal_to_amplifier_detected",1500,1500,0,0;
+PLACE:"ECG__cont_ECG__cont_e_send_signal_to_ecg",1500,1500,0,0;
+PLACE:"ECG__cont_ECG__cont_e_send_signal_to_ecg_detected",1500,1500,0,0;
 PLACE:"ECG__bat_ECG__bat_send_level__failure",1500,1500,0,0;
 PLACE:"ECG__cont_ECG__cont_level_out_controller__failure",1500,1500,0,0;
+PLACE:"ECG__cont_ECG__cont_send_signal_to_amplifier__failure",1500,1500,0,0;
+PLACE:"ECG__cont_ECG__cont_send_signal_to_ecg__failure",1500,1500,0,0;
 PLACE:"ECG__bat_ECG__bat_fge_1_tmp",1500,1500,0,0;
 PLACE:"ECG__bat_ECG__bat_fge_1_blocker",1500,1500,0,0;
 PLACE:"ECG__cont_ECG__cont_fge_1_tmp",1500,1500,0,0;
@@ -33,6 +48,12 @@ PLACE:"ECG__bat_e_send_level_sel_ECG__bat_epf_1",1500,1500,0,0;
 PLACE:"ECG__cont_ECG__cont_epf_1_tmp",1500,1500,0,0;
 PLACE:"ECG__cont_ECG__cont_epf_1_blocker",1500,1500,0,0;
 PLACE:"ECG__cont_e_level_out_controller_sel_ECG__cont_epf_1",1500,1500,0,0;
+PLACE:"ECG__cont_ECG__cont_epf_2_tmp",1500,1500,0,0;
+PLACE:"ECG__cont_ECG__cont_epf_2_blocker",1500,1500,0,0;
+PLACE:"ECG__cont_e_send_signal_to_amplifier_sel_ECG__cont_epf_2",1500,1500,0,0;
+PLACE:"ECG__cont_ECG__cont_epf_3_tmp",1500,1500,0,0;
+PLACE:"ECG__cont_ECG__cont_epf_3_blocker",1500,1500,0,0;
+PLACE:"ECG__cont_e_send_signal_to_ecg_sel_ECG__cont_epf_3",1500,1500,0,0;
 PLACE:"ECG__cont_repair_enabled",1500,1500,0,0;
 PLACE:"ECG__cont_repair_completed",1500,1500,0,0;
 PLACE:"ECG_Analysis_memory_pl",1500,1500,0,0;
@@ -42,6 +63,42 @@ TRANS:"ECG__bat_reset",1500,1500,V,Immediate,6,1,'TRUE', '1.0',
 1.0
   );
 TRANS:"ECG__cont_reset",1500,1500,V,Immediate,6,1,'(TRUE)AND(((TRUE)AND(MARK(ECG__bat_ECG__bat_send_level__failure)=0.0))OR(MARK(ECG__bat_doreset)>0.0))', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__elec__part1_reset",1500,1500,V,Immediate,6,1,'TRUE', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__elec__part2_reset",1500,1500,V,Immediate,6,1,'TRUE', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__ampl_reset",1500,1500,V,Immediate,6,1,'TRUE', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__apfil__part1_reset",1500,1500,V,Immediate,6,1,'TRUE', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__apfil__part2_reset",1500,1500,V,Immediate,6,1,'TRUE', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__apfil__part3_reset",1500,1500,V,Immediate,6,1,'TRUE', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__con_reset",1500,1500,V,Immediate,6,1,'TRUE', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__elec_reset",1500,1500,V,Immediate,6,1,'TRUE', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__apfil_reset",1500,1500,V,Immediate,6,1,'TRUE', '1.0',
  (
 1.0
   );
@@ -89,7 +146,7 @@ TRANS:"ECG__bat_ECG__bat_fge_1_caseskip",1500,1500,V,Immediate,7,1,'FALSE', '0.0
  (
 0.0
   );
-TRANS:"ECG__cont_ECG__cont_fge_1",1500,1500,V,Immediate,5,1,'((MARK(ECG__cont_ECG__cont_ift)>0.0)AND((MARK(ECG__cont_ECG__cont_fge_1_tmp)=0.0)AND(MARK(ECG__cont_ECG__cont_level_out_controller__failure)=0.0)))AND(MARK(ECG__cont_ECG__cont_e_level_out_controller)=0.0)', '1.0',
+TRANS:"ECG__cont_ECG__cont_fge_1",1500,1500,V,Immediate,5,1,'((MARK(ECG__cont_ECG__cont_ift)>0.0)AND((MARK(ECG__cont_ECG__cont_fge_1_tmp)=0.0)AND(((MARK(ECG__cont_ECG__cont_level_out_controller__failure)=0.0)AND(MARK(ECG__cont_ECG__cont_send_signal_to_amplifier__failure)=0.0))AND(MARK(ECG__cont_ECG__cont_send_signal_to_ecg__failure)=0.0))))AND((MARK(ECG__cont_ECG__cont_e_send_signal_to_amplifier)=0.0)OR((MARK(ECG__cont_ECG__cont_e_send_signal_to_ecg)=0.0)OR(MARK(ECG__cont_ECG__cont_e_level_out_controller)=0.0)))', '1.0',
  (
 1.0
   );
@@ -101,7 +158,7 @@ TRANS:"ECG__cont_ECG__cont_fge_1_caseskip",1500,1500,V,Immediate,7,1,'FALSE', '0
  (
 0.0
   );
-TRANS:"ECG__cont_ECG__cont_fge_2",1500,1500,V,Immediate,5,1,'((MARK(ECG__bat_ECG__bat_send_level__failure)>0.0)AND((MARK(ECG__cont_ECG__cont_fge_2_tmp)=0.0)AND(MARK(ECG__cont_ECG__cont_level_out_controller__failure)=0.0)))AND(MARK(ECG__cont_ECG__cont_e_level_out_controller)=0.0)', '1.0',
+TRANS:"ECG__cont_ECG__cont_fge_2",1500,1500,V,Immediate,5,1,'((MARK(ECG__bat_ECG__bat_send_level__failure)>0.0)AND((MARK(ECG__cont_ECG__cont_fge_2_tmp)=0.0)AND(((MARK(ECG__cont_ECG__cont_level_out_controller__failure)=0.0)AND(MARK(ECG__cont_ECG__cont_send_signal_to_amplifier__failure)=0.0))AND(MARK(ECG__cont_ECG__cont_send_signal_to_ecg__failure)=0.0))))AND((MARK(ECG__cont_ECG__cont_e_send_signal_to_amplifier)=0.0)OR((MARK(ECG__cont_ECG__cont_e_send_signal_to_ecg)=0.0)OR(MARK(ECG__cont_ECG__cont_e_level_out_controller)=0.0)))', '1.0',
  (
 1.0
   );
@@ -129,7 +186,7 @@ TRANS:"ECG__bat_e_send_level_choice_ECG__bat_epf_1",1500,1500,V,Immediate,7,1,'(
  (
 1.0
   );
-TRANS:"ECG__cont_ECG__cont_epf_1",1500,1500,V,Immediate,5,1,'((MARK(ECG__cont_ECG__cont_e_level_out_controller)>0.0)AND((MARK(ECG__cont_ECG__cont_epf_1_tmp)=0.0)AND(MARK(ECG__cont_ECG__cont_level_out_controller__failure)=0.0)))AND(MARK(ECG__cont_ECG__cont_level_out_controller__failure)=0.0)', '1.0',
+TRANS:"ECG__cont_ECG__cont_epf_1",1500,1500,V,Immediate,5,1,'((MARK(ECG__cont_ECG__cont_e_level_out_controller)>0.0)AND((MARK(ECG__cont_ECG__cont_epf_1_tmp)=0.0)AND(((MARK(ECG__cont_ECG__cont_level_out_controller__failure)=0.0)AND(MARK(ECG__cont_ECG__cont_send_signal_to_amplifier__failure)=0.0))AND(MARK(ECG__cont_ECG__cont_send_signal_to_ecg__failure)=0.0))))AND(MARK(ECG__cont_ECG__cont_level_out_controller__failure)=0.0)', '1.0',
  (
 1.0
   );
@@ -141,11 +198,43 @@ TRANS:"ECG__cont_ECG__cont_epf_1_caseskip",1500,1500,V,Immediate,7,1,'', '0.0',
  (
 0.0
   );
-TRANS:"ECG__cont_e_level_out_controller_choice_ECG__cont_epf_1",1500,1500,V,Immediate,7,1,'((MARK(ECG__cont_ECG__cont_e_level_out_controller)>0.0)AND((MARK(ECG__cont_ECG__cont_epf_1_tmp)=0.0)AND(MARK(ECG__cont_ECG__cont_level_out_controller__failure)=0.0)))AND(MARK(ECG__cont_ECG__cont_level_out_controller__failure)=0.0)', '1.0',
+TRANS:"ECG__cont_e_level_out_controller_choice_ECG__cont_epf_1",1500,1500,V,Immediate,7,1,'((MARK(ECG__cont_ECG__cont_e_level_out_controller)>0.0)AND((MARK(ECG__cont_ECG__cont_epf_1_tmp)=0.0)AND(((MARK(ECG__cont_ECG__cont_level_out_controller__failure)=0.0)AND(MARK(ECG__cont_ECG__cont_send_signal_to_amplifier__failure)=0.0))AND(MARK(ECG__cont_ECG__cont_send_signal_to_ecg__failure)=0.0))))AND(MARK(ECG__cont_ECG__cont_level_out_controller__failure)=0.0)', '1.0',
  (
 1.0
   );
-TRANS:"ECG__cont_repair_schedule_T",1500,1500,V,Immediate,1,1,'(MARK(ECG__cont_ECG__cont_level_out_controller__failure)>0.0)AND(MARK(ECG__cont_repair_enabled)=0.0)', '1.0',
+TRANS:"ECG__cont_ECG__cont_epf_2",1500,1500,V,Immediate,5,1,'((MARK(ECG__cont_ECG__cont_e_send_signal_to_amplifier)>0.0)AND((MARK(ECG__cont_ECG__cont_epf_2_tmp)=0.0)AND(((MARK(ECG__cont_ECG__cont_level_out_controller__failure)=0.0)AND(MARK(ECG__cont_ECG__cont_send_signal_to_amplifier__failure)=0.0))AND(MARK(ECG__cont_ECG__cont_send_signal_to_ecg__failure)=0.0))))AND(MARK(ECG__cont_ECG__cont_send_signal_to_amplifier__failure)=0.0)', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__cont_ECG__cont_epf_2_caseprop",1500,1500,V,Immediate,7,1,'', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__cont_ECG__cont_epf_2_caseskip",1500,1500,V,Immediate,7,1,'', '0.0',
+ (
+0.0
+  );
+TRANS:"ECG__cont_e_send_signal_to_amplifier_choice_ECG__cont_epf_2",1500,1500,V,Immediate,7,1,'((MARK(ECG__cont_ECG__cont_e_send_signal_to_amplifier)>0.0)AND((MARK(ECG__cont_ECG__cont_epf_2_tmp)=0.0)AND(((MARK(ECG__cont_ECG__cont_level_out_controller__failure)=0.0)AND(MARK(ECG__cont_ECG__cont_send_signal_to_amplifier__failure)=0.0))AND(MARK(ECG__cont_ECG__cont_send_signal_to_ecg__failure)=0.0))))AND(MARK(ECG__cont_ECG__cont_send_signal_to_amplifier__failure)=0.0)', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__cont_ECG__cont_epf_3",1500,1500,V,Immediate,5,1,'((MARK(ECG__cont_ECG__cont_e_send_signal_to_ecg)>0.0)AND((MARK(ECG__cont_ECG__cont_epf_3_tmp)=0.0)AND(((MARK(ECG__cont_ECG__cont_level_out_controller__failure)=0.0)AND(MARK(ECG__cont_ECG__cont_send_signal_to_amplifier__failure)=0.0))AND(MARK(ECG__cont_ECG__cont_send_signal_to_ecg__failure)=0.0))))AND(MARK(ECG__cont_ECG__cont_send_signal_to_ecg__failure)=0.0)', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__cont_ECG__cont_epf_3_caseprop",1500,1500,V,Immediate,7,1,'', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__cont_ECG__cont_epf_3_caseskip",1500,1500,V,Immediate,7,1,'', '0.0',
+ (
+0.0
+  );
+TRANS:"ECG__cont_e_send_signal_to_ecg_choice_ECG__cont_epf_3",1500,1500,V,Immediate,7,1,'((MARK(ECG__cont_ECG__cont_e_send_signal_to_ecg)>0.0)AND((MARK(ECG__cont_ECG__cont_epf_3_tmp)=0.0)AND(((MARK(ECG__cont_ECG__cont_level_out_controller__failure)=0.0)AND(MARK(ECG__cont_ECG__cont_send_signal_to_amplifier__failure)=0.0))AND(MARK(ECG__cont_ECG__cont_send_signal_to_ecg__failure)=0.0))))AND(MARK(ECG__cont_ECG__cont_send_signal_to_ecg__failure)=0.0)', '1.0',
+ (
+1.0
+  );
+TRANS:"ECG__cont_repair_schedule_T",1500,1500,V,Immediate,1,1,'(((MARK(ECG__cont_ECG__cont_level_out_controller__failure)>0.0)OR(MARK(ECG__cont_ECG__cont_send_signal_to_amplifier__failure)>0.0))OR(MARK(ECG__cont_ECG__cont_send_signal_to_ecg__failure)>0.0))AND(MARK(ECG__cont_repair_enabled)=0.0)', '1.0',
  (
 1.0
   );
@@ -161,7 +250,7 @@ TRANS:"ECG__cont_repair_outcome_failed",1500,1500,V,Immediate,3,1,'', '0.0',
  (
 0.0
   );
-TRANS:"ECG_Analysis_memory_tr",1500,1500,V,Immediate,8,1,'(MARK(ECG__cont_ECG__cont_level_out_controller__failure)>0.0)AND(MARK(ECG_Analysis_memory_pl)=0.0)', '1.0',
+TRANS:"ECG_Analysis_memory_tr",1500,1500,V,Immediate,8,1,'((MARK(ECG__cont_ECG__cont_send_signal_to_ecg__failure)>0.0)OR(MARK(ECG__cont_ECG__cont_level_out_controller__failure)>0.0))AND(MARK(ECG_Analysis_memory_pl)=0.0)', '1.0',
  (
 1.0
   );
@@ -169,6 +258,24 @@ TRANS:"ECG_Analysis_memory_tr",1500,1500,V,Immediate,8,1,'(MARK(ECG__cont_ECG__c
 IARC:"ECG__bat_doreset","ECG__bat_reset",1,0,'',
  (1500,1500,1500,1500),1;
 IARC:"ECG__cont_doreset","ECG__cont_reset",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__elec__part1_doreset","ECG__elec__part1_reset",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__elec__part2_doreset","ECG__elec__part2_reset",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__ampl_doreset","ECG__ampl_reset",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__apfil__part1_doreset","ECG__apfil__part1_reset",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__apfil__part2_doreset","ECG__apfil__part2_reset",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__apfil__part3_doreset","ECG__apfil__part3_reset",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__con_doreset","ECG__con_reset",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__elec_doreset","ECG__elec_reset",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__apfil_doreset","ECG__apfil_reset",1,0,'',
  (1500,1500,1500,1500),1;
 OARC:"ECG__bat_ECG__bat_ift_tmp","ECG__bat_ift_FO",1,1,'',
  (1500,1500,1500,1500),1;
@@ -222,9 +329,21 @@ IARC:"ECG__cont_ECG__cont_e_level_out_controller","ECG__cont_reset",1,0,'MARK(EC
  (1500,1500,1500,1500),1;
 IARC:"ECG__cont_ECG__cont_e_level_out_controller_detected","ECG__cont_reset",1,0,'MARK(ECG__cont_ECG__cont_e_level_out_controller_detected)',
  (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_e_send_signal_to_amplifier","ECG__cont_reset",1,0,'MARK(ECG__cont_ECG__cont_e_send_signal_to_amplifier)',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_e_send_signal_to_amplifier_detected","ECG__cont_reset",1,0,'MARK(ECG__cont_ECG__cont_e_send_signal_to_amplifier_detected)',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_e_send_signal_to_ecg","ECG__cont_reset",1,0,'MARK(ECG__cont_ECG__cont_e_send_signal_to_ecg)',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_e_send_signal_to_ecg_detected","ECG__cont_reset",1,0,'MARK(ECG__cont_ECG__cont_e_send_signal_to_ecg_detected)',
+ (1500,1500,1500,1500),1;
 IARC:"ECG__bat_ECG__bat_send_level__failure","ECG__bat_reset",1,0,'MARK(ECG__bat_ECG__bat_send_level__failure)',
  (1500,1500,1500,1500),1;
 IARC:"ECG__cont_ECG__cont_level_out_controller__failure","ECG__cont_reset",1,0,'MARK(ECG__cont_ECG__cont_level_out_controller__failure)',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_send_signal_to_amplifier__failure","ECG__cont_reset",1,0,'MARK(ECG__cont_ECG__cont_send_signal_to_amplifier__failure)',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_send_signal_to_ecg__failure","ECG__cont_reset",1,0,'MARK(ECG__cont_ECG__cont_send_signal_to_ecg__failure)',
  (1500,1500,1500,1500),1;
 OARC:"ECG__bat_ECG__bat_fge_1_tmp","ECG__bat_ECG__bat_fge_1",1,1,'',
  (1500,1500,1500,1500),1;
@@ -256,6 +375,10 @@ IARC:"ECG__cont_ECG__cont_fge_1_tmp","ECG__cont_reset",1,0,'MARK(ECG__cont_ECG__
  (1500,1500,1500,1500),1;
 IARC:"ECG__cont_ECG__cont_fge_1_blocker","ECG__cont_reset",1,0,'MARK(ECG__cont_ECG__cont_fge_1_blocker)',
  (1500,1500,1500,1500),1;
+OARC:"ECG__cont_ECG__cont_e_send_signal_to_amplifier","ECG__cont_ECG__cont_fge_1_caseprop",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_ECG__cont_e_send_signal_to_ecg","ECG__cont_ECG__cont_fge_1_caseprop",1,1,'',
+ (1500,1500,1500,1500),1;
 OARC:"ECG__cont_ECG__cont_e_level_out_controller","ECG__cont_ECG__cont_fge_1_caseprop",1,1,'',
  (1500,1500,1500,1500),1;
 OARC:"ECG__cont_ECG__cont_fge_2_tmp","ECG__cont_ECG__cont_fge_2",1,1,'',
@@ -271,6 +394,10 @@ IARC:"ECG__cont_ECG__cont_fge_2_tmp","ECG__cont_ECG__cont_fge_2_caseskip",1,0,''
 IARC:"ECG__cont_ECG__cont_fge_2_tmp","ECG__cont_reset",1,0,'MARK(ECG__cont_ECG__cont_fge_2_tmp)',
  (1500,1500,1500,1500),1;
 IARC:"ECG__cont_ECG__cont_fge_2_blocker","ECG__cont_reset",1,0,'MARK(ECG__cont_ECG__cont_fge_2_blocker)',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_ECG__cont_e_send_signal_to_amplifier","ECG__cont_ECG__cont_fge_2_caseprop",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_ECG__cont_e_send_signal_to_ecg","ECG__cont_ECG__cont_fge_2_caseprop",1,1,'',
  (1500,1500,1500,1500),1;
 OARC:"ECG__cont_ECG__cont_e_level_out_controller","ECG__cont_ECG__cont_fge_2_caseprop",1,1,'',
  (1500,1500,1500,1500),1;
@@ -317,6 +444,50 @@ OARC:"ECG__cont_e_level_out_controller_sel_ECG__cont_epf_1","ECG__cont_e_level_o
 OARC:"ECG__cont_e_level_out_controller_sel_ECG__cont_epf_1","ECG__cont_e_level_out_controller_choice_ECG__cont_epf_1",1,2,'',
  (1500,1500,1500,1500),1;
 IARC:"ECG__cont_e_level_out_controller_sel_ECG__cont_epf_1","ECG__cont_ECG__cont_epf_1",1,0,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_ECG__cont_epf_2_tmp","ECG__cont_ECG__cont_epf_2",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_ECG__cont_epf_2_blocker","ECG__cont_ECG__cont_epf_2",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_ECG__cont_epf_2_blocker","ECG__cont_ECG__cont_epf_2",1,2,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_epf_2_tmp","ECG__cont_ECG__cont_epf_2_caseprop",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_epf_2_tmp","ECG__cont_ECG__cont_epf_2_caseskip",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_epf_2_tmp","ECG__cont_reset",1,0,'MARK(ECG__cont_ECG__cont_epf_2_tmp)',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_epf_2_blocker","ECG__cont_reset",1,0,'MARK(ECG__cont_ECG__cont_epf_2_blocker)',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_ECG__cont_send_signal_to_amplifier__failure","ECG__cont_ECG__cont_epf_2_caseprop",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_e_send_signal_to_amplifier_sel_ECG__cont_epf_2","ECG__cont_e_send_signal_to_amplifier_choice_ECG__cont_epf_2",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_e_send_signal_to_amplifier_sel_ECG__cont_epf_2","ECG__cont_e_send_signal_to_amplifier_choice_ECG__cont_epf_2",1,2,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_e_send_signal_to_amplifier_sel_ECG__cont_epf_2","ECG__cont_ECG__cont_epf_2",1,0,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_ECG__cont_epf_3_tmp","ECG__cont_ECG__cont_epf_3",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_ECG__cont_epf_3_blocker","ECG__cont_ECG__cont_epf_3",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_ECG__cont_epf_3_blocker","ECG__cont_ECG__cont_epf_3",1,2,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_epf_3_tmp","ECG__cont_ECG__cont_epf_3_caseprop",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_epf_3_tmp","ECG__cont_ECG__cont_epf_3_caseskip",1,0,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_epf_3_tmp","ECG__cont_reset",1,0,'MARK(ECG__cont_ECG__cont_epf_3_tmp)',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_ECG__cont_epf_3_blocker","ECG__cont_reset",1,0,'MARK(ECG__cont_ECG__cont_epf_3_blocker)',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_ECG__cont_send_signal_to_ecg__failure","ECG__cont_ECG__cont_epf_3_caseprop",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_e_send_signal_to_ecg_sel_ECG__cont_epf_3","ECG__cont_e_send_signal_to_ecg_choice_ECG__cont_epf_3",1,1,'',
+ (1500,1500,1500,1500),1;
+OARC:"ECG__cont_e_send_signal_to_ecg_sel_ECG__cont_epf_3","ECG__cont_e_send_signal_to_ecg_choice_ECG__cont_epf_3",1,2,'',
+ (1500,1500,1500,1500),1;
+IARC:"ECG__cont_e_send_signal_to_ecg_sel_ECG__cont_epf_3","ECG__cont_ECG__cont_epf_3",1,0,'',
  (1500,1500,1500,1500),1;
 OARC:"ECG__cont_repair_enabled","ECG__cont_repair_schedule_T",1,1,'',
  (1500,1500,1500,1500),1;

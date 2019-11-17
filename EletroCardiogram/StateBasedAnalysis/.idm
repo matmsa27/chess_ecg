@@ -19,17 +19,21 @@
     </components>
     <components Name="ECG.cont">
       <FailureModes Name="ECG.cont_level_out_controller.failure"/>
+      <FailureModes Name="ECG.cont_send_signal_to_amplifier.failure"/>
+      <FailureModes Name="ECG.cont_send_signal_to_ecg.failure"/>
       <Errors Name="ECG.cont_e_level_out_controller"/>
+      <Errors Name="ECG.cont_e_send_signal_to_amplifier"/>
+      <Errors Name="ECG.cont_e_send_signal_to_ecg"/>
       <Faults xsi:type="InternalFault" Name="ECG.cont_ift" PermanentProbability="1.0">
         <Occurrence xsi:type="Exponential" Rate="1.0E-6"/>
         <TransientDuration xsi:type="Deterministic"/>
       </Faults>
       <Faults xsi:type="ExternalFault" Name="ECG.cont_xft_level_in_controller.failure" Source="ECG.bat_send_level.failure"/>
-      <FaultsGeneratesErrors Source="ECG.cont_ift" Destination="ECG.cont_e_level_out_controller" PropagationProbability="1.0" PropagationLogicStringFormat="ECG.cont_ift" Name="ECG.cont_fge_1">
+      <FaultsGeneratesErrors Source="ECG.cont_ift" Destination="ECG.cont_e_level_out_controller ECG.cont_e_send_signal_to_amplifier ECG.cont_e_send_signal_to_ecg" PropagationProbability="1.0" PropagationLogicStringFormat="ECG.cont_ift" Name="ECG.cont_fge_1">
         <ActivationDelay xsi:type="Deterministic"/>
         <PropagationLogic xsi:type="FaultsExpressionFaultNode" faultsGenerateErrors="/0/@components.1/@FaultsGeneratesErrors.0" Fault="ECG.cont_ift"/>
       </FaultsGeneratesErrors>
-      <FaultsGeneratesErrors Source="ECG.cont_xft_level_in_controller.failure" Destination="ECG.cont_e_level_out_controller" PropagationProbability="1.0" PropagationLogicStringFormat="ECG.cont_xft_level_in_controller.failure" Name="ECG.cont_fge_2">
+      <FaultsGeneratesErrors Source="ECG.cont_xft_level_in_controller.failure" Destination="ECG.cont_e_level_out_controller ECG.cont_e_send_signal_to_amplifier ECG.cont_e_send_signal_to_ecg" PropagationProbability="1.0" PropagationLogicStringFormat="ECG.cont_xft_level_in_controller.failure" Name="ECG.cont_fge_2">
         <ActivationDelay xsi:type="Deterministic"/>
         <PropagationLogic xsi:type="FaultsExpressionFaultNode" faultsGenerateErrors="/0/@components.1/@FaultsGeneratesErrors.1" Fault="ECG.cont_xft_level_in_controller.failure"/>
       </FaultsGeneratesErrors>
@@ -37,8 +41,23 @@
         <PropagationLogic xsi:type="ErrorsExpressionErrorNode" errorPropagation="/0/@components.1/@ErrorsGeneratesFailures.0" Error="ECG.cont_e_level_out_controller"/>
         <PropagationDelay xsi:type="Deterministic"/>
       </ErrorsGeneratesFailures>
+      <ErrorsGeneratesFailures Name="ECG.cont_epf_2" PropagationLogicStringFormat="ECG.cont_e_send_signal_to_amplifier" Source="ECG.cont_e_send_signal_to_amplifier" Destination="ECG.cont_send_signal_to_amplifier.failure">
+        <PropagationLogic xsi:type="ErrorsExpressionErrorNode" errorPropagation="/0/@components.1/@ErrorsGeneratesFailures.1" Error="ECG.cont_e_send_signal_to_amplifier"/>
+        <PropagationDelay xsi:type="Deterministic"/>
+      </ErrorsGeneratesFailures>
+      <ErrorsGeneratesFailures Name="ECG.cont_epf_3" PropagationLogicStringFormat="ECG.cont_e_send_signal_to_ecg" Source="ECG.cont_e_send_signal_to_ecg" Destination="ECG.cont_send_signal_to_ecg.failure">
+        <PropagationLogic xsi:type="ErrorsExpressionErrorNode" errorPropagation="/0/@components.1/@ErrorsGeneratesFailures.2" Error="ECG.cont_e_send_signal_to_ecg"/>
+        <PropagationDelay xsi:type="Deterministic"/>
+      </ErrorsGeneratesFailures>
     </components>
-    <measures xsi:type="Reliability" Name="ECG_Analysis" target="ECG.cont_level_out_controller.failure">
+    <components Name="ECG.elec.part1"/>
+    <components Name="ECG.elec.part2"/>
+    <components Name="ECG.ampl"/>
+    <components Name="ECG.apfil.part1"/>
+    <components Name="ECG.apfil.part2"/>
+    <components Name="ECG.apfil.part3"/>
+    <components Name="ECG.con"/>
+    <measures xsi:type="Reliability" Name="ECG_Analysis" target="ECG.cont_level_out_controller.failure ECG.cont_send_signal_to_ecg.failure">
       <evaluations xsi:type="InstantOfTime" timePoint="21600.0"/>
     </measures>
   </Sistema>
@@ -46,7 +65,15 @@
     <Duration xsi:type="Exponential"/>
     <When>
       <T xsi:type="ScheduleExpressionImmediately"/>
-      <EX xsi:type="ScheduleExpressionFailed" failureMode="ECG.cont_level_out_controller.failure"/>
+      <EX xsi:type="ScheduleExpressionOr">
+        <e1 xsi:type="ScheduleExpressionOr">
+          <e1 xsi:type="ScheduleExpressionFailed" failureMode="ECG.cont_level_out_controller.failure"/>
+          <e2 xsi:type="ScheduleExpressionFailed" failureMode="ECG.cont_send_signal_to_amplifier.failure"/>
+        </e1>
+        <e2 xsi:type="ScheduleExpressionFailed" failureMode="ECG.cont_send_signal_to_ecg.failure"/>
+      </EX>
     </When>
   </RepairActivity>
+  <Component Name="ECG.elec"/>
+  <Component Name="ECG.apfil"/>
 </xmi:XMI>

@@ -208,7 +208,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TtsAcQT3Eeq1SckFCqvxvA" x="225" y="115" width="20" height="20"/>
       </children>
       <element xmi:type="uml:Class" href="model.uml#_FgOoALifEem0EpkRGXzNFg"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Fgqs4bifEem0EpkRGXzNFg" x="860" y="26" width="235" height="235"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Fgqs4bifEem0EpkRGXzNFg" x="888" y="24" width="235" height="235"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_iaficLigEem0EpkRGXzNFg" type="shape_sysml_block_as_classifier" fillColor="8047085">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_-nopcLinEem0EpkRGXzNFg" source="Stereotype_Annotation">
