@@ -91,200 +91,200 @@
       </packagedElement>
       <packagedElement xmi:type="uml:DataType" xmi:id="_mXnGALilEem0EpkRGXzNFg" name="BatteryAlarm"/>
       <packagedElement xmi:type="uml:Package" xmi:id="_fyorMLinEem0EpkRGXzNFg" name="ECG_instSpec">
-        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_nz6EIAYxEeqJydvM0dw8Cg" name="ECG" classifier="_FgOoALifEem0EpkRGXzNFg">
-          <slot xmi:type="uml:Slot" xmi:id="_n0LJ4AYxEeqJydvM0dw8Cg" definingFeature="_CTX1ALigEem0EpkRGXzNFg"/>
-          <slot xmi:type="uml:Slot" xmi:id="_n0zcAAYxEeqJydvM0dw8Cg" definingFeature="_cOodILigEem0EpkRGXzNFg">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n0zcAQYxEeqJydvM0dw8Cg" name="bat" instance="_n0WJAAYxEeqJydvM0dw8Cg"/>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_nloocAlvEeqqGsyqwSYe7A" name="ECG" classifier="_FgOoALifEem0EpkRGXzNFg">
+          <slot xmi:type="uml:Slot" xmi:id="_nl0OoAlvEeqqGsyqwSYe7A" definingFeature="_CTX1ALigEem0EpkRGXzNFg"/>
+          <slot xmi:type="uml:Slot" xmi:id="_nmOeUAlvEeqqGsyqwSYe7A" definingFeature="_cOodILigEem0EpkRGXzNFg">
+            <value xmi:type="uml:InstanceValue" xmi:id="_nmOeUQlvEeqqGsyqwSYe7A" name="bat" instance="_nl8KcAlvEeqqGsyqwSYe7A"/>
           </slot>
-          <slot xmi:type="uml:Slot" xmi:id="_n1agAQYxEeqJydvM0dw8Cg" definingFeature="_83NR0LigEem0EpkRGXzNFg">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n1agAgYxEeqJydvM0dw8Cg" name="cont" instance="_n00DEAYxEeqJydvM0dw8Cg"/>
+          <slot xmi:type="uml:Slot" xmi:id="_nnAhcAlvEeqqGsyqwSYe7A" definingFeature="_83NR0LigEem0EpkRGXzNFg">
+            <value xmi:type="uml:InstanceValue" xmi:id="_nnBIgAlvEeqqGsyqwSYe7A" name="cont" instance="_nmPFYAlvEeqqGsyqwSYe7A"/>
           </slot>
-          <slot xmi:type="uml:Slot" xmi:id="_n1bHEAYxEeqJydvM0dw8Cg" definingFeature="_TthoYAT3Eeq1SckFCqvxvA"/>
-          <slot xmi:type="uml:Slot" xmi:id="_n2NKMAYxEeqJydvM0dw8Cg" definingFeature="_zLqqQAT3Eeq1SckFCqvxvA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n2NKMQYxEeqJydvM0dw8Cg" name="elec" instance="_n1bHEQYxEeqJydvM0dw8Cg"/>
+          <slot xmi:type="uml:Slot" xmi:id="_nnBIgQlvEeqqGsyqwSYe7A" definingFeature="_TthoYAT3Eeq1SckFCqvxvA"/>
+          <slot xmi:type="uml:Slot" xmi:id="_nn_Y4glvEeqqGsyqwSYe7A" definingFeature="_zLqqQAT3Eeq1SckFCqvxvA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_nn_Y4wlvEeqqGsyqwSYe7A" name="elec" instance="_nnHPIAlvEeqqGsyqwSYe7A"/>
           </slot>
-          <slot xmi:type="uml:Slot" xmi:id="_n2Z-gQYxEeqJydvM0dw8Cg" definingFeature="_6RePUAT3Eeq1SckFCqvxvA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n2Z-ggYxEeqJydvM0dw8Cg" name="ampl" instance="_n2NxQAYxEeqJydvM0dw8Cg"/>
+          <slot xmi:type="uml:Slot" xmi:id="_noP3kAlvEeqqGsyqwSYe7A" definingFeature="_6RePUAT3Eeq1SckFCqvxvA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_noP3kQlvEeqqGsyqwSYe7A" name="ampl" instance="_nn__8AlvEeqqGsyqwSYe7A"/>
           </slot>
-          <slot xmi:type="uml:Slot" xmi:id="_n3YO4gYxEeqJydvM0dw8Cg" definingFeature="_A26SQAT4Eeq1SckFCqvxvA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n3YO4wYxEeqJydvM0dw8Cg" name="apfil" instance="_n2alkAYxEeqJydvM0dw8Cg"/>
+          <slot xmi:type="uml:Slot" xmi:id="_np6rgwlvEeqqGsyqwSYe7A" definingFeature="_A26SQAT4Eeq1SckFCqvxvA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_np6rhAlvEeqqGsyqwSYe7A" name="apfil" instance="_noQeoAlvEeqqGsyqwSYe7A"/>
           </slot>
-          <slot xmi:type="uml:Slot" xmi:id="_n3h_4gYxEeqJydvM0dw8Cg" definingFeature="_Ozyc0AT4Eeq1SckFCqvxvA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n3h_4wYxEeqJydvM0dw8Cg" name="con" instance="_n3Y18AYxEeqJydvM0dw8Cg"/>
-          </slot>
-        </packagedElement>
-        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_n0WJAAYxEeqJydvM0dw8Cg" name="ECG.bat" classifier="_CzWyELifEem0EpkRGXzNFg">
-          <slot xmi:type="uml:Slot" xmi:id="_n0rgMAYxEeqJydvM0dw8Cg" definingFeature="_3dB9kLifEem0EpkRGXzNFg"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_n00DEAYxEeqJydvM0dw8Cg" name="ECG.cont" classifier="_iaErsLigEem0EpkRGXzNFg">
-          <slot xmi:type="uml:Slot" xmi:id="_n1G-AAYxEeqJydvM0dw8Cg" definingFeature="_lUUPQLigEem0EpkRGXzNFg"/>
-          <slot xmi:type="uml:Slot" xmi:id="_n1NrsAYxEeqJydvM0dw8Cg" definingFeature="_taWiQLigEem0EpkRGXzNFg"/>
-          <slot xmi:type="uml:Slot" xmi:id="_n1ZR4AYxEeqJydvM0dw8Cg" definingFeature="_1r6hAAA3EeqyFesyy2OlGA"/>
-          <slot xmi:type="uml:Slot" xmi:id="_n1Z48AYxEeqJydvM0dw8Cg" definingFeature="_kLCrEAT0Eeq1SckFCqvxvA"/>
-          <slot xmi:type="uml:Slot" xmi:id="_n1Z48QYxEeqJydvM0dw8Cg" definingFeature="_nzsXUAT1Eeq1SckFCqvxvA"/>
-          <slot xmi:type="uml:Slot" xmi:id="_n1agAAYxEeqJydvM0dw8Cg" definingFeature="_tuQRQAT1Eeq1SckFCqvxvA"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_n1bHEQYxEeqJydvM0dw8Cg" name="ECG.elec" classifier="_vDYDkAAzEeqyFesyy2OlGA">
-          <slot xmi:type="uml:Slot" xmi:id="_n1xFUAYxEeqJydvM0dw8Cg" definingFeature="_0rQcoAA0EeqyFesyy2OlGA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n1xFUQYxEeqJydvM0dw8Cg" name="part1" instance="_n1nUUAYxEeqJydvM0dw8Cg"/>
-          </slot>
-          <slot xmi:type="uml:Slot" xmi:id="_n195oQYxEeqJydvM0dw8Cg" definingFeature="_1dl4gAA0EeqyFesyy2OlGA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n195ogYxEeqJydvM0dw8Cg" name="part2" instance="_n1xsYAYxEeqJydvM0dw8Cg"/>
-          </slot>
-          <slot xmi:type="uml:Slot" xmi:id="_n1-gsAYxEeqJydvM0dw8Cg" definingFeature="_egtbIAA2EeqyFesyy2OlGA"/>
-          <slot xmi:type="uml:Slot" xmi:id="_n1-gsQYxEeqJydvM0dw8Cg" definingFeature="_kWSR8AA3EeqyFesyy2OlGA"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_n1nUUAYxEeqJydvM0dw8Cg" name="ECG.elec.part1" classifier="_JQYJwP91EemyFesyy2OlGA">
-          <slot xmi:type="uml:Slot" xmi:id="_n1weQAYxEeqJydvM0dw8Cg" definingFeature="_UlhZ0AA1EeqyFesyy2OlGA"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_n1xsYAYxEeqJydvM0dw8Cg" name="ECG.elec.part2" classifier="_BM4_AP92EemyFesyy2OlGA">
-          <slot xmi:type="uml:Slot" xmi:id="_n195oAYxEeqJydvM0dw8Cg" definingFeature="_TTtzsAA1EeqyFesyy2OlGA"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_n1_HwAYxEeqJydvM0dw8Cg" name="ECG.elec.Connector1">
-          <slot xmi:type="uml:Slot" xmi:id="_n2EnUQYxEeqJydvM0dw8Cg" definingFeature="_UlhZ0AA1EeqyFesyy2OlGA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n2FOYQYxEeqJydvM0dw8Cg" name="partWithPort" instance="_n1nUUAYxEeqJydvM0dw8Cg"/>
-          </slot>
-          <slot xmi:type="uml:Slot" xmi:id="_n2FOYAYxEeqJydvM0dw8Cg" definingFeature="_egtbIAA2EeqyFesyy2OlGA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n2F1cAYxEeqJydvM0dw8Cg" name="partWithPort" instance="_n1bHEQYxEeqJydvM0dw8Cg"/>
+          <slot xmi:type="uml:Slot" xmi:id="_nqLKMAlvEeqqGsyqwSYe7A" definingFeature="_Ozyc0AT4Eeq1SckFCqvxvA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_nqLKMQlvEeqqGsyqwSYe7A" name="con" instance="_np7SkAlvEeqqGsyqwSYe7A"/>
           </slot>
         </packagedElement>
-        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_n2GcgAYxEeqJydvM0dw8Cg" name="ECG.elec.Connector2">
-          <slot xmi:type="uml:Slot" xmi:id="_n2L8EAYxEeqJydvM0dw8Cg" definingFeature="_TTtzsAA1EeqyFesyy2OlGA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n2MjIAYxEeqJydvM0dw8Cg" name="partWithPort" instance="_n1xsYAYxEeqJydvM0dw8Cg"/>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_nl8KcAlvEeqqGsyqwSYe7A" name="ECG.bat" classifier="_CzWyELifEem0EpkRGXzNFg">
+          <slot xmi:type="uml:Slot" xmi:id="_nmJl0AlvEeqqGsyqwSYe7A" definingFeature="_3dB9kLifEem0EpkRGXzNFg"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_nmPFYAlvEeqqGsyqwSYe7A" name="ECG.cont" classifier="_iaErsLigEem0EpkRGXzNFg">
+          <slot xmi:type="uml:Slot" xmi:id="_nmaEgAlvEeqqGsyqwSYe7A" definingFeature="_lUUPQLigEem0EpkRGXzNFg"/>
+          <slot xmi:type="uml:Slot" xmi:id="_nmeV8AlvEeqqGsyqwSYe7A" definingFeature="_taWiQLigEem0EpkRGXzNFg"/>
+          <slot xmi:type="uml:Slot" xmi:id="_nmjOcAlvEeqqGsyqwSYe7A" definingFeature="_1r6hAAA3EeqyFesyy2OlGA"/>
+          <slot xmi:type="uml:Slot" xmi:id="_nmnf4AlvEeqqGsyqwSYe7A" definingFeature="_kLCrEAT0Eeq1SckFCqvxvA"/>
+          <slot xmi:type="uml:Slot" xmi:id="_nmrxUAlvEeqqGsyqwSYe7A" definingFeature="_nzsXUAT1Eeq1SckFCqvxvA"/>
+          <slot xmi:type="uml:Slot" xmi:id="_nmyfAAlvEeqqGsyqwSYe7A" definingFeature="_tuQRQAT1Eeq1SckFCqvxvA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_nnHPIAlvEeqqGsyqwSYe7A" name="ECG.elec" classifier="_vDYDkAAzEeqyFesyy2OlGA">
+          <slot xmi:type="uml:Slot" xmi:id="_nnebgAlvEeqqGsyqwSYe7A" definingFeature="_0rQcoAA0EeqyFesyy2OlGA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_nnfCkAlvEeqqGsyqwSYe7A" name="part1" instance="_nnRAIAlvEeqqGsyqwSYe7A"/>
           </slot>
-          <slot xmi:type="uml:Slot" xmi:id="_n2L8EQYxEeqJydvM0dw8Cg" definingFeature="_egtbIAA2EeqyFesyy2OlGA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n2MjIQYxEeqJydvM0dw8Cg" name="partWithPort" instance="_n1bHEQYxEeqJydvM0dw8Cg"/>
+          <slot xmi:type="uml:Slot" xmi:id="_nntsEAlvEeqqGsyqwSYe7A" definingFeature="_1dl4gAA0EeqyFesyy2OlGA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_nnuTIAlvEeqqGsyqwSYe7A" name="part2" instance="_nnfCkQlvEeqqGsyqwSYe7A"/>
+          </slot>
+          <slot xmi:type="uml:Slot" xmi:id="_nnuTIQlvEeqqGsyqwSYe7A" definingFeature="_egtbIAA2EeqyFesyy2OlGA"/>
+          <slot xmi:type="uml:Slot" xmi:id="_nnx9gAlvEeqqGsyqwSYe7A" definingFeature="_kWSR8AA3EeqyFesyy2OlGA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_nnRAIAlvEeqqGsyqwSYe7A" name="ECG.elec.part1" classifier="_JQYJwP91EemyFesyy2OlGA">
+          <slot xmi:type="uml:Slot" xmi:id="_nnaKEAlvEeqqGsyqwSYe7A" definingFeature="_UlhZ0AA1EeqyFesyy2OlGA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_nnfCkQlvEeqqGsyqwSYe7A" name="ECG.elec.part2" classifier="_BM4_AP92EemyFesyy2OlGA">
+          <slot xmi:type="uml:Slot" xmi:id="_nnpaoAlvEeqqGsyqwSYe7A" definingFeature="_TTtzsAA1EeqyFesyy2OlGA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_nn1n4AlvEeqqGsyqwSYe7A" name="ECG.elec.Connector1">
+          <slot xmi:type="uml:Slot" xmi:id="_nn55UAlvEeqqGsyqwSYe7A" definingFeature="_UlhZ0AA1EeqyFesyy2OlGA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_nn6gYAlvEeqqGsyqwSYe7A" name="partWithPort" instance="_nnRAIAlvEeqqGsyqwSYe7A"/>
+          </slot>
+          <slot xmi:type="uml:Slot" xmi:id="_nn55UQlvEeqqGsyqwSYe7A" definingFeature="_egtbIAA2EeqyFesyy2OlGA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_nn6gYQlvEeqqGsyqwSYe7A" name="partWithPort" instance="_nnHPIAlvEeqqGsyqwSYe7A"/>
           </slot>
         </packagedElement>
-        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_n2NxQAYxEeqJydvM0dw8Cg" name="ECG.ampl" classifier="_P71u4APYEeq1SckFCqvxvA">
-          <slot xmi:type="uml:Slot" xmi:id="_n2ZXcAYxEeqJydvM0dw8Cg" definingFeature="_hoL3UAT1Eeq1SckFCqvxvA"/>
-          <slot xmi:type="uml:Slot" xmi:id="_n2Z-gAYxEeqJydvM0dw8Cg" definingFeature="_ivD_0AT1Eeq1SckFCqvxvA"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_n2alkAYxEeqJydvM0dw8Cg" name="ECG.apfil" classifier="_WFxhkAPYEeq1SckFCqvxvA">
-          <slot xmi:type="uml:Slot" xmi:id="_n2tggAYxEeqJydvM0dw8Cg" definingFeature="_9Zm34APZEeq1SckFCqvxvA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n2tggQYxEeqJydvM0dw8Cg" name="part1" instance="_n2jvgAYxEeqJydvM0dw8Cg"/>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_nn7HcAlvEeqqGsyqwSYe7A" name="ECG.elec.Connector2">
+          <slot xmi:type="uml:Slot" xmi:id="_nn-x0QlvEeqqGsyqwSYe7A" definingFeature="_TTtzsAA1EeqyFesyy2OlGA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_nn_Y4AlvEeqqGsyqwSYe7A" name="partWithPort" instance="_nnfCkQlvEeqqGsyqwSYe7A"/>
           </slot>
-          <slot xmi:type="uml:Slot" xmi:id="_n23RgQYxEeqJydvM0dw8Cg" definingFeature="__8uU4APZEeq1SckFCqvxvA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n23RggYxEeqJydvM0dw8Cg" name="part2" instance="_n2tgggYxEeqJydvM0dw8Cg"/>
-          </slot>
-          <slot xmi:type="uml:Slot" xmi:id="_n3BCgQYxEeqJydvM0dw8Cg" definingFeature="_CpBjEAPaEeq1SckFCqvxvA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n3BpkAYxEeqJydvM0dw8Cg" name="part3" instance="_n234kAYxEeqJydvM0dw8Cg"/>
-          </slot>
-          <slot xmi:type="uml:Slot" xmi:id="_n3BpkQYxEeqJydvM0dw8Cg" definingFeature="_KnOTQAPbEeq1SckFCqvxvA"/>
-          <slot xmi:type="uml:Slot" xmi:id="_n3CQoAYxEeqJydvM0dw8Cg" definingFeature="_LYszgAPbEeq1SckFCqvxvA"/>
-          <slot xmi:type="uml:Slot" xmi:id="_n3CQoQYxEeqJydvM0dw8Cg" definingFeature="_j-EwoAT1Eeq1SckFCqvxvA"/>
-          <slot xmi:type="uml:Slot" xmi:id="_n3CQogYxEeqJydvM0dw8Cg" definingFeature="_ktUcQAT1Eeq1SckFCqvxvA"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_n2jvgAYxEeqJydvM0dw8Cg" name="ECG.apfil.part1" classifier="_8LlbAAPYEeq1SckFCqvxvA">
-          <slot xmi:type="uml:Slot" xmi:id="_n2s5cAYxEeqJydvM0dw8Cg" definingFeature="_DeHikAPbEeq1SckFCqvxvA"/>
-          <slot xmi:type="uml:Slot" xmi:id="_n2s5cQYxEeqJydvM0dw8Cg" definingFeature="_FHUVAAPbEeq1SckFCqvxvA"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_n2tgggYxEeqJydvM0dw8Cg" name="ECG.apfil.part2" classifier="_ADuxQAPZEeq1SckFCqvxvA">
-          <slot xmi:type="uml:Slot" xmi:id="_n22qcAYxEeqJydvM0dw8Cg" definingFeature="_HSLDAAPbEeq1SckFCqvxvA"/>
-          <slot xmi:type="uml:Slot" xmi:id="_n23RgAYxEeqJydvM0dw8Cg" definingFeature="_Id7rgAPbEeq1SckFCqvxvA"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_n234kAYxEeqJydvM0dw8Cg" name="ECG.apfil.part3" classifier="_qgHCUAPZEeq1SckFCqvxvA">
-          <slot xmi:type="uml:Slot" xmi:id="_n3AbcAYxEeqJydvM0dw8Cg" definingFeature="_JIgSgAPbEeq1SckFCqvxvA"/>
-          <slot xmi:type="uml:Slot" xmi:id="_n3BCgAYxEeqJydvM0dw8Cg" definingFeature="_J0LFsAPbEeq1SckFCqvxvA"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_n3C3sAYxEeqJydvM0dw8Cg" name="ECG.apfil.Connector1">
-          <slot xmi:type="uml:Slot" xmi:id="_n3HwMAYxEeqJydvM0dw8Cg" definingFeature="_LYszgAPbEeq1SckFCqvxvA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n3HwMgYxEeqJydvM0dw8Cg" name="partWithPort" instance="_n2alkAYxEeqJydvM0dw8Cg"/>
-          </slot>
-          <slot xmi:type="uml:Slot" xmi:id="_n3HwMQYxEeqJydvM0dw8Cg" definingFeature="_DeHikAPbEeq1SckFCqvxvA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n3HwMwYxEeqJydvM0dw8Cg" name="partWithPort" instance="_n2jvgAYxEeqJydvM0dw8Cg"/>
+          <slot xmi:type="uml:Slot" xmi:id="_nn-x0glvEeqqGsyqwSYe7A" definingFeature="_egtbIAA2EeqyFesyy2OlGA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_nn_Y4QlvEeqqGsyqwSYe7A" name="partWithPort" instance="_nnHPIAlvEeqqGsyqwSYe7A"/>
           </slot>
         </packagedElement>
-        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_n3IXQAYxEeqJydvM0dw8Cg" name="ECG.apfil.Connector2">
-          <slot xmi:type="uml:Slot" xmi:id="_n3MBoQYxEeqJydvM0dw8Cg" definingFeature="_FHUVAAPbEeq1SckFCqvxvA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n3MosQYxEeqJydvM0dw8Cg" name="partWithPort" instance="_n2jvgAYxEeqJydvM0dw8Cg"/>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_nn__8AlvEeqqGsyqwSYe7A" name="ECG.ampl" classifier="_P71u4APYEeq1SckFCqvxvA">
+          <slot xmi:type="uml:Slot" xmi:id="_noIi0AlvEeqqGsyqwSYe7A" definingFeature="_hoL3UAT1Eeq1SckFCqvxvA"/>
+          <slot xmi:type="uml:Slot" xmi:id="_noMNMAlvEeqqGsyqwSYe7A" definingFeature="_ivD_0AT1Eeq1SckFCqvxvA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_noQeoAlvEeqqGsyqwSYe7A" name="ECG.apfil" classifier="_WFxhkAPYEeq1SckFCqvxvA">
+          <slot xmi:type="uml:Slot" xmi:id="_noo5IAlvEeqqGsyqwSYe7A" definingFeature="_9Zm34APZEeq1SckFCqvxvA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_noo5IQlvEeqqGsyqwSYe7A" name="part1" instance="_noZBgAlvEeqqGsyqwSYe7A"/>
           </slot>
-          <slot xmi:type="uml:Slot" xmi:id="_n3MosAYxEeqJydvM0dw8Cg" definingFeature="_HSLDAAPbEeq1SckFCqvxvA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n3NPwAYxEeqJydvM0dw8Cg" name="partWithPort" instance="_n2tgggYxEeqJydvM0dw8Cg"/>
+          <slot xmi:type="uml:Slot" xmi:id="_no4wwAlvEeqqGsyqwSYe7A" definingFeature="__8uU4APZEeq1SckFCqvxvA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_no4wwQlvEeqqGsyqwSYe7A" name="part2" instance="_noo5IglvEeqqGsyqwSYe7A"/>
+          </slot>
+          <slot xmi:type="uml:Slot" xmi:id="_npJPcAlvEeqqGsyqwSYe7A" definingFeature="_CpBjEAPaEeq1SckFCqvxvA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_npJ2gAlvEeqqGsyqwSYe7A" name="part3" instance="_no5X0AlvEeqqGsyqwSYe7A"/>
+          </slot>
+          <slot xmi:type="uml:Slot" xmi:id="_npJ2gQlvEeqqGsyqwSYe7A" definingFeature="_KnOTQAPbEeq1SckFCqvxvA"/>
+          <slot xmi:type="uml:Slot" xmi:id="_npP9IAlvEeqqGsyqwSYe7A" definingFeature="_LYszgAPbEeq1SckFCqvxvA"/>
+          <slot xmi:type="uml:Slot" xmi:id="_npWDwAlvEeqqGsyqwSYe7A" definingFeature="_j-EwoAT1Eeq1SckFCqvxvA"/>
+          <slot xmi:type="uml:Slot" xmi:id="_npbjUAlvEeqqGsyqwSYe7A" definingFeature="_ktUcQAT1Eeq1SckFCqvxvA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_noZBgAlvEeqqGsyqwSYe7A" name="ECG.apfil.part1" classifier="_8LlbAAPYEeq1SckFCqvxvA">
+          <slot xmi:type="uml:Slot" xmi:id="_nohkYAlvEeqqGsyqwSYe7A" definingFeature="_DeHikAPbEeq1SckFCqvxvA"/>
+          <slot xmi:type="uml:Slot" xmi:id="_nolOwAlvEeqqGsyqwSYe7A" definingFeature="_FHUVAAPbEeq1SckFCqvxvA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_noo5IglvEeqqGsyqwSYe7A" name="ECG.apfil.part2" classifier="_ADuxQAPZEeq1SckFCqvxvA">
+          <slot xmi:type="uml:Slot" xmi:id="_noxcAAlvEeqqGsyqwSYe7A" definingFeature="_HSLDAAPbEeq1SckFCqvxvA"/>
+          <slot xmi:type="uml:Slot" xmi:id="_no1GYAlvEeqqGsyqwSYe7A" definingFeature="_Id7rgAPbEeq1SckFCqvxvA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_no5X0AlvEeqqGsyqwSYe7A" name="ECG.apfil.part3" classifier="_qgHCUAPZEeq1SckFCqvxvA">
+          <slot xmi:type="uml:Slot" xmi:id="_npBToAlvEeqqGsyqwSYe7A" definingFeature="_JIgSgAPbEeq1SckFCqvxvA"/>
+          <slot xmi:type="uml:Slot" xmi:id="_npE-AAlvEeqqGsyqwSYe7A" definingFeature="_J0LFsAPbEeq1SckFCqvxvA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_nphC4AlvEeqqGsyqwSYe7A" name="ECG.apfil.Connector1">
+          <slot xmi:type="uml:Slot" xmi:id="_npnwkAlvEeqqGsyqwSYe7A" definingFeature="_LYszgAPbEeq1SckFCqvxvA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_npoXoAlvEeqqGsyqwSYe7A" name="partWithPort" instance="_noQeoAlvEeqqGsyqwSYe7A"/>
+          </slot>
+          <slot xmi:type="uml:Slot" xmi:id="_npnwkQlvEeqqGsyqwSYe7A" definingFeature="_DeHikAPbEeq1SckFCqvxvA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_npoXoQlvEeqqGsyqwSYe7A" name="partWithPort" instance="_noZBgAlvEeqqGsyqwSYe7A"/>
           </slot>
         </packagedElement>
-        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_n3NPwQYxEeqJydvM0dw8Cg" name="ECG.apfil.Connector3">
-          <slot xmi:type="uml:Slot" xmi:id="_n3SIQQYxEeqJydvM0dw8Cg" definingFeature="_Id7rgAPbEeq1SckFCqvxvA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n3SvUQYxEeqJydvM0dw8Cg" name="partWithPort" instance="_n2tgggYxEeqJydvM0dw8Cg"/>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_npo-sAlvEeqqGsyqwSYe7A" name="ECG.apfil.Connector2">
+          <slot xmi:type="uml:Slot" xmi:id="_npvsYAlvEeqqGsyqwSYe7A" definingFeature="_FHUVAAPbEeq1SckFCqvxvA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_npwTcAlvEeqqGsyqwSYe7A" name="partWithPort" instance="_noZBgAlvEeqqGsyqwSYe7A"/>
           </slot>
-          <slot xmi:type="uml:Slot" xmi:id="_n3SvUAYxEeqJydvM0dw8Cg" definingFeature="_JIgSgAPbEeq1SckFCqvxvA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n3TWYAYxEeqJydvM0dw8Cg" name="partWithPort" instance="_n234kAYxEeqJydvM0dw8Cg"/>
-          </slot>
-        </packagedElement>
-        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_n3TWYQYxEeqJydvM0dw8Cg" name="ECG.apfil.Connector4">
-          <slot xmi:type="uml:Slot" xmi:id="_n3Xn0AYxEeqJydvM0dw8Cg" definingFeature="_J0LFsAPbEeq1SckFCqvxvA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n3YO4AYxEeqJydvM0dw8Cg" name="partWithPort" instance="_n234kAYxEeqJydvM0dw8Cg"/>
-          </slot>
-          <slot xmi:type="uml:Slot" xmi:id="_n3Xn0QYxEeqJydvM0dw8Cg" definingFeature="_KnOTQAPbEeq1SckFCqvxvA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n3YO4QYxEeqJydvM0dw8Cg" name="partWithPort" instance="_n2alkAYxEeqJydvM0dw8Cg"/>
+          <slot xmi:type="uml:Slot" xmi:id="_npvsYQlvEeqqGsyqwSYe7A" definingFeature="_HSLDAAPbEeq1SckFCqvxvA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_npwTcQlvEeqqGsyqwSYe7A" name="partWithPort" instance="_noo5IglvEeqqGsyqwSYe7A"/>
           </slot>
         </packagedElement>
-        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_n3Y18AYxEeqJydvM0dw8Cg" name="ECG.con" classifier="_aitm8APYEeq1SckFCqvxvA">
-          <slot xmi:type="uml:Slot" xmi:id="_n3h_4AYxEeqJydvM0dw8Cg" definingFeature="_lycRQAT1Eeq1SckFCqvxvA"/>
-          <slot xmi:type="uml:Slot" xmi:id="_n3h_4QYxEeqJydvM0dw8Cg" definingFeature="_mxFq0AT1Eeq1SckFCqvxvA"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_n3im8AYxEeqJydvM0dw8Cg" name="ECG.Connector1">
-          <slot xmi:type="uml:Slot" xmi:id="_n3m4YQYxEeqJydvM0dw8Cg" definingFeature="_3dB9kLifEem0EpkRGXzNFg">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n3nfcQYxEeqJydvM0dw8Cg" name="partWithPort" instance="_n0WJAAYxEeqJydvM0dw8Cg"/>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_npwTcglvEeqqGsyqwSYe7A" name="ECG.apfil.Connector3">
+          <slot xmi:type="uml:Slot" xmi:id="_np1zAQlvEeqqGsyqwSYe7A" definingFeature="_Id7rgAPbEeq1SckFCqvxvA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_np2aEAlvEeqqGsyqwSYe7A" name="partWithPort" instance="_noo5IglvEeqqGsyqwSYe7A"/>
           </slot>
-          <slot xmi:type="uml:Slot" xmi:id="_n3nfcAYxEeqJydvM0dw8Cg" definingFeature="_lUUPQLigEem0EpkRGXzNFg">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n3nfcgYxEeqJydvM0dw8Cg" name="partWithPort" instance="_n00DEAYxEeqJydvM0dw8Cg"/>
+          <slot xmi:type="uml:Slot" xmi:id="_np1zAglvEeqqGsyqwSYe7A" definingFeature="_JIgSgAPbEeq1SckFCqvxvA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_np2aEQlvEeqqGsyqwSYe7A" name="partWithPort" instance="_no5X0AlvEeqqGsyqwSYe7A"/>
           </slot>
         </packagedElement>
-        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_n3nfcwYxEeqJydvM0dw8Cg" name="ECG.Connector2">
-          <slot xmi:type="uml:Slot" xmi:id="_n3sX8AYxEeqJydvM0dw8Cg" definingFeature="_taWiQLigEem0EpkRGXzNFg">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n3sX8gYxEeqJydvM0dw8Cg" name="partWithPort" instance="_n00DEAYxEeqJydvM0dw8Cg"/>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_np2aEglvEeqqGsyqwSYe7A" name="ECG.apfil.Connector4">
+          <slot xmi:type="uml:Slot" xmi:id="_np6EcQlvEeqqGsyqwSYe7A" definingFeature="_J0LFsAPbEeq1SckFCqvxvA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_np6rgQlvEeqqGsyqwSYe7A" name="partWithPort" instance="_no5X0AlvEeqqGsyqwSYe7A"/>
           </slot>
-          <slot xmi:type="uml:Slot" xmi:id="_n3sX8QYxEeqJydvM0dw8Cg" definingFeature="_CTX1ALigEem0EpkRGXzNFg">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n3s_AAYxEeqJydvM0dw8Cg" name="partWithPort" instance="_nz6EIAYxEeqJydvM0dw8Cg"/>
-          </slot>
-        </packagedElement>
-        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_n3s_AQYxEeqJydvM0dw8Cg" name="ECG.Connector3">
-          <slot xmi:type="uml:Slot" xmi:id="_n3zssAYxEeqJydvM0dw8Cg" definingFeature="_kWSR8AA3EeqyFesyy2OlGA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n3zssgYxEeqJydvM0dw8Cg" name="partWithPort" instance="_n1bHEQYxEeqJydvM0dw8Cg"/>
-          </slot>
-          <slot xmi:type="uml:Slot" xmi:id="_n3zssQYxEeqJydvM0dw8Cg" definingFeature="_1r6hAAA3EeqyFesyy2OlGA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n30TwAYxEeqJydvM0dw8Cg" name="partWithPort" instance="_n00DEAYxEeqJydvM0dw8Cg"/>
+          <slot xmi:type="uml:Slot" xmi:id="_np6rgAlvEeqqGsyqwSYe7A" definingFeature="_KnOTQAPbEeq1SckFCqvxvA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_np6rgglvEeqqGsyqwSYe7A" name="partWithPort" instance="_noQeoAlvEeqqGsyqwSYe7A"/>
           </slot>
         </packagedElement>
-        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_n30TwQYxEeqJydvM0dw8Cg" name="ECG.Connector4">
-          <slot xmi:type="uml:Slot" xmi:id="_n34lMQYxEeqJydvM0dw8Cg" definingFeature="_kLCrEAT0Eeq1SckFCqvxvA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n35MQQYxEeqJydvM0dw8Cg" name="partWithPort" instance="_n00DEAYxEeqJydvM0dw8Cg"/>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_np7SkAlvEeqqGsyqwSYe7A" name="ECG.con" classifier="_aitm8APYEeq1SckFCqvxvA">
+          <slot xmi:type="uml:Slot" xmi:id="_nqD1cAlvEeqqGsyqwSYe7A" definingFeature="_lycRQAT1Eeq1SckFCqvxvA"/>
+          <slot xmi:type="uml:Slot" xmi:id="_nqHf0AlvEeqqGsyqwSYe7A" definingFeature="_mxFq0AT1Eeq1SckFCqvxvA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_nqLKMglvEeqqGsyqwSYe7A" name="ECG.Connector1">
+          <slot xmi:type="uml:Slot" xmi:id="_nqO0kAlvEeqqGsyqwSYe7A" definingFeature="_3dB9kLifEem0EpkRGXzNFg">
+            <value xmi:type="uml:InstanceValue" xmi:id="_nqO0kglvEeqqGsyqwSYe7A" name="partWithPort" instance="_nl8KcAlvEeqqGsyqwSYe7A"/>
           </slot>
-          <slot xmi:type="uml:Slot" xmi:id="_n35MQAYxEeqJydvM0dw8Cg" definingFeature="_6RePUAT3Eeq1SckFCqvxvA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n35MQgYxEeqJydvM0dw8Cg" name="partWithPort" instance="_nz6EIAYxEeqJydvM0dw8Cg"/>
+          <slot xmi:type="uml:Slot" xmi:id="_nqO0kQlvEeqqGsyqwSYe7A" definingFeature="_lUUPQLigEem0EpkRGXzNFg">
+            <value xmi:type="uml:InstanceValue" xmi:id="_nqO0kwlvEeqqGsyqwSYe7A" name="partWithPort" instance="_nmPFYAlvEeqqGsyqwSYe7A"/>
           </slot>
         </packagedElement>
-        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_n35zUAYxEeqJydvM0dw8Cg" name="ECG.Connector5">
-          <slot xmi:type="uml:Slot" xmi:id="_n3-EwQYxEeqJydvM0dw8Cg" definingFeature="_ivD_0AT1Eeq1SckFCqvxvA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n3-EwwYxEeqJydvM0dw8Cg" name="partWithPort" instance="_n2NxQAYxEeqJydvM0dw8Cg"/>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_nqO0lAlvEeqqGsyqwSYe7A" name="ECG.Connector2">
+          <slot xmi:type="uml:Slot" xmi:id="_nqTGAAlvEeqqGsyqwSYe7A" definingFeature="_taWiQLigEem0EpkRGXzNFg">
+            <value xmi:type="uml:InstanceValue" xmi:id="_nqTGAglvEeqqGsyqwSYe7A" name="partWithPort" instance="_nmPFYAlvEeqqGsyqwSYe7A"/>
           </slot>
-          <slot xmi:type="uml:Slot" xmi:id="_n3-EwgYxEeqJydvM0dw8Cg" definingFeature="_j-EwoAT1Eeq1SckFCqvxvA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n3-r0AYxEeqJydvM0dw8Cg" name="partWithPort" instance="_n2alkAYxEeqJydvM0dw8Cg"/>
-          </slot>
-        </packagedElement>
-        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_n3-r0QYxEeqJydvM0dw8Cg" name="ECG.Connector6">
-          <slot xmi:type="uml:Slot" xmi:id="_n4C9QQYxEeqJydvM0dw8Cg" definingFeature="_ktUcQAT1Eeq1SckFCqvxvA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n4C9QwYxEeqJydvM0dw8Cg" name="partWithPort" instance="_n2alkAYxEeqJydvM0dw8Cg"/>
-          </slot>
-          <slot xmi:type="uml:Slot" xmi:id="_n4C9QgYxEeqJydvM0dw8Cg" definingFeature="_lycRQAT1Eeq1SckFCqvxvA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n4C9RAYxEeqJydvM0dw8Cg" name="partWithPort" instance="_n3Y18AYxEeqJydvM0dw8Cg"/>
+          <slot xmi:type="uml:Slot" xmi:id="_nqTGAQlvEeqqGsyqwSYe7A" definingFeature="_CTX1ALigEem0EpkRGXzNFg">
+            <value xmi:type="uml:InstanceValue" xmi:id="_nqTGAwlvEeqqGsyqwSYe7A" name="partWithPort" instance="_nloocAlvEeqqGsyqwSYe7A"/>
           </slot>
         </packagedElement>
-        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_n4DkUAYxEeqJydvM0dw8Cg" name="ECG.Connector7">
-          <slot xmi:type="uml:Slot" xmi:id="_n4H1wAYxEeqJydvM0dw8Cg" definingFeature="_mxFq0AT1Eeq1SckFCqvxvA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n4H1wgYxEeqJydvM0dw8Cg" name="partWithPort" instance="_n3Y18AYxEeqJydvM0dw8Cg"/>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_nqTtEAlvEeqqGsyqwSYe7A" name="ECG.Connector3">
+          <slot xmi:type="uml:Slot" xmi:id="_nqWwYQlvEeqqGsyqwSYe7A" definingFeature="_kWSR8AA3EeqyFesyy2OlGA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_nqXXcQlvEeqqGsyqwSYe7A" name="partWithPort" instance="_nnHPIAlvEeqqGsyqwSYe7A"/>
           </slot>
-          <slot xmi:type="uml:Slot" xmi:id="_n4H1wQYxEeqJydvM0dw8Cg" definingFeature="_nzsXUAT1Eeq1SckFCqvxvA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n4H1wwYxEeqJydvM0dw8Cg" name="partWithPort" instance="_n00DEAYxEeqJydvM0dw8Cg"/>
+          <slot xmi:type="uml:Slot" xmi:id="_nqXXcAlvEeqqGsyqwSYe7A" definingFeature="_1r6hAAA3EeqyFesyy2OlGA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_nqXXcglvEeqqGsyqwSYe7A" name="partWithPort" instance="_nmPFYAlvEeqqGsyqwSYe7A"/>
           </slot>
         </packagedElement>
-        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_n4H1xAYxEeqJydvM0dw8Cg" name="ECG.Connector8">
-          <slot xmi:type="uml:Slot" xmi:id="_n4MuQAYxEeqJydvM0dw8Cg" definingFeature="_tuQRQAT1Eeq1SckFCqvxvA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n4MuQgYxEeqJydvM0dw8Cg" name="partWithPort" instance="_n00DEAYxEeqJydvM0dw8Cg"/>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_nqXXcwlvEeqqGsyqwSYe7A" name="ECG.Connector4">
+          <slot xmi:type="uml:Slot" xmi:id="_nqbB0QlvEeqqGsyqwSYe7A" definingFeature="_kLCrEAT0Eeq1SckFCqvxvA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_nqbB0wlvEeqqGsyqwSYe7A" name="partWithPort" instance="_nmPFYAlvEeqqGsyqwSYe7A"/>
           </slot>
-          <slot xmi:type="uml:Slot" xmi:id="_n4MuQQYxEeqJydvM0dw8Cg" definingFeature="_TthoYAT3Eeq1SckFCqvxvA">
-            <value xmi:type="uml:InstanceValue" xmi:id="_n4MuQwYxEeqJydvM0dw8Cg" name="partWithPort" instance="_nz6EIAYxEeqJydvM0dw8Cg"/>
+          <slot xmi:type="uml:Slot" xmi:id="_nqbB0glvEeqqGsyqwSYe7A" definingFeature="_6RePUAT3Eeq1SckFCqvxvA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_nqbo4AlvEeqqGsyqwSYe7A" name="partWithPort" instance="_nloocAlvEeqqGsyqwSYe7A"/>
+          </slot>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_nqbo4QlvEeqqGsyqwSYe7A" name="ECG.Connector5">
+          <slot xmi:type="uml:Slot" xmi:id="_nqfTQAlvEeqqGsyqwSYe7A" definingFeature="_ivD_0AT1Eeq1SckFCqvxvA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_nqfTQglvEeqqGsyqwSYe7A" name="partWithPort" instance="_nn__8AlvEeqqGsyqwSYe7A"/>
+          </slot>
+          <slot xmi:type="uml:Slot" xmi:id="_nqfTQQlvEeqqGsyqwSYe7A" definingFeature="_j-EwoAT1Eeq1SckFCqvxvA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_nqfTQwlvEeqqGsyqwSYe7A" name="partWithPort" instance="_noQeoAlvEeqqGsyqwSYe7A"/>
+          </slot>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_nqf6UAlvEeqqGsyqwSYe7A" name="ECG.Connector6">
+          <slot xmi:type="uml:Slot" xmi:id="_nqi9oQlvEeqqGsyqwSYe7A" definingFeature="_ktUcQAT1Eeq1SckFCqvxvA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_nqi9owlvEeqqGsyqwSYe7A" name="partWithPort" instance="_noQeoAlvEeqqGsyqwSYe7A"/>
+          </slot>
+          <slot xmi:type="uml:Slot" xmi:id="_nqi9oglvEeqqGsyqwSYe7A" definingFeature="_lycRQAT1Eeq1SckFCqvxvA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_nqjksAlvEeqqGsyqwSYe7A" name="partWithPort" instance="_np7SkAlvEeqqGsyqwSYe7A"/>
+          </slot>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_nqjksQlvEeqqGsyqwSYe7A" name="ECG.Connector7">
+          <slot xmi:type="uml:Slot" xmi:id="_nqnPEQlvEeqqGsyqwSYe7A" definingFeature="_mxFq0AT1Eeq1SckFCqvxvA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_nqnPEwlvEeqqGsyqwSYe7A" name="partWithPort" instance="_np7SkAlvEeqqGsyqwSYe7A"/>
+          </slot>
+          <slot xmi:type="uml:Slot" xmi:id="_nqnPEglvEeqqGsyqwSYe7A" definingFeature="_nzsXUAT1Eeq1SckFCqvxvA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_nqn2IAlvEeqqGsyqwSYe7A" name="partWithPort" instance="_nmPFYAlvEeqqGsyqwSYe7A"/>
+          </slot>
+        </packagedElement>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_nqn2IQlvEeqqGsyqwSYe7A" name="ECG.Connector8">
+          <slot xmi:type="uml:Slot" xmi:id="_nqrggAlvEeqqGsyqwSYe7A" definingFeature="_tuQRQAT1Eeq1SckFCqvxvA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_nqrggglvEeqqGsyqwSYe7A" name="partWithPort" instance="_nmPFYAlvEeqqGsyqwSYe7A"/>
+          </slot>
+          <slot xmi:type="uml:Slot" xmi:id="_nqrggQlvEeqqGsyqwSYe7A" definingFeature="_TthoYAT3Eeq1SckFCqvxvA">
+            <value xmi:type="uml:InstanceValue" xmi:id="_nqrggwlvEeqqGsyqwSYe7A" name="partWithPort" instance="_nloocAlvEeqqGsyqwSYe7A"/>
           </slot>
         </packagedElement>
       </packagedElement>
@@ -1079,30 +1079,39 @@
   <PortAndFlows:FlowPort xmi:id="_nzvaoAT1Eeq1SckFCqvxvA" base_Port="_nzsXUAT1Eeq1SckFCqvxvA" direction="in"/>
   <PortAndFlows:FlowPort xmi:id="_tuSGcAT1Eeq1SckFCqvxvA" base_Port="_tuQRQAT1Eeq1SckFCqvxvA" direction="out"/>
   <PortAndFlows:FlowPort xmi:id="_TtkEoAT3Eeq1SckFCqvxvA" base_Port="_TthoYAT3Eeq1SckFCqvxvA"/>
-  <Core:CHGaResourcePlatform xmi:id="_n0ItoAYxEeqJydvM0dw8Cg" resources="_n0fS8AYxEeqJydvM0dw8Cg _n07-4AYxEeqJydvM0dw8Cg _n1f_kAYxEeqJydvM0dw8Cg _n1rlwAYxEeqJydvM0dw8Cg _n13zAAYxEeqJydvM0dw8Cg _n2EnUAYxEeqJydvM0dw8Cg _n2LVAAYxEeqJydvM0dw8Cg _n2T34AYxEeqJydvM0dw8Cg _n2eP8AYxEeqJydvM0dw8Cg _n2nZ4AYxEeqJydvM0dw8Cg _n2xx8AYxEeqJydvM0dw8Cg _n27i8AYxEeqJydvM0dw8Cg _n3HJIAYxEeqJydvM0dw8Cg _n3MBoAYxEeqJydvM0dw8Cg _n3SIQAYxEeqJydvM0dw8Cg _n3XAwAYxEeqJydvM0dw8Cg _n3cgUAYxEeqJydvM0dw8Cg _n3m4YAYxEeqJydvM0dw8Cg _n3rw4AYxEeqJydvM0dw8Cg _n3zFoAYxEeqJydvM0dw8Cg _n34lMAYxEeqJydvM0dw8Cg _n3-EwAYxEeqJydvM0dw8Cg _n4C9QAYxEeqJydvM0dw8Cg _n4HOsAYxEeqJydvM0dw8Cg _n4MHMAYxEeqJydvM0dw8Cg" base_InstanceSpecification="_nz6EIAYxEeqJydvM0dw8Cg"/>
-  <GRM:Resource xmi:id="_n0fS8AYxEeqJydvM0dw8Cg" base_InstanceSpecification="_n0WJAAYxEeqJydvM0dw8Cg"/>
-  <GRM:Resource xmi:id="_n07-4AYxEeqJydvM0dw8Cg" base_InstanceSpecification="_n00DEAYxEeqJydvM0dw8Cg"/>
-  <GRM:Resource xmi:id="_n1f_kAYxEeqJydvM0dw8Cg" base_InstanceSpecification="_n1bHEQYxEeqJydvM0dw8Cg"/>
-  <GRM:Resource xmi:id="_n1rlwAYxEeqJydvM0dw8Cg" base_InstanceSpecification="_n1nUUAYxEeqJydvM0dw8Cg"/>
-  <GRM:Resource xmi:id="_n13zAAYxEeqJydvM0dw8Cg" base_InstanceSpecification="_n1xsYAYxEeqJydvM0dw8Cg"/>
-  <GRM:Resource xmi:id="_n2EnUAYxEeqJydvM0dw8Cg" base_InstanceSpecification="_n1_HwAYxEeqJydvM0dw8Cg"/>
-  <GRM:Resource xmi:id="_n2LVAAYxEeqJydvM0dw8Cg" base_InstanceSpecification="_n2GcgAYxEeqJydvM0dw8Cg"/>
-  <GRM:Resource xmi:id="_n2T34AYxEeqJydvM0dw8Cg" base_InstanceSpecification="_n2NxQAYxEeqJydvM0dw8Cg"/>
-  <GRM:Resource xmi:id="_n2eP8AYxEeqJydvM0dw8Cg" base_InstanceSpecification="_n2alkAYxEeqJydvM0dw8Cg"/>
-  <GRM:Resource xmi:id="_n2nZ4AYxEeqJydvM0dw8Cg" base_InstanceSpecification="_n2jvgAYxEeqJydvM0dw8Cg"/>
-  <GRM:Resource xmi:id="_n2xx8AYxEeqJydvM0dw8Cg" base_InstanceSpecification="_n2tgggYxEeqJydvM0dw8Cg"/>
-  <GRM:Resource xmi:id="_n27i8AYxEeqJydvM0dw8Cg" base_InstanceSpecification="_n234kAYxEeqJydvM0dw8Cg"/>
-  <GRM:Resource xmi:id="_n3HJIAYxEeqJydvM0dw8Cg" base_InstanceSpecification="_n3C3sAYxEeqJydvM0dw8Cg"/>
-  <GRM:Resource xmi:id="_n3MBoAYxEeqJydvM0dw8Cg" base_InstanceSpecification="_n3IXQAYxEeqJydvM0dw8Cg"/>
-  <GRM:Resource xmi:id="_n3SIQAYxEeqJydvM0dw8Cg" base_InstanceSpecification="_n3NPwQYxEeqJydvM0dw8Cg"/>
-  <GRM:Resource xmi:id="_n3XAwAYxEeqJydvM0dw8Cg" base_InstanceSpecification="_n3TWYQYxEeqJydvM0dw8Cg"/>
-  <GRM:Resource xmi:id="_n3cgUAYxEeqJydvM0dw8Cg" base_InstanceSpecification="_n3Y18AYxEeqJydvM0dw8Cg"/>
-  <GRM:Resource xmi:id="_n3m4YAYxEeqJydvM0dw8Cg" base_InstanceSpecification="_n3im8AYxEeqJydvM0dw8Cg"/>
-  <GRM:Resource xmi:id="_n3rw4AYxEeqJydvM0dw8Cg" base_InstanceSpecification="_n3nfcwYxEeqJydvM0dw8Cg"/>
-  <GRM:Resource xmi:id="_n3zFoAYxEeqJydvM0dw8Cg" base_InstanceSpecification="_n3s_AQYxEeqJydvM0dw8Cg"/>
-  <GRM:Resource xmi:id="_n34lMAYxEeqJydvM0dw8Cg" base_InstanceSpecification="_n30TwQYxEeqJydvM0dw8Cg"/>
-  <GRM:Resource xmi:id="_n3-EwAYxEeqJydvM0dw8Cg" base_InstanceSpecification="_n35zUAYxEeqJydvM0dw8Cg"/>
-  <GRM:Resource xmi:id="_n4C9QAYxEeqJydvM0dw8Cg" base_InstanceSpecification="_n3-r0QYxEeqJydvM0dw8Cg"/>
-  <GRM:Resource xmi:id="_n4HOsAYxEeqJydvM0dw8Cg" base_InstanceSpecification="_n4DkUAYxEeqJydvM0dw8Cg"/>
-  <GRM:Resource xmi:id="_n4MHMAYxEeqJydvM0dw8Cg" base_InstanceSpecification="_n4H1xAYxEeqJydvM0dw8Cg"/>
+  <StateBasedComponents:SimpleStochasticBehavior xmi:id="_6uFAUAlsEeqqGsyqwSYe7A" base_Class="_vDYDkAAzEeqyFesyy2OlGA" failureOccurrence="exp(1.0E-6)"/>
+  <StateBasedComponents:SimpleStochasticBehavior xmi:id="__MGDwAlsEeqqGsyqwSYe7A" base_Class="_JQYJwP91EemyFesyy2OlGA" failureOccurrence="exp(1.0E-6)"/>
+  <StateBasedComponents:SimpleStochasticBehavior xmi:id="_AjvMIAltEeqqGsyqwSYe7A" base_Class="_BM4_AP92EemyFesyy2OlGA" failureOccurrence="exp(1.0E-6)"/>
+  <StateBasedComponents:SimpleStochasticBehavior xmi:id="_CEcJ4AltEeqqGsyqwSYe7A" base_Class="_P71u4APYEeq1SckFCqvxvA" failureOccurrence="exp(1.0E-6)"/>
+  <StateBasedComponents:SimpleStochasticBehavior xmi:id="_Dp9WMAltEeqqGsyqwSYe7A" base_Class="_8LlbAAPYEeq1SckFCqvxvA" failureOccurrence="exp(1.0E-6)"/>
+  <StateBasedComponents:SimpleStochasticBehavior xmi:id="_FbBrMAltEeqqGsyqwSYe7A" base_Class="_ADuxQAPZEeq1SckFCqvxvA" failureOccurrence="exp(1.0E-6)"/>
+  <StateBasedComponents:SimpleStochasticBehavior xmi:id="_HHYfUAltEeqqGsyqwSYe7A" base_Class="_qgHCUAPZEeq1SckFCqvxvA" failureOccurrence="exp(1.0E-6)"/>
+  <StateBasedComponents:SimpleStochasticBehavior xmi:id="_I88SwAltEeqqGsyqwSYe7A" base_Class="_WFxhkAPYEeq1SckFCqvxvA" failureOccurrence="exp(1.0E-6)"/>
+  <StateBasedComponents:SimpleStochasticBehavior xmi:id="_LMmoQAltEeqqGsyqwSYe7A" base_Class="_aitm8APYEeq1SckFCqvxvA" failureOccurrence="exp(1.0E-6)"/>
+  <Core:CHGaResourcePlatform xmi:id="_nlznkAlvEeqqGsyqwSYe7A" resources="_nmC4IAlvEeqqGsyqwSYe7A _nmT94AlvEeqqGsyqwSYe7A _nnK5gAlvEeqqGsyqwSYe7A _nnUqgAlvEeqqGsyqwSYe7A _nnjUAAlvEeqqGsyqwSYe7A _nn5SQAlvEeqqGsyqwSYe7A _nn-x0AlvEeqqGsyqwSYe7A _noDDQAlvEeqqGsyqwSYe7A _noTh8AlvEeqqGsyqwSYe7A _nocr4AlvEeqqGsyqwSYe7A _nosjgAlvEeqqGsyqwSYe7A _no8bIAlvEeqqGsyqwSYe7A _npnJgAlvEeqqGsyqwSYe7A _npvFUAlvEeqqGsyqwSYe7A _np1zAAlvEeqqGsyqwSYe7A _np6EcAlvEeqqGsyqwSYe7A _np-88AlvEeqqGsyqwSYe7A _nqONgAlvEeqqGsyqwSYe7A _nqSe8AlvEeqqGsyqwSYe7A _nqWwYAlvEeqqGsyqwSYe7A _nqbB0AlvEeqqGsyqwSYe7A _nqesMAlvEeqqGsyqwSYe7A _nqi9oAlvEeqqGsyqwSYe7A _nqnPEAlvEeqqGsyqwSYe7A _nqq5cAlvEeqqGsyqwSYe7A" base_InstanceSpecification="_nloocAlvEeqqGsyqwSYe7A"/>
+  <GRM:Resource xmi:id="_nmC4IAlvEeqqGsyqwSYe7A" base_InstanceSpecification="_nl8KcAlvEeqqGsyqwSYe7A"/>
+  <GRM:Resource xmi:id="_nmT94AlvEeqqGsyqwSYe7A" base_InstanceSpecification="_nmPFYAlvEeqqGsyqwSYe7A"/>
+  <GRM:Resource xmi:id="_nnK5gAlvEeqqGsyqwSYe7A" base_InstanceSpecification="_nnHPIAlvEeqqGsyqwSYe7A"/>
+  <GRM:Resource xmi:id="_nnUqgAlvEeqqGsyqwSYe7A" base_InstanceSpecification="_nnRAIAlvEeqqGsyqwSYe7A"/>
+  <GRM:Resource xmi:id="_nnjUAAlvEeqqGsyqwSYe7A" base_InstanceSpecification="_nnfCkQlvEeqqGsyqwSYe7A"/>
+  <GRM:Resource xmi:id="_nn5SQAlvEeqqGsyqwSYe7A" base_InstanceSpecification="_nn1n4AlvEeqqGsyqwSYe7A"/>
+  <GRM:Resource xmi:id="_nn-x0AlvEeqqGsyqwSYe7A" base_InstanceSpecification="_nn7HcAlvEeqqGsyqwSYe7A"/>
+  <GRM:Resource xmi:id="_noDDQAlvEeqqGsyqwSYe7A" base_InstanceSpecification="_nn__8AlvEeqqGsyqwSYe7A"/>
+  <GRM:Resource xmi:id="_noTh8AlvEeqqGsyqwSYe7A" base_InstanceSpecification="_noQeoAlvEeqqGsyqwSYe7A"/>
+  <GRM:Resource xmi:id="_nocr4AlvEeqqGsyqwSYe7A" base_InstanceSpecification="_noZBgAlvEeqqGsyqwSYe7A"/>
+  <GRM:Resource xmi:id="_nosjgAlvEeqqGsyqwSYe7A" base_InstanceSpecification="_noo5IglvEeqqGsyqwSYe7A"/>
+  <GRM:Resource xmi:id="_no8bIAlvEeqqGsyqwSYe7A" base_InstanceSpecification="_no5X0AlvEeqqGsyqwSYe7A"/>
+  <GRM:Resource xmi:id="_npnJgAlvEeqqGsyqwSYe7A" base_InstanceSpecification="_nphC4AlvEeqqGsyqwSYe7A"/>
+  <GRM:Resource xmi:id="_npvFUAlvEeqqGsyqwSYe7A" base_InstanceSpecification="_npo-sAlvEeqqGsyqwSYe7A"/>
+  <GRM:Resource xmi:id="_np1zAAlvEeqqGsyqwSYe7A" base_InstanceSpecification="_npwTcglvEeqqGsyqwSYe7A"/>
+  <GRM:Resource xmi:id="_np6EcAlvEeqqGsyqwSYe7A" base_InstanceSpecification="_np2aEglvEeqqGsyqwSYe7A"/>
+  <GRM:Resource xmi:id="_np-88AlvEeqqGsyqwSYe7A" base_InstanceSpecification="_np7SkAlvEeqqGsyqwSYe7A"/>
+  <GRM:Resource xmi:id="_nqONgAlvEeqqGsyqwSYe7A" base_InstanceSpecification="_nqLKMglvEeqqGsyqwSYe7A"/>
+  <GRM:Resource xmi:id="_nqSe8AlvEeqqGsyqwSYe7A" base_InstanceSpecification="_nqO0lAlvEeqqGsyqwSYe7A"/>
+  <GRM:Resource xmi:id="_nqWwYAlvEeqqGsyqwSYe7A" base_InstanceSpecification="_nqTtEAlvEeqqGsyqwSYe7A"/>
+  <GRM:Resource xmi:id="_nqbB0AlvEeqqGsyqwSYe7A" base_InstanceSpecification="_nqXXcwlvEeqqGsyqwSYe7A"/>
+  <GRM:Resource xmi:id="_nqesMAlvEeqqGsyqwSYe7A" base_InstanceSpecification="_nqbo4QlvEeqqGsyqwSYe7A"/>
+  <GRM:Resource xmi:id="_nqi9oAlvEeqqGsyqwSYe7A" base_InstanceSpecification="_nqf6UAlvEeqqGsyqwSYe7A"/>
+  <GRM:Resource xmi:id="_nqnPEAlvEeqqGsyqwSYe7A" base_InstanceSpecification="_nqjksQlvEeqqGsyqwSYe7A"/>
+  <GRM:Resource xmi:id="_nqq5cAlvEeqqGsyqwSYe7A" base_InstanceSpecification="_nqn2IQlvEeqqGsyqwSYe7A"/>
 </xmi:XMI>

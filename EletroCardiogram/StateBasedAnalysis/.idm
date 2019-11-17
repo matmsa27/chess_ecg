@@ -29,13 +29,21 @@
         <TransientDuration xsi:type="Deterministic"/>
       </Faults>
       <Faults xsi:type="ExternalFault" Name="ECG.cont_xft_level_in_controller.failure" Source="ECG.bat_send_level.failure"/>
+      <Faults xsi:type="ExternalFault" Name="ECG.cont_xft_receive_electrode_signal.failure" Source="ECG.elec_send_signal_to_controller.failure"/>
+      <Faults xsi:type="ExternalFault" Name="ECG.cont_xft_receive_signal_from_converter.failure" Source="ECG.con_send_signal_to_controller.failure"/>
       <FaultsGeneratesErrors Source="ECG.cont_ift" Destination="ECG.cont_e_level_out_controller ECG.cont_e_send_signal_to_amplifier ECG.cont_e_send_signal_to_ecg" PropagationProbability="1.0" PropagationLogicStringFormat="ECG.cont_ift" Name="ECG.cont_fge_1">
         <ActivationDelay xsi:type="Deterministic"/>
         <PropagationLogic xsi:type="FaultsExpressionFaultNode" faultsGenerateErrors="/0/@components.1/@FaultsGeneratesErrors.0" Fault="ECG.cont_ift"/>
       </FaultsGeneratesErrors>
-      <FaultsGeneratesErrors Source="ECG.cont_xft_level_in_controller.failure" Destination="ECG.cont_e_level_out_controller ECG.cont_e_send_signal_to_amplifier ECG.cont_e_send_signal_to_ecg" PropagationProbability="1.0" PropagationLogicStringFormat="ECG.cont_xft_level_in_controller.failure" Name="ECG.cont_fge_2">
+      <FaultsGeneratesErrors Source="ECG.cont_xft_level_in_controller.failure ECG.cont_xft_receive_electrode_signal.failure ECG.cont_xft_receive_signal_from_converter.failure" Destination="ECG.cont_e_level_out_controller ECG.cont_e_send_signal_to_amplifier ECG.cont_e_send_signal_to_ecg" PropagationProbability="1.0" PropagationLogicStringFormat="((ECG.cont_xft_level_in_controller.failure OR ECG.cont_xft_receive_electrode_signal.failure) OR ECG.cont_xft_receive_signal_from_converter.failure)" Name="ECG.cont_fge_2">
         <ActivationDelay xsi:type="Deterministic"/>
-        <PropagationLogic xsi:type="FaultsExpressionFaultNode" faultsGenerateErrors="/0/@components.1/@FaultsGeneratesErrors.1" Fault="ECG.cont_xft_level_in_controller.failure"/>
+        <PropagationLogic xsi:type="FaultsExpressionOrNode" faultsGenerateErrors="/0/@components.1/@FaultsGeneratesErrors.1">
+          <FaultsExpression1 xsi:type="FaultsExpressionOrNode" faultsGenerateErrors="/0/@components.1/@FaultsGeneratesErrors.1">
+            <FaultsExpression1 xsi:type="FaultsExpressionFaultNode" faultsGenerateErrors="/0/@components.1/@FaultsGeneratesErrors.1" Fault="ECG.cont_xft_level_in_controller.failure"/>
+            <FaultsExpression2 xsi:type="FaultsExpressionFaultNode" faultsGenerateErrors="/0/@components.1/@FaultsGeneratesErrors.1" Fault="ECG.cont_xft_receive_electrode_signal.failure"/>
+          </FaultsExpression1>
+          <FaultsExpression2 xsi:type="FaultsExpressionFaultNode" faultsGenerateErrors="/0/@components.1/@FaultsGeneratesErrors.1" Fault="ECG.cont_xft_receive_signal_from_converter.failure"/>
+        </PropagationLogic>
       </FaultsGeneratesErrors>
       <ErrorsGeneratesFailures Name="ECG.cont_epf_1" PropagationLogicStringFormat="ECG.cont_e_level_out_controller" Source="ECG.cont_e_level_out_controller" Destination="ECG.cont_level_out_controller.failure">
         <PropagationLogic xsi:type="ErrorsExpressionErrorNode" errorPropagation="/0/@components.1/@ErrorsGeneratesFailures.0" Error="ECG.cont_e_level_out_controller"/>
@@ -50,13 +58,92 @@
         <PropagationDelay xsi:type="Deterministic"/>
       </ErrorsGeneratesFailures>
     </components>
-    <components Name="ECG.elec.part1"/>
-    <components Name="ECG.elec.part2"/>
-    <components Name="ECG.ampl"/>
-    <components Name="ECG.apfil.part1"/>
-    <components Name="ECG.apfil.part2"/>
-    <components Name="ECG.apfil.part3"/>
-    <components Name="ECG.con"/>
+    <components Name="ECG.elec">
+      <FailureModes Name="ECG.elec_send_signal_refference.failure"/>
+      <FailureModes Name="ECG.elec_send_signal_to_controller.failure"/>
+      <Errors Name="ECG.elec_e_send_signal_refference"/>
+      <Errors Name="ECG.elec_e_send_signal_to_controller"/>
+      <Faults xsi:type="InternalFault" Name="ECG.elec_ift" PermanentProbability="1.0">
+        <Occurrence xsi:type="Exponential" Rate="1.0E-6"/>
+        <TransientDuration xsi:type="Deterministic"/>
+      </Faults>
+      <FaultsGeneratesErrors Source="ECG.elec_ift" Destination="ECG.elec_e_send_signal_refference ECG.elec_e_send_signal_to_controller" PropagationProbability="1.0" PropagationLogicStringFormat="ECG.elec_ift" Name="ECG.elec_fge_1">
+        <ActivationDelay xsi:type="Deterministic"/>
+        <PropagationLogic xsi:type="FaultsExpressionFaultNode" faultsGenerateErrors="/0/@components.2/@FaultsGeneratesErrors.0" Fault="ECG.elec_ift"/>
+      </FaultsGeneratesErrors>
+      <ErrorsGeneratesFailures Name="ECG.elec_epf_1" PropagationLogicStringFormat="ECG.elec_e_send_signal_refference" Source="ECG.elec_e_send_signal_refference" Destination="ECG.elec_send_signal_refference.failure">
+        <PropagationLogic xsi:type="ErrorsExpressionErrorNode" errorPropagation="/0/@components.2/@ErrorsGeneratesFailures.0" Error="ECG.elec_e_send_signal_refference"/>
+        <PropagationDelay xsi:type="Deterministic"/>
+      </ErrorsGeneratesFailures>
+      <ErrorsGeneratesFailures Name="ECG.elec_epf_2" PropagationLogicStringFormat="ECG.elec_e_send_signal_to_controller" Source="ECG.elec_e_send_signal_to_controller" Destination="ECG.elec_send_signal_to_controller.failure">
+        <PropagationLogic xsi:type="ErrorsExpressionErrorNode" errorPropagation="/0/@components.2/@ErrorsGeneratesFailures.1" Error="ECG.elec_e_send_signal_to_controller"/>
+        <PropagationDelay xsi:type="Deterministic"/>
+      </ErrorsGeneratesFailures>
+    </components>
+    <components Name="ECG.ampl">
+      <FailureModes Name="ECG.ampl_send_signal_to_filters.failure"/>
+      <Errors Name="ECG.ampl_e_send_signal_to_filters"/>
+      <Faults xsi:type="InternalFault" Name="ECG.ampl_ift" PermanentProbability="1.0">
+        <Occurrence xsi:type="Exponential" Rate="1.0E-6"/>
+        <TransientDuration xsi:type="Deterministic"/>
+      </Faults>
+      <FaultsGeneratesErrors Source="ECG.ampl_ift" Destination="ECG.ampl_e_send_signal_to_filters" PropagationProbability="1.0" PropagationLogicStringFormat="ECG.ampl_ift" Name="ECG.ampl_fge_1">
+        <ActivationDelay xsi:type="Deterministic"/>
+        <PropagationLogic xsi:type="FaultsExpressionFaultNode" faultsGenerateErrors="/0/@components.3/@FaultsGeneratesErrors.0" Fault="ECG.ampl_ift"/>
+      </FaultsGeneratesErrors>
+      <ErrorsGeneratesFailures Name="ECG.ampl_epf_1" PropagationLogicStringFormat="ECG.ampl_e_send_signal_to_filters" Source="ECG.ampl_e_send_signal_to_filters" Destination="ECG.ampl_send_signal_to_filters.failure">
+        <PropagationLogic xsi:type="ErrorsExpressionErrorNode" errorPropagation="/0/@components.3/@ErrorsGeneratesFailures.0" Error="ECG.ampl_e_send_signal_to_filters"/>
+        <PropagationDelay xsi:type="Deterministic"/>
+      </ErrorsGeneratesFailures>
+    </components>
+    <components Name="ECG.apfil">
+      <FailureModes Name="ECG.apfil_filters_applied.failure"/>
+      <FailureModes Name="ECG.apfil_send_signal_to_converter.failure"/>
+      <Errors Name="ECG.apfil_e_filters_applied"/>
+      <Errors Name="ECG.apfil_e_send_signal_to_converter"/>
+      <Faults xsi:type="InternalFault" Name="ECG.apfil_ift" PermanentProbability="1.0">
+        <Occurrence xsi:type="Exponential" Rate="1.0E-6"/>
+        <TransientDuration xsi:type="Deterministic"/>
+      </Faults>
+      <Faults xsi:type="ExternalFault" Name="ECG.apfil_xft_receive_signal.failure" Source="ECG.ampl_send_signal_to_filters.failure"/>
+      <FaultsGeneratesErrors Source="ECG.apfil_ift" Destination="ECG.apfil_e_filters_applied ECG.apfil_e_send_signal_to_converter" PropagationProbability="1.0" PropagationLogicStringFormat="ECG.apfil_ift" Name="ECG.apfil_fge_1">
+        <ActivationDelay xsi:type="Deterministic"/>
+        <PropagationLogic xsi:type="FaultsExpressionFaultNode" faultsGenerateErrors="/0/@components.4/@FaultsGeneratesErrors.0" Fault="ECG.apfil_ift"/>
+      </FaultsGeneratesErrors>
+      <FaultsGeneratesErrors Source="ECG.apfil_xft_receive_signal.failure" Destination="ECG.apfil_e_filters_applied ECG.apfil_e_send_signal_to_converter" PropagationProbability="1.0" PropagationLogicStringFormat="ECG.apfil_xft_receive_signal.failure" Name="ECG.apfil_fge_2">
+        <ActivationDelay xsi:type="Deterministic"/>
+        <PropagationLogic xsi:type="FaultsExpressionFaultNode" faultsGenerateErrors="/0/@components.4/@FaultsGeneratesErrors.1" Fault="ECG.apfil_xft_receive_signal.failure"/>
+      </FaultsGeneratesErrors>
+      <ErrorsGeneratesFailures Name="ECG.apfil_epf_1" PropagationLogicStringFormat="ECG.apfil_e_filters_applied" Source="ECG.apfil_e_filters_applied" Destination="ECG.apfil_filters_applied.failure">
+        <PropagationLogic xsi:type="ErrorsExpressionErrorNode" errorPropagation="/0/@components.4/@ErrorsGeneratesFailures.0" Error="ECG.apfil_e_filters_applied"/>
+        <PropagationDelay xsi:type="Deterministic"/>
+      </ErrorsGeneratesFailures>
+      <ErrorsGeneratesFailures Name="ECG.apfil_epf_2" PropagationLogicStringFormat="ECG.apfil_e_send_signal_to_converter" Source="ECG.apfil_e_send_signal_to_converter" Destination="ECG.apfil_send_signal_to_converter.failure">
+        <PropagationLogic xsi:type="ErrorsExpressionErrorNode" errorPropagation="/0/@components.4/@ErrorsGeneratesFailures.1" Error="ECG.apfil_e_send_signal_to_converter"/>
+        <PropagationDelay xsi:type="Deterministic"/>
+      </ErrorsGeneratesFailures>
+    </components>
+    <components Name="ECG.con">
+      <FailureModes Name="ECG.con_send_signal_to_controller.failure"/>
+      <Errors Name="ECG.con_e_send_signal_to_controller"/>
+      <Faults xsi:type="InternalFault" Name="ECG.con_ift" PermanentProbability="1.0">
+        <Occurrence xsi:type="Exponential" Rate="1.0E-6"/>
+        <TransientDuration xsi:type="Deterministic"/>
+      </Faults>
+      <Faults xsi:type="ExternalFault" Name="ECG.con_xft_receive_signal_to_converter.failure" Source="ECG.apfil_send_signal_to_converter.failure"/>
+      <FaultsGeneratesErrors Source="ECG.con_ift" Destination="ECG.con_e_send_signal_to_controller" PropagationProbability="1.0" PropagationLogicStringFormat="ECG.con_ift" Name="ECG.con_fge_1">
+        <ActivationDelay xsi:type="Deterministic"/>
+        <PropagationLogic xsi:type="FaultsExpressionFaultNode" faultsGenerateErrors="/0/@components.5/@FaultsGeneratesErrors.0" Fault="ECG.con_ift"/>
+      </FaultsGeneratesErrors>
+      <FaultsGeneratesErrors Source="ECG.con_xft_receive_signal_to_converter.failure" Destination="ECG.con_e_send_signal_to_controller" PropagationProbability="1.0" PropagationLogicStringFormat="ECG.con_xft_receive_signal_to_converter.failure" Name="ECG.con_fge_2">
+        <ActivationDelay xsi:type="Deterministic"/>
+        <PropagationLogic xsi:type="FaultsExpressionFaultNode" faultsGenerateErrors="/0/@components.5/@FaultsGeneratesErrors.1" Fault="ECG.con_xft_receive_signal_to_converter.failure"/>
+      </FaultsGeneratesErrors>
+      <ErrorsGeneratesFailures Name="ECG.con_epf_1" PropagationLogicStringFormat="ECG.con_e_send_signal_to_controller" Source="ECG.con_e_send_signal_to_controller" Destination="ECG.con_send_signal_to_controller.failure">
+        <PropagationLogic xsi:type="ErrorsExpressionErrorNode" errorPropagation="/0/@components.5/@ErrorsGeneratesFailures.0" Error="ECG.con_e_send_signal_to_controller"/>
+        <PropagationDelay xsi:type="Deterministic"/>
+      </ErrorsGeneratesFailures>
+    </components>
     <measures xsi:type="Reliability" Name="ECG_Analysis" target="ECG.cont_level_out_controller.failure ECG.cont_send_signal_to_ecg.failure">
       <evaluations xsi:type="InstantOfTime" timePoint="21600.0"/>
     </measures>
@@ -74,6 +161,4 @@
       </EX>
     </When>
   </RepairActivity>
-  <Component Name="ECG.elec"/>
-  <Component Name="ECG.apfil"/>
 </xmi:XMI>
