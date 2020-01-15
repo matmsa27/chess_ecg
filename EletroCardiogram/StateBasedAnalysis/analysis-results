@@ -26,5 +26,5 @@ Variables Setting:
 
  Rew measure:
 
- -> ECG_Analysis  9.500000e-01	 [ 9.339611e-01 , 9.660389e-01 ]  (Half-lenght confidence interval = 1.69%) (Number of samples: 1000)
+ -> ECG_Analysis  8.830000e-01	 [ 8.593462e-01 , 9.066538e-01 ]  (Half-lenght confidence interval = 2.68%) (Number of samples: 1000)
 
