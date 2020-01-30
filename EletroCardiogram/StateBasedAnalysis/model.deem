@@ -39,8 +39,8 @@ PLACE:"ECG__cont_ECG__cont_e_send_signal_to_amplifier",1500,1500,0,0;
 PLACE:"ECG__cont_ECG__cont_e_send_signal_to_amplifier_detected",1500,1500,0,0;
 PLACE:"ECG__cont_ECG__cont_e_send_signal_to_ecg",1500,1500,0,0;
 PLACE:"ECG__cont_ECG__cont_e_send_signal_to_ecg_detected",1500,1500,0,0;
-PLACE:"ECG__elec_ECG__elec_e_send_signal_refference",1500,1500,0,0;
-PLACE:"ECG__elec_ECG__elec_e_send_signal_refference_detected",1500,1500,0,0;
+PLACE:"ECG__elec_ECG__elec_e_channel_1",1500,1500,0,0;
+PLACE:"ECG__elec_ECG__elec_e_channel_1_detected",1500,1500,0,0;
 PLACE:"ECG__elec_ECG__elec_e_send_signal_to_controller",1500,1500,0,0;
 PLACE:"ECG__elec_ECG__elec_e_send_signal_to_controller_detected",1500,1500,0,0;
 PLACE:"ECG__ampl_ECG__ampl_e_send_signal_to_filters",1500,1500,0,0;
@@ -55,7 +55,7 @@ PLACE:"ECG__bat_ECG__bat_send_level__failure",1500,1500,0,0;
 PLACE:"ECG__cont_ECG__cont_level_out_controller__failure",1500,1500,0,0;
 PLACE:"ECG__cont_ECG__cont_send_signal_to_amplifier__failure",1500,1500,0,0;
 PLACE:"ECG__cont_ECG__cont_send_signal_to_ecg__failure",1500,1500,0,0;
-PLACE:"ECG__elec_ECG__elec_send_signal_refference__failure",1500,1500,0,0;
+PLACE:"ECG__elec_ECG__elec_channel_1__failure",1500,1500,0,0;
 PLACE:"ECG__elec_ECG__elec_send_signal_to_controller__failure",1500,1500,0,0;
 PLACE:"ECG__ampl_ECG__ampl_send_signal_to_filters__failure",1500,1500,0,0;
 PLACE:"ECG__apfil_ECG__apfil_filters_applied__failure",1500,1500,0,0;
@@ -93,7 +93,7 @@ PLACE:"ECG__cont_ECG__cont_epf_3_blocker",1500,1500,0,0;
 PLACE:"ECG__cont_e_send_signal_to_ecg_sel_ECG__cont_epf_3",1500,1500,0,0;
 PLACE:"ECG__elec_ECG__elec_epf_1_tmp",1500,1500,0,0;
 PLACE:"ECG__elec_ECG__elec_epf_1_blocker",1500,1500,0,0;
-PLACE:"ECG__elec_e_send_signal_refference_sel_ECG__elec_epf_1",1500,1500,0,0;
+PLACE:"ECG__elec_e_channel_1_sel_ECG__elec_epf_1",1500,1500,0,0;
 PLACE:"ECG__elec_ECG__elec_epf_2_tmp",1500,1500,0,0;
 PLACE:"ECG__elec_ECG__elec_epf_2_blocker",1500,1500,0,0;
 PLACE:"ECG__elec_e_send_signal_to_controller_sel_ECG__elec_epf_2",1500,1500,0,0;
@@ -269,7 +269,7 @@ TRANS:"ECG__cont_ECG__cont_fge_2_caseskip",1500,1500,V,Immediate,7,1,'FALSE', '0
  (
 0.0
   );
-TRANS:"ECG__elec_ECG__elec_fge_1",1500,1500,V,Immediate,5,1,'((MARK(ECG__elec_ECG__elec_ift)>0.0)AND((MARK(ECG__elec_ECG__elec_fge_1_tmp)=0.0)AND((MARK(ECG__elec_ECG__elec_send_signal_refference__failure)=0.0)AND(MARK(ECG__elec_ECG__elec_send_signal_to_controller__failure)=0.0))))AND((MARK(ECG__elec_ECG__elec_e_send_signal_to_controller)=0.0)OR(MARK(ECG__elec_ECG__elec_e_send_signal_refference)=0.0))', '1.0',
+TRANS:"ECG__elec_ECG__elec_fge_1",1500,1500,V,Immediate,5,1,'((MARK(ECG__elec_ECG__elec_ift)>0.0)AND((MARK(ECG__elec_ECG__elec_fge_1_tmp)=0.0)AND((MARK(ECG__elec_ECG__elec_channel_1__failure)=0.0)AND(MARK(ECG__elec_ECG__elec_send_signal_to_controller__failure)=0.0))))AND((MARK(ECG__elec_ECG__elec_e_send_signal_to_controller)=0.0)OR(MARK(ECG__elec_ECG__elec_e_channel_1)=0.0))', '1.0',
  (
 1.0
   );
@@ -405,7 +405,7 @@ TRANS:"ECG__cont_e_send_signal_to_ecg_choice_ECG__cont_epf_3",1500,1500,V,Immedi
  (
 1.0
   );
-TRANS:"ECG__elec_ECG__elec_epf_1",1500,1500,V,Immediate,5,1,'((MARK(ECG__elec_ECG__elec_e_send_signal_refference)>0.0)AND((MARK(ECG__elec_ECG__elec_epf_1_tmp)=0.0)AND((MARK(ECG__elec_ECG__elec_send_signal_refference__failure)=0.0)AND(MARK(ECG__elec_ECG__elec_send_signal_to_controller__failure)=0.0))))AND(MARK(ECG__elec_ECG__elec_send_signal_refference__failure)=0.0)', '1.0',
+TRANS:"ECG__elec_ECG__elec_epf_1",1500,1500,V,Immediate,5,1,'((MARK(ECG__elec_ECG__elec_e_channel_1)>0.0)AND((MARK(ECG__elec_ECG__elec_epf_1_tmp)=0.0)AND((MARK(ECG__elec_ECG__elec_channel_1__failure)=0.0)AND(MARK(ECG__elec_ECG__elec_send_signal_to_controller__failure)=0.0))))AND(MARK(ECG__elec_ECG__elec_channel_1__failure)=0.0)', '1.0',
  (
 1.0
   );
@@ -417,11 +417,11 @@ TRANS:"ECG__elec_ECG__elec_epf_1_caseskip",1500,1500,V,Immediate,7,1,'', '0.0',
  (
 0.0
   );
-TRANS:"ECG__elec_e_send_signal_refference_choice_ECG__elec_epf_1",1500,1500,V,Immediate,7,1,'((MARK(ECG__elec_ECG__elec_e_send_signal_refference)>0.0)AND((MARK(ECG__elec_ECG__elec_epf_1_tmp)=0.0)AND((MARK(ECG__elec_ECG__elec_send_signal_refference__failure)=0.0)AND(MARK(ECG__elec_ECG__elec_send_signal_to_controller__failure)=0.0))))AND(MARK(ECG__elec_ECG__elec_send_signal_refference__failure)=0.0)', '1.0',
+TRANS:"ECG__elec_e_channel_1_choice_ECG__elec_epf_1",1500,1500,V,Immediate,7,1,'((MARK(ECG__elec_ECG__elec_e_channel_1)>0.0)AND((MARK(ECG__elec_ECG__elec_epf_1_tmp)=0.0)AND((MARK(ECG__elec_ECG__elec_channel_1__failure)=0.0)AND(MARK(ECG__elec_ECG__elec_send_signal_to_controller__failure)=0.0))))AND(MARK(ECG__elec_ECG__elec_channel_1__failure)=0.0)', '1.0',
  (
 1.0
   );
-TRANS:"ECG__elec_ECG__elec_epf_2",1500,1500,V,Immediate,5,1,'((MARK(ECG__elec_ECG__elec_e_send_signal_to_controller)>0.0)AND((MARK(ECG__elec_ECG__elec_epf_2_tmp)=0.0)AND((MARK(ECG__elec_ECG__elec_send_signal_refference__failure)=0.0)AND(MARK(ECG__elec_ECG__elec_send_signal_to_controller__failure)=0.0))))AND(MARK(ECG__elec_ECG__elec_send_signal_to_controller__failure)=0.0)', '1.0',
+TRANS:"ECG__elec_ECG__elec_epf_2",1500,1500,V,Immediate,5,1,'((MARK(ECG__elec_ECG__elec_e_send_signal_to_controller)>0.0)AND((MARK(ECG__elec_ECG__elec_epf_2_tmp)=0.0)AND((MARK(ECG__elec_ECG__elec_channel_1__failure)=0.0)AND(MARK(ECG__elec_ECG__elec_send_signal_to_controller__failure)=0.0))))AND(MARK(ECG__elec_ECG__elec_send_signal_to_controller__failure)=0.0)', '1.0',
  (
 1.0
   );
@@ -433,7 +433,7 @@ TRANS:"ECG__elec_ECG__elec_epf_2_caseskip",1500,1500,V,Immediate,7,1,'', '0.0',
  (
 0.0
   );
-TRANS:"ECG__elec_e_send_signal_to_controller_choice_ECG__elec_epf_2",1500,1500,V,Immediate,7,1,'((MARK(ECG__elec_ECG__elec_e_send_signal_to_controller)>0.0)AND((MARK(ECG__elec_ECG__elec_epf_2_tmp)=0.0)AND((MARK(ECG__elec_ECG__elec_send_signal_refference__failure)=0.0)AND(MARK(ECG__elec_ECG__elec_send_signal_to_controller__failure)=0.0))))AND(MARK(ECG__elec_ECG__elec_send_signal_to_controller__failure)=0.0)', '1.0',
+TRANS:"ECG__elec_e_send_signal_to_controller_choice_ECG__elec_epf_2",1500,1500,V,Immediate,7,1,'((MARK(ECG__elec_ECG__elec_e_send_signal_to_controller)>0.0)AND((MARK(ECG__elec_ECG__elec_epf_2_tmp)=0.0)AND((MARK(ECG__elec_ECG__elec_channel_1__failure)=0.0)AND(MARK(ECG__elec_ECG__elec_send_signal_to_controller__failure)=0.0))))AND(MARK(ECG__elec_ECG__elec_send_signal_to_controller__failure)=0.0)', '1.0',
  (
 1.0
   );
@@ -682,9 +682,9 @@ IARC:"ECG__cont_ECG__cont_e_send_signal_to_ecg","ECG__cont_reset",1,0,'MARK(ECG_
  (1500,1500,1500,1500),1;
 IARC:"ECG__cont_ECG__cont_e_send_signal_to_ecg_detected","ECG__cont_reset",1,0,'MARK(ECG__cont_ECG__cont_e_send_signal_to_ecg_detected)',
  (1500,1500,1500,1500),1;
-IARC:"ECG__elec_ECG__elec_e_send_signal_refference","ECG__elec_reset",1,0,'MARK(ECG__elec_ECG__elec_e_send_signal_refference)',
+IARC:"ECG__elec_ECG__elec_e_channel_1","ECG__elec_reset",1,0,'MARK(ECG__elec_ECG__elec_e_channel_1)',
  (1500,1500,1500,1500),1;
-IARC:"ECG__elec_ECG__elec_e_send_signal_refference_detected","ECG__elec_reset",1,0,'MARK(ECG__elec_ECG__elec_e_send_signal_refference_detected)',
+IARC:"ECG__elec_ECG__elec_e_channel_1_detected","ECG__elec_reset",1,0,'MARK(ECG__elec_ECG__elec_e_channel_1_detected)',
  (1500,1500,1500,1500),1;
 IARC:"ECG__elec_ECG__elec_e_send_signal_to_controller","ECG__elec_reset",1,0,'MARK(ECG__elec_ECG__elec_e_send_signal_to_controller)',
  (1500,1500,1500,1500),1;
@@ -714,7 +714,7 @@ IARC:"ECG__cont_ECG__cont_send_signal_to_amplifier__failure","ECG__cont_reset",1
  (1500,1500,1500,1500),1;
 IARC:"ECG__cont_ECG__cont_send_signal_to_ecg__failure","ECG__cont_reset",1,0,'MARK(ECG__cont_ECG__cont_send_signal_to_ecg__failure)',
  (1500,1500,1500,1500),1;
-IARC:"ECG__elec_ECG__elec_send_signal_refference__failure","ECG__elec_reset",1,0,'MARK(ECG__elec_ECG__elec_send_signal_refference__failure)',
+IARC:"ECG__elec_ECG__elec_channel_1__failure","ECG__elec_reset",1,0,'MARK(ECG__elec_ECG__elec_channel_1__failure)',
  (1500,1500,1500,1500),1;
 IARC:"ECG__elec_ECG__elec_send_signal_to_controller__failure","ECG__elec_reset",1,0,'MARK(ECG__elec_ECG__elec_send_signal_to_controller__failure)',
  (1500,1500,1500,1500),1;
@@ -798,7 +798,7 @@ IARC:"ECG__elec_ECG__elec_fge_1_blocker","ECG__elec_reset",1,0,'MARK(ECG__elec_E
  (1500,1500,1500,1500),1;
 OARC:"ECG__elec_ECG__elec_e_send_signal_to_controller","ECG__elec_ECG__elec_fge_1_caseprop",1,1,'',
  (1500,1500,1500,1500),1;
-OARC:"ECG__elec_ECG__elec_e_send_signal_refference","ECG__elec_ECG__elec_fge_1_caseprop",1,1,'',
+OARC:"ECG__elec_ECG__elec_e_channel_1","ECG__elec_ECG__elec_fge_1_caseprop",1,1,'',
  (1500,1500,1500,1500),1;
 OARC:"ECG__ampl_ECG__ampl_fge_1_tmp","ECG__ampl_ECG__ampl_fge_1",1,1,'',
  (1500,1500,1500,1500),1;
@@ -986,13 +986,13 @@ IARC:"ECG__elec_ECG__elec_epf_1_tmp","ECG__elec_reset",1,0,'MARK(ECG__elec_ECG__
  (1500,1500,1500,1500),1;
 IARC:"ECG__elec_ECG__elec_epf_1_blocker","ECG__elec_reset",1,0,'MARK(ECG__elec_ECG__elec_epf_1_blocker)',
  (1500,1500,1500,1500),1;
-OARC:"ECG__elec_ECG__elec_send_signal_refference__failure","ECG__elec_ECG__elec_epf_1_caseprop",1,1,'',
+OARC:"ECG__elec_ECG__elec_channel_1__failure","ECG__elec_ECG__elec_epf_1_caseprop",1,1,'',
  (1500,1500,1500,1500),1;
-OARC:"ECG__elec_e_send_signal_refference_sel_ECG__elec_epf_1","ECG__elec_e_send_signal_refference_choice_ECG__elec_epf_1",1,1,'',
+OARC:"ECG__elec_e_channel_1_sel_ECG__elec_epf_1","ECG__elec_e_channel_1_choice_ECG__elec_epf_1",1,1,'',
  (1500,1500,1500,1500),1;
-OARC:"ECG__elec_e_send_signal_refference_sel_ECG__elec_epf_1","ECG__elec_e_send_signal_refference_choice_ECG__elec_epf_1",1,2,'',
+OARC:"ECG__elec_e_channel_1_sel_ECG__elec_epf_1","ECG__elec_e_channel_1_choice_ECG__elec_epf_1",1,2,'',
  (1500,1500,1500,1500),1;
-IARC:"ECG__elec_e_send_signal_refference_sel_ECG__elec_epf_1","ECG__elec_ECG__elec_epf_1",1,0,'',
+IARC:"ECG__elec_e_channel_1_sel_ECG__elec_epf_1","ECG__elec_ECG__elec_epf_1",1,0,'',
  (1500,1500,1500,1500),1;
 OARC:"ECG__elec_ECG__elec_epf_2_tmp","ECG__elec_ECG__elec_epf_2",1,1,'',
  (1500,1500,1500,1500),1;

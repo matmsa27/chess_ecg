@@ -59,20 +59,20 @@
       </ErrorsGeneratesFailures>
     </components>
     <components Name="ECG.elec">
-      <FailureModes Name="ECG.elec_send_signal_refference.failure"/>
+      <FailureModes Name="ECG.elec_channel_1.failure"/>
       <FailureModes Name="ECG.elec_send_signal_to_controller.failure"/>
-      <Errors Name="ECG.elec_e_send_signal_refference"/>
+      <Errors Name="ECG.elec_e_channel_1"/>
       <Errors Name="ECG.elec_e_send_signal_to_controller"/>
       <Faults xsi:type="InternalFault" Name="ECG.elec_ift" PermanentProbability="1.0">
         <Occurrence xsi:type="Exponential" Rate="1.0E-6"/>
         <TransientDuration xsi:type="Deterministic"/>
       </Faults>
-      <FaultsGeneratesErrors Source="ECG.elec_ift" Destination="ECG.elec_e_send_signal_refference ECG.elec_e_send_signal_to_controller" PropagationProbability="1.0" PropagationLogicStringFormat="ECG.elec_ift" Name="ECG.elec_fge_1">
+      <FaultsGeneratesErrors Source="ECG.elec_ift" Destination="ECG.elec_e_channel_1 ECG.elec_e_send_signal_to_controller" PropagationProbability="1.0" PropagationLogicStringFormat="ECG.elec_ift" Name="ECG.elec_fge_1">
         <ActivationDelay xsi:type="Deterministic"/>
         <PropagationLogic xsi:type="FaultsExpressionFaultNode" faultsGenerateErrors="/0/@components.2/@FaultsGeneratesErrors.0" Fault="ECG.elec_ift"/>
       </FaultsGeneratesErrors>
-      <ErrorsGeneratesFailures Name="ECG.elec_epf_1" PropagationLogicStringFormat="ECG.elec_e_send_signal_refference" Source="ECG.elec_e_send_signal_refference" Destination="ECG.elec_send_signal_refference.failure">
-        <PropagationLogic xsi:type="ErrorsExpressionErrorNode" errorPropagation="/0/@components.2/@ErrorsGeneratesFailures.0" Error="ECG.elec_e_send_signal_refference"/>
+      <ErrorsGeneratesFailures Name="ECG.elec_epf_1" PropagationLogicStringFormat="ECG.elec_e_channel_1" Source="ECG.elec_e_channel_1" Destination="ECG.elec_channel_1.failure">
+        <PropagationLogic xsi:type="ErrorsExpressionErrorNode" errorPropagation="/0/@components.2/@ErrorsGeneratesFailures.0" Error="ECG.elec_e_channel_1"/>
         <PropagationDelay xsi:type="Deterministic"/>
       </ErrorsGeneratesFailures>
       <ErrorsGeneratesFailures Name="ECG.elec_epf_2" PropagationLogicStringFormat="ECG.elec_e_send_signal_to_controller" Source="ECG.elec_e_send_signal_to_controller" Destination="ECG.elec_send_signal_to_controller.failure">

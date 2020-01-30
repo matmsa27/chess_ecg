@@ -65,7 +65,7 @@
         <objects xsi:type="ptnet:Place" id="ECG.elec_doreset" OutArcs="ECG.elec_arcreset">
           <initialMarking text="0"/>
         </objects>
-        <objects xsi:type="ptnet:GSPNImmediateTransition" id="ECG.elec_reset" InArcs="ECG.elec_arcreset ECG.elec_ECG.elec_ift_to_ECG.elec_reset ECG.elec_ECG.elec_ift_transient_to_ECG.elec_reset ECG.elec_ECG.elec_ift_tmp_to_ECG.elec_reset ECG.elec_ECG.elec_e_send_signal_refference_to_ECG.elec_reset ECG.elec_ECG.elec_e_send_signal_refference_detected_to_ECG.elec_reset ECG.elec_ECG.elec_e_send_signal_to_controller_to_ECG.elec_reset ECG.elec_ECG.elec_e_send_signal_to_controller_detected_to_ECG.elec_reset ECG.elec_ECG.elec_send_signal_refference.failure_to_ECG.elec_reset ECG.elec_ECG.elec_send_signal_to_controller.failure_to_ECG.elec_reset ECG.elec_ECG.elec_fge_1_tmp_to_ECG.elec_reset ECG.elec_ECG.elec_fge_1_blocker_to_ECG.elec_reset ECG.elec_ECG.elec_epf_1_tmp_to_ECG.elec_reset ECG.elec_ECG.elec_epf_1_blocker_to_ECG.elec_reset ECG.elec_ECG.elec_epf_2_tmp_to_ECG.elec_reset ECG.elec_ECG.elec_epf_2_blocker_to_ECG.elec_reset" Priority="6">
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="ECG.elec_reset" InArcs="ECG.elec_arcreset ECG.elec_ECG.elec_ift_to_ECG.elec_reset ECG.elec_ECG.elec_ift_transient_to_ECG.elec_reset ECG.elec_ECG.elec_ift_tmp_to_ECG.elec_reset ECG.elec_ECG.elec_e_channel_1_to_ECG.elec_reset ECG.elec_ECG.elec_e_channel_1_detected_to_ECG.elec_reset ECG.elec_ECG.elec_e_send_signal_to_controller_to_ECG.elec_reset ECG.elec_ECG.elec_e_send_signal_to_controller_detected_to_ECG.elec_reset ECG.elec_ECG.elec_channel_1.failure_to_ECG.elec_reset ECG.elec_ECG.elec_send_signal_to_controller.failure_to_ECG.elec_reset ECG.elec_ECG.elec_fge_1_tmp_to_ECG.elec_reset ECG.elec_ECG.elec_fge_1_blocker_to_ECG.elec_reset ECG.elec_ECG.elec_epf_1_tmp_to_ECG.elec_reset ECG.elec_ECG.elec_epf_1_blocker_to_ECG.elec_reset ECG.elec_ECG.elec_epf_2_tmp_to_ECG.elec_reset ECG.elec_ECG.elec_epf_2_blocker_to_ECG.elec_reset" Priority="6">
           <Guard xsi:type="ptnet:OpTrue"/>
         </objects>
         <objects xsi:type="ptnet:GSPNArc" id="ECG.elec_arcreset" source="ECG.elec_doreset" target="ECG.elec_reset"/>
@@ -384,17 +384,17 @@
         <objects xsi:type="ptnet:GSPNArc" id="ECG.cont_ECG.cont_e_send_signal_to_ecg_detected_to_ECG.cont_reset" source="ECG.cont_ECG.cont_e_send_signal_to_ecg_detected" target="ECG.cont_reset">
           <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="ECG.cont_ECG.cont_e_send_signal_to_ecg_detected"/>
         </objects>
-        <objects xsi:type="ptnet:Place" id="ECG.elec_ECG.elec_e_send_signal_refference" InArcs="ECG.elec_ECG.elec_fge_1_caseprop_to_ECG.elec_e_send_signal_refference" OutArcs="ECG.elec_ECG.elec_e_send_signal_refference_to_ECG.elec_reset">
+        <objects xsi:type="ptnet:Place" id="ECG.elec_ECG.elec_e_channel_1" InArcs="ECG.elec_ECG.elec_fge_1_caseprop_to_ECG.elec_e_channel_1" OutArcs="ECG.elec_ECG.elec_e_channel_1_to_ECG.elec_reset">
           <initialMarking text="0"/>
         </objects>
-        <objects xsi:type="ptnet:Place" id="ECG.elec_ECG.elec_e_send_signal_refference_detected" OutArcs="ECG.elec_ECG.elec_e_send_signal_refference_detected_to_ECG.elec_reset">
+        <objects xsi:type="ptnet:Place" id="ECG.elec_ECG.elec_e_channel_1_detected" OutArcs="ECG.elec_ECG.elec_e_channel_1_detected_to_ECG.elec_reset">
           <initialMarking text="0"/>
         </objects>
-        <objects xsi:type="ptnet:GSPNArc" id="ECG.elec_ECG.elec_e_send_signal_refference_to_ECG.elec_reset" source="ECG.elec_ECG.elec_e_send_signal_refference" target="ECG.elec_reset">
-          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="ECG.elec_ECG.elec_e_send_signal_refference"/>
+        <objects xsi:type="ptnet:GSPNArc" id="ECG.elec_ECG.elec_e_channel_1_to_ECG.elec_reset" source="ECG.elec_ECG.elec_e_channel_1" target="ECG.elec_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="ECG.elec_ECG.elec_e_channel_1"/>
         </objects>
-        <objects xsi:type="ptnet:GSPNArc" id="ECG.elec_ECG.elec_e_send_signal_refference_detected_to_ECG.elec_reset" source="ECG.elec_ECG.elec_e_send_signal_refference_detected" target="ECG.elec_reset">
-          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="ECG.elec_ECG.elec_e_send_signal_refference_detected"/>
+        <objects xsi:type="ptnet:GSPNArc" id="ECG.elec_ECG.elec_e_channel_1_detected_to_ECG.elec_reset" source="ECG.elec_ECG.elec_e_channel_1_detected" target="ECG.elec_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="ECG.elec_ECG.elec_e_channel_1_detected"/>
         </objects>
         <objects xsi:type="ptnet:Place" id="ECG.elec_ECG.elec_e_send_signal_to_controller" InArcs="ECG.elec_ECG.elec_fge_1_caseprop_to_ECG.elec_e_send_signal_to_controller" OutArcs="ECG.elec_ECG.elec_e_send_signal_to_controller_to_ECG.elec_reset">
           <initialMarking text="0"/>
@@ -480,11 +480,11 @@
         <objects xsi:type="ptnet:GSPNArc" id="ECG.cont_ECG.cont_send_signal_to_ecg.failure_to_ECG.cont_reset" source="ECG.cont_ECG.cont_send_signal_to_ecg.failure" target="ECG.cont_reset">
           <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="ECG.cont_ECG.cont_send_signal_to_ecg.failure"/>
         </objects>
-        <objects xsi:type="ptnet:Place" id="ECG.elec_ECG.elec_send_signal_refference.failure" InArcs="ECG.elec_ECG.elec_epf_1_caseprop_to_ECG.elec_send_signal_refference.failure" OutArcs="ECG.elec_ECG.elec_send_signal_refference.failure_to_ECG.elec_reset">
+        <objects xsi:type="ptnet:Place" id="ECG.elec_ECG.elec_channel_1.failure" InArcs="ECG.elec_ECG.elec_epf_1_caseprop_to_ECG.elec_channel_1.failure" OutArcs="ECG.elec_ECG.elec_channel_1.failure_to_ECG.elec_reset">
           <initialMarking text="0"/>
         </objects>
-        <objects xsi:type="ptnet:GSPNArc" id="ECG.elec_ECG.elec_send_signal_refference.failure_to_ECG.elec_reset" source="ECG.elec_ECG.elec_send_signal_refference.failure" target="ECG.elec_reset">
-          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="ECG.elec_ECG.elec_send_signal_refference.failure"/>
+        <objects xsi:type="ptnet:GSPNArc" id="ECG.elec_ECG.elec_channel_1.failure_to_ECG.elec_reset" source="ECG.elec_ECG.elec_channel_1.failure" target="ECG.elec_reset">
+          <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="ECG.elec_ECG.elec_channel_1.failure"/>
         </objects>
         <objects xsi:type="ptnet:Place" id="ECG.elec_ECG.elec_send_signal_to_controller.failure" InArcs="ECG.elec_ECG.elec_epf_2_caseprop_to_ECG.elec_send_signal_to_controller.failure" OutArcs="ECG.elec_ECG.elec_send_signal_to_controller.failure_to_ECG.elec_reset">
           <initialMarking text="0"/>
@@ -732,7 +732,7 @@
                 </expression1>
                 <expression2 xsi:type="ptnet:OpAnd">
                   <expression1 xsi:type="ptnet:OpEqual">
-                    <expression1 xsi:type="ptnet:MarkingExpression" place="ECG.elec_ECG.elec_send_signal_refference.failure"/>
+                    <expression1 xsi:type="ptnet:MarkingExpression" place="ECG.elec_ECG.elec_channel_1.failure"/>
                     <expression2 xsi:type="ptnet:ValueExpression"/>
                   </expression1>
                   <expression2 xsi:type="ptnet:OpEqual">
@@ -748,7 +748,7 @@
                 <expression2 xsi:type="ptnet:ValueExpression"/>
               </expression1>
               <expression2 xsi:type="ptnet:OpEqual">
-                <expression1 xsi:type="ptnet:MarkingExpression" place="ECG.elec_ECG.elec_e_send_signal_refference"/>
+                <expression1 xsi:type="ptnet:MarkingExpression" place="ECG.elec_ECG.elec_e_channel_1"/>
                 <expression2 xsi:type="ptnet:ValueExpression"/>
               </expression2>
             </expression2>
@@ -760,7 +760,7 @@
         <objects xsi:type="ptnet:Place" id="ECG.elec_ECG.elec_fge_1_tmp" InArcs="ECG.elec_ECG.elec_fge_1_totmp" OutArcs="ECG.elec_ECG.elec_fge_1_toprop ECG.elec_ECG.elec_fge_1_toskip ECG.elec_ECG.elec_fge_1_tmp_to_ECG.elec_reset">
           <initialMarking text="0"/>
         </objects>
-        <objects xsi:type="ptnet:GSPNImmediateTransition" id="ECG.elec_ECG.elec_fge_1_caseprop" InArcs="ECG.elec_ECG.elec_fge_1_toprop" OutArcs="ECG.elec_ECG.elec_fge_1_caseprop_to_ECG.elec_e_send_signal_to_controller ECG.elec_ECG.elec_fge_1_caseprop_to_ECG.elec_e_send_signal_refference" Priority="7"/>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="ECG.elec_ECG.elec_fge_1_caseprop" InArcs="ECG.elec_ECG.elec_fge_1_toprop" OutArcs="ECG.elec_ECG.elec_fge_1_caseprop_to_ECG.elec_e_send_signal_to_controller ECG.elec_ECG.elec_fge_1_caseprop_to_ECG.elec_e_channel_1" Priority="7"/>
         <objects xsi:type="ptnet:GSPNImmediateTransition" id="ECG.elec_ECG.elec_fge_1_caseskip" InArcs="ECG.elec_ECG.elec_fge_1_toskip" Priority="7" Weight="0.0">
           <Guard xsi:type="ptnet:OpFalse"/>
         </objects>
@@ -776,7 +776,7 @@
           <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="ECG.elec_ECG.elec_fge_1_blocker"/>
         </objects>
         <objects xsi:type="ptnet:GSPNArc" id="ECG.elec_ECG.elec_fge_1_caseprop_to_ECG.elec_e_send_signal_to_controller" source="ECG.elec_ECG.elec_fge_1_caseprop" target="ECG.elec_ECG.elec_e_send_signal_to_controller"/>
-        <objects xsi:type="ptnet:GSPNArc" id="ECG.elec_ECG.elec_fge_1_caseprop_to_ECG.elec_e_send_signal_refference" source="ECG.elec_ECG.elec_fge_1_caseprop" target="ECG.elec_ECG.elec_e_send_signal_refference"/>
+        <objects xsi:type="ptnet:GSPNArc" id="ECG.elec_ECG.elec_fge_1_caseprop_to_ECG.elec_e_channel_1" source="ECG.elec_ECG.elec_fge_1_caseprop" target="ECG.elec_ECG.elec_e_channel_1"/>
         <objects xsi:type="ptnet:GSPNImmediateTransition" id="ECG.ampl_ECG.ampl_fge_1" InArcs="ECG.ampl_ECG.ampl_fge_1_toblocker_inhibit" OutArcs="ECG.ampl_ECG.ampl_fge_1_totmp ECG.ampl_ECG.ampl_fge_1_toblocker" Priority="5">
           <Guard xsi:type="ptnet:OpAnd">
             <expression1 xsi:type="ptnet:OpAnd">
@@ -1401,11 +1401,11 @@
         <objects xsi:type="ptnet:GSPNArc" id="ECG.cont_e_send_signal_to_ecg_choice_ECG.cont_epf_3_to_sel" source="ECG.cont_e_send_signal_to_ecg_choice_ECG.cont_epf_3" target="ECG.cont_e_send_signal_to_ecg_sel_ECG.cont_epf_3"/>
         <objects xsi:type="ptnet:GSPNArc" id="ECG.cont_e_send_signal_to_ecg_choice_ECG.cont_epf_3_to_sel_inh" source="ECG.cont_e_send_signal_to_ecg_sel_ECG.cont_epf_3" target="ECG.cont_e_send_signal_to_ecg_choice_ECG.cont_epf_3" type="inhibitor"/>
         <objects xsi:type="ptnet:GSPNArc" id="ECG.cont_e_send_signal_to_ecg_sel_ECG.cont_epf_3_to_ECG.cont_ECG.cont_epf_3" source="ECG.cont_e_send_signal_to_ecg_sel_ECG.cont_epf_3" target="ECG.cont_ECG.cont_epf_3"/>
-        <objects xsi:type="ptnet:GSPNImmediateTransition" id="ECG.elec_ECG.elec_epf_1" InArcs="ECG.elec_ECG.elec_epf_1_toblocker_inhibit ECG.elec_e_send_signal_refference_sel_ECG.elec_epf_1_to_ECG.elec_ECG.elec_epf_1" OutArcs="ECG.elec_ECG.elec_epf_1_totmp ECG.elec_ECG.elec_epf_1_toblocker" Priority="5">
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="ECG.elec_ECG.elec_epf_1" InArcs="ECG.elec_ECG.elec_epf_1_toblocker_inhibit ECG.elec_e_channel_1_sel_ECG.elec_epf_1_to_ECG.elec_ECG.elec_epf_1" OutArcs="ECG.elec_ECG.elec_epf_1_totmp ECG.elec_ECG.elec_epf_1_toblocker" Priority="5">
           <Guard xsi:type="ptnet:OpAnd">
             <expression1 xsi:type="ptnet:OpAnd">
               <expression1 xsi:type="ptnet:OpGreater">
-                <expression1 xsi:type="ptnet:MarkingExpression" place="ECG.elec_ECG.elec_e_send_signal_refference"/>
+                <expression1 xsi:type="ptnet:MarkingExpression" place="ECG.elec_ECG.elec_e_channel_1"/>
                 <expression2 xsi:type="ptnet:ValueExpression"/>
               </expression1>
               <expression2 xsi:type="ptnet:OpAnd">
@@ -1415,7 +1415,7 @@
                 </expression1>
                 <expression2 xsi:type="ptnet:OpAnd">
                   <expression1 xsi:type="ptnet:OpEqual">
-                    <expression1 xsi:type="ptnet:MarkingExpression" place="ECG.elec_ECG.elec_send_signal_refference.failure"/>
+                    <expression1 xsi:type="ptnet:MarkingExpression" place="ECG.elec_ECG.elec_channel_1.failure"/>
                     <expression2 xsi:type="ptnet:ValueExpression"/>
                   </expression1>
                   <expression2 xsi:type="ptnet:OpEqual">
@@ -1426,7 +1426,7 @@
               </expression2>
             </expression1>
             <expression2 xsi:type="ptnet:OpEqual">
-              <expression1 xsi:type="ptnet:MarkingExpression" place="ECG.elec_ECG.elec_send_signal_refference.failure"/>
+              <expression1 xsi:type="ptnet:MarkingExpression" place="ECG.elec_ECG.elec_channel_1.failure"/>
               <expression2 xsi:type="ptnet:ValueExpression"/>
             </expression2>
           </Guard>
@@ -1437,7 +1437,7 @@
         <objects xsi:type="ptnet:Place" id="ECG.elec_ECG.elec_epf_1_tmp" InArcs="ECG.elec_ECG.elec_epf_1_totmp" OutArcs="ECG.elec_ECG.elec_epf_1_toprop ECG.elec_ECG.elec_epf_1_toskip ECG.elec_ECG.elec_epf_1_tmp_to_ECG.elec_reset">
           <initialMarking text="0"/>
         </objects>
-        <objects xsi:type="ptnet:GSPNImmediateTransition" id="ECG.elec_ECG.elec_epf_1_caseprop" InArcs="ECG.elec_ECG.elec_epf_1_toprop" OutArcs="ECG.elec_ECG.elec_epf_1_caseprop_to_ECG.elec_send_signal_refference.failure" Priority="7"/>
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="ECG.elec_ECG.elec_epf_1_caseprop" InArcs="ECG.elec_ECG.elec_epf_1_toprop" OutArcs="ECG.elec_ECG.elec_epf_1_caseprop_to_ECG.elec_channel_1.failure" Priority="7"/>
         <objects xsi:type="ptnet:GSPNImmediateTransition" id="ECG.elec_ECG.elec_epf_1_caseskip" InArcs="ECG.elec_ECG.elec_epf_1_toskip" Priority="7" Weight="0.0"/>
         <objects xsi:type="ptnet:Place" id="ECG.elec_ECG.elec_epf_1_blocker" InArcs="ECG.elec_ECG.elec_epf_1_toblocker" OutArcs="ECG.elec_ECG.elec_epf_1_toblocker_inhibit ECG.elec_ECG.elec_epf_1_blocker_to_ECG.elec_reset">
           <initialMarking text="0"/>
@@ -1450,15 +1450,15 @@
         <objects xsi:type="ptnet:GSPNArc" id="ECG.elec_ECG.elec_epf_1_blocker_to_ECG.elec_reset" source="ECG.elec_ECG.elec_epf_1_blocker" target="ECG.elec_reset">
           <MultiplicityFunction xsi:type="ptnet:MarkingExpression" place="ECG.elec_ECG.elec_epf_1_blocker"/>
         </objects>
-        <objects xsi:type="ptnet:GSPNArc" id="ECG.elec_ECG.elec_epf_1_caseprop_to_ECG.elec_send_signal_refference.failure" source="ECG.elec_ECG.elec_epf_1_caseprop" target="ECG.elec_ECG.elec_send_signal_refference.failure"/>
-        <objects xsi:type="ptnet:Place" id="ECG.elec_e_send_signal_refference_sel_ECG.elec_epf_1" InArcs="ECG.elec_e_send_signal_refference_choice_ECG.elec_epf_1_to_sel" OutArcs="ECG.elec_e_send_signal_refference_choice_ECG.elec_epf_1_to_sel_inh ECG.elec_e_send_signal_refference_sel_ECG.elec_epf_1_to_ECG.elec_ECG.elec_epf_1">
+        <objects xsi:type="ptnet:GSPNArc" id="ECG.elec_ECG.elec_epf_1_caseprop_to_ECG.elec_channel_1.failure" source="ECG.elec_ECG.elec_epf_1_caseprop" target="ECG.elec_ECG.elec_channel_1.failure"/>
+        <objects xsi:type="ptnet:Place" id="ECG.elec_e_channel_1_sel_ECG.elec_epf_1" InArcs="ECG.elec_e_channel_1_choice_ECG.elec_epf_1_to_sel" OutArcs="ECG.elec_e_channel_1_choice_ECG.elec_epf_1_to_sel_inh ECG.elec_e_channel_1_sel_ECG.elec_epf_1_to_ECG.elec_ECG.elec_epf_1">
           <initialMarking text="0"/>
         </objects>
-        <objects xsi:type="ptnet:GSPNImmediateTransition" id="ECG.elec_e_send_signal_refference_choice_ECG.elec_epf_1" InArcs="ECG.elec_e_send_signal_refference_choice_ECG.elec_epf_1_to_sel_inh" OutArcs="ECG.elec_e_send_signal_refference_choice_ECG.elec_epf_1_to_sel" Priority="7">
+        <objects xsi:type="ptnet:GSPNImmediateTransition" id="ECG.elec_e_channel_1_choice_ECG.elec_epf_1" InArcs="ECG.elec_e_channel_1_choice_ECG.elec_epf_1_to_sel_inh" OutArcs="ECG.elec_e_channel_1_choice_ECG.elec_epf_1_to_sel" Priority="7">
           <Guard xsi:type="ptnet:OpAnd">
             <expression1 xsi:type="ptnet:OpAnd">
               <expression1 xsi:type="ptnet:OpGreater">
-                <expression1 xsi:type="ptnet:MarkingExpression" place="ECG.elec_ECG.elec_e_send_signal_refference"/>
+                <expression1 xsi:type="ptnet:MarkingExpression" place="ECG.elec_ECG.elec_e_channel_1"/>
                 <expression2 xsi:type="ptnet:ValueExpression"/>
               </expression1>
               <expression2 xsi:type="ptnet:OpAnd">
@@ -1468,7 +1468,7 @@
                 </expression1>
                 <expression2 xsi:type="ptnet:OpAnd">
                   <expression1 xsi:type="ptnet:OpEqual">
-                    <expression1 xsi:type="ptnet:MarkingExpression" place="ECG.elec_ECG.elec_send_signal_refference.failure"/>
+                    <expression1 xsi:type="ptnet:MarkingExpression" place="ECG.elec_ECG.elec_channel_1.failure"/>
                     <expression2 xsi:type="ptnet:ValueExpression"/>
                   </expression1>
                   <expression2 xsi:type="ptnet:OpEqual">
@@ -1479,14 +1479,14 @@
               </expression2>
             </expression1>
             <expression2 xsi:type="ptnet:OpEqual">
-              <expression1 xsi:type="ptnet:MarkingExpression" place="ECG.elec_ECG.elec_send_signal_refference.failure"/>
+              <expression1 xsi:type="ptnet:MarkingExpression" place="ECG.elec_ECG.elec_channel_1.failure"/>
               <expression2 xsi:type="ptnet:ValueExpression"/>
             </expression2>
           </Guard>
         </objects>
-        <objects xsi:type="ptnet:GSPNArc" id="ECG.elec_e_send_signal_refference_choice_ECG.elec_epf_1_to_sel" source="ECG.elec_e_send_signal_refference_choice_ECG.elec_epf_1" target="ECG.elec_e_send_signal_refference_sel_ECG.elec_epf_1"/>
-        <objects xsi:type="ptnet:GSPNArc" id="ECG.elec_e_send_signal_refference_choice_ECG.elec_epf_1_to_sel_inh" source="ECG.elec_e_send_signal_refference_sel_ECG.elec_epf_1" target="ECG.elec_e_send_signal_refference_choice_ECG.elec_epf_1" type="inhibitor"/>
-        <objects xsi:type="ptnet:GSPNArc" id="ECG.elec_e_send_signal_refference_sel_ECG.elec_epf_1_to_ECG.elec_ECG.elec_epf_1" source="ECG.elec_e_send_signal_refference_sel_ECG.elec_epf_1" target="ECG.elec_ECG.elec_epf_1"/>
+        <objects xsi:type="ptnet:GSPNArc" id="ECG.elec_e_channel_1_choice_ECG.elec_epf_1_to_sel" source="ECG.elec_e_channel_1_choice_ECG.elec_epf_1" target="ECG.elec_e_channel_1_sel_ECG.elec_epf_1"/>
+        <objects xsi:type="ptnet:GSPNArc" id="ECG.elec_e_channel_1_choice_ECG.elec_epf_1_to_sel_inh" source="ECG.elec_e_channel_1_sel_ECG.elec_epf_1" target="ECG.elec_e_channel_1_choice_ECG.elec_epf_1" type="inhibitor"/>
+        <objects xsi:type="ptnet:GSPNArc" id="ECG.elec_e_channel_1_sel_ECG.elec_epf_1_to_ECG.elec_ECG.elec_epf_1" source="ECG.elec_e_channel_1_sel_ECG.elec_epf_1" target="ECG.elec_ECG.elec_epf_1"/>
         <objects xsi:type="ptnet:GSPNImmediateTransition" id="ECG.elec_ECG.elec_epf_2" InArcs="ECG.elec_ECG.elec_epf_2_toblocker_inhibit ECG.elec_e_send_signal_to_controller_sel_ECG.elec_epf_2_to_ECG.elec_ECG.elec_epf_2" OutArcs="ECG.elec_ECG.elec_epf_2_totmp ECG.elec_ECG.elec_epf_2_toblocker" Priority="5">
           <Guard xsi:type="ptnet:OpAnd">
             <expression1 xsi:type="ptnet:OpAnd">
@@ -1501,7 +1501,7 @@
                 </expression1>
                 <expression2 xsi:type="ptnet:OpAnd">
                   <expression1 xsi:type="ptnet:OpEqual">
-                    <expression1 xsi:type="ptnet:MarkingExpression" place="ECG.elec_ECG.elec_send_signal_refference.failure"/>
+                    <expression1 xsi:type="ptnet:MarkingExpression" place="ECG.elec_ECG.elec_channel_1.failure"/>
                     <expression2 xsi:type="ptnet:ValueExpression"/>
                   </expression1>
                   <expression2 xsi:type="ptnet:OpEqual">
@@ -1554,7 +1554,7 @@
                 </expression1>
                 <expression2 xsi:type="ptnet:OpAnd">
                   <expression1 xsi:type="ptnet:OpEqual">
-                    <expression1 xsi:type="ptnet:MarkingExpression" place="ECG.elec_ECG.elec_send_signal_refference.failure"/>
+                    <expression1 xsi:type="ptnet:MarkingExpression" place="ECG.elec_ECG.elec_channel_1.failure"/>
                     <expression2 xsi:type="ptnet:ValueExpression"/>
                   </expression1>
                   <expression2 xsi:type="ptnet:OpEqual">
