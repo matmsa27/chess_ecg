@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks" xmlns:CHESSViews="http://CHESS/Core/Views" xmlns:Core="http://CHESS/Core" xmlns:GRM="http://www.eclipse.org/papyrus/GRM/1" xmlns:HwDevice="http://www.eclipse.org/papyrus/HwDevice/1" xmlns:PortAndFlows="http://www.eclipse.org/papyrus/0.7.0/SysML/PortAndFlows" xmlns:StateBasedAnalysis="http://CHESS/Dependability/StateBased/StateBasedAnalysis" xmlns:StateBasedComponents="http://CHESS/Dependability/StateBased/StateBasedComponents" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks http://www.eclipse.org/papyrus/0.7.0/SysML#//blocks http://CHESS/Core/Views http://CHESS#//Core/CHESSViews http://CHESS/Core http://CHESS#//Core http://www.eclipse.org/papyrus/GRM/1 http://www.eclipse.org/papyrus/MARTE/1#//GRM http://www.eclipse.org/papyrus/HwDevice/1 http://www.eclipse.org/papyrus/MARTE/1#//HRM/HwLogical/HwDevice http://www.eclipse.org/papyrus/0.7.0/SysML/PortAndFlows http://www.eclipse.org/papyrus/0.7.0/SysML#//portandflows http://CHESS/Dependability/StateBased/StateBasedAnalysis http://CHESS#//StateBasedAnalysis http://CHESS/Dependability/StateBased/StateBasedComponents http://CHESS#//StateBasedComponents">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks" xmlns:CHESSViews="http://CHESS/Core/Views" xmlns:ComponentModel="http://CHESS/ComponentModel" xmlns:Core="http://CHESS/Core" xmlns:GCM="http://www.eclipse.org/papyrus/GCM/1" xmlns:GRM="http://www.eclipse.org/papyrus/GRM/1" xmlns:HwDevice="http://www.eclipse.org/papyrus/HwDevice/1" xmlns:PortAndFlows="http://www.eclipse.org/papyrus/0.7.0/SysML/PortAndFlows" xmlns:StateBasedAnalysis="http://CHESS/Dependability/StateBased/StateBasedAnalysis" xmlns:StateBasedComponents="http://CHESS/Dependability/StateBased/StateBasedComponents" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks http://www.eclipse.org/papyrus/0.7.0/SysML#//blocks http://CHESS/Core/Views http://CHESS#//Core/CHESSViews http://CHESS/ComponentModel http://CHESS#//ComponentModel http://CHESS/Core http://CHESS#//Core http://www.eclipse.org/papyrus/GCM/1 http://www.eclipse.org/papyrus/MARTE/1#//GCM http://www.eclipse.org/papyrus/GRM/1 http://www.eclipse.org/papyrus/MARTE/1#//GRM http://www.eclipse.org/papyrus/HwDevice/1 http://www.eclipse.org/papyrus/MARTE/1#//HRM/HwLogical/HwDevice http://www.eclipse.org/papyrus/0.7.0/SysML/PortAndFlows http://www.eclipse.org/papyrus/0.7.0/SysML#//portandflows http://CHESS/Dependability/StateBased/StateBasedAnalysis http://CHESS#//StateBasedAnalysis http://CHESS/Dependability/StateBased/StateBasedComponents http://CHESS#//StateBasedComponents">
   <uml:Model xmi:id="_xBG4cLieEem0EpkRGXzNFg" name="model">
     <packagedElement xmi:type="uml:Package" xmi:id="_x2PJoLieEem0EpkRGXzNFg" name="modelRequirementView">
       <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_x4X3oLieEem0EpkRGXzNFg">
@@ -804,6 +804,116 @@
       </profileApplication>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_x2scoLieEem0EpkRGXzNFg" name="modelComponentView">
+      <packagedElement xmi:type="uml:Interface" xmi:id="_6lu2EEPXEeq4MezwNe_png" name="BatteryAlarm">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_dwHgMEPYEeq4MezwNe_png" name="sound_alarm"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_M-k1oEPYEeq4MezwNe_png" name="ProcessBatteryCharge">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_ivrKcEPYEeq4MezwNe_png" name="verify_charge_battery"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_Az8PUEPZEeq4MezwNe_png" name="InputBatteryCharge">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_I0tAwEPZEeq4MezwNe_png" name="get_battery_charge"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_FmAQIEPZEeq4MezwNe_png" name="OutputBatteryCharge">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_KfK-gEPZEeq4MezwNe_png" name="show_battery_charge"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Component" xmi:id="_Uc06cEPZEeq4MezwNe_png" name="Supervisor"/>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_c-KCUEPZEeq4MezwNe_png" client="_Uc06cEPZEeq4MezwNe_png" supplier="_6lu2EEPXEeq4MezwNe_png"/>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_fOhicEPZEeq4MezwNe_png" client="_Uc06cEPZEeq4MezwNe_png" supplier="_FmAQIEPZEeq4MezwNe_png"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_l-Hm8EPZEeq4MezwNe_png" client="_Uc06cEPZEeq4MezwNe_png" supplier="_M-k1oEPYEeq4MezwNe_png"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_oOnC4EPZEeq4MezwNe_png" name="ChargeProcess"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_LWPT8EPaEeq4MezwNe_png" name="ProcessBatteryCharge_impl">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_41OdkEPeEeq4MezwNe_png" name="receive_charge" type="_M-k1oEPYEeq4MezwNe_png" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_5cB-4EPeEeq4MezwNe_png" name="send_to_super" type="_M-k1oEPYEeq4MezwNe_png" aggregation="composite"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_Yt3cYEPaEeq4MezwNe_png" client="_LWPT8EPaEeq4MezwNe_png" supplier="_oOnC4EPZEeq4MezwNe_png"/>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_Z_k74EPaEeq4MezwNe_png" client="_oOnC4EPZEeq4MezwNe_png" supplier="_M-k1oEPYEeq4MezwNe_png"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_hmHPcEPaEeq4MezwNe_png" name="InputCharge"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_iUZRwEPaEeq4MezwNe_png" name="InputBatteryChargeImpl">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_4Se84EPeEeq4MezwNe_png" name="send_charge" type="_Az8PUEPZEeq4MezwNe_png" aggregation="composite"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_tcbWIEPaEeq4MezwNe_png" client="_M-k1oEPYEeq4MezwNe_png" supplier="_Az8PUEPZEeq4MezwNe_png"/>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_v1AXEEPaEeq4MezwNe_png" client="_iUZRwEPaEeq4MezwNe_png" supplier="_hmHPcEPaEeq4MezwNe_png"/>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_wexs0EPaEeq4MezwNe_png" client="_hmHPcEPaEeq4MezwNe_png" supplier="_Az8PUEPZEeq4MezwNe_png"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_J7y5wEPbEeq4MezwNe_png" name="Supervisor_impl">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_58vfQEPeEeq4MezwNe_png" name="get_charge_from_proc" type="_M-k1oEPYEeq4MezwNe_png" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_moPrgESpEeqk74OdS1CXfQ" name="show_charge" type="_FmAQIEPZEeq4MezwNe_png" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_s2kO8ESpEeqk74OdS1CXfQ" name="sound_alarm" type="_6lu2EEPXEeq4MezwNe_png" aggregation="composite"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_dfdN8EScEeqk74OdS1CXfQ" name="sound_alarm"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_e-TxkEScEeqk74OdS1CXfQ" name="show_battery_charge"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_ga8nYEPbEeq4MezwNe_png" client="_J7y5wEPbEeq4MezwNe_png" supplier="_Uc06cEPZEeq4MezwNe_png"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_LuJywEPcEeq4MezwNe_png" name="AlarmSW">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_T67KcEPdEeq4MezwNe_png" name="supervisor_impl" type="_J7y5wEPbEeq4MezwNe_png"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_u-C9EEPeEeq4MezwNe_png" name="inputBatteryChargeImpl" type="_iUZRwEPaEeq4MezwNe_png"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_xlFQwEPeEeq4MezwNe_png" name="processBatteryCharge_impl" type="_LWPT8EPaEeq4MezwNe_png"/>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_4aQLAESdEeqk74OdS1CXfQ" name="Connector1">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4aSAMESdEeqk74OdS1CXfQ" partWithPort="_u-C9EEPeEeq4MezwNe_png" role="_4Se84EPeEeq4MezwNe_png">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4aSAMUSdEeqk74OdS1CXfQ" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4aSAMkSdEeqk74OdS1CXfQ" value="1"/>
+          </end>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_4aT1YESdEeqk74OdS1CXfQ" partWithPort="_xlFQwEPeEeq4MezwNe_png" role="_41OdkEPeEeq4MezwNe_png">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4aT1YUSdEeqk74OdS1CXfQ" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4aT1YkSdEeqk74OdS1CXfQ" value="1"/>
+          </end>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_5tWxoESdEeqk74OdS1CXfQ" name="Connector2">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_5tX_wESdEeqk74OdS1CXfQ" partWithPort="_xlFQwEPeEeq4MezwNe_png" role="_5cB-4EPeEeq4MezwNe_png">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5tX_wUSdEeqk74OdS1CXfQ" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5tX_wkSdEeqk74OdS1CXfQ" value="1"/>
+          </end>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_5tZN4ESdEeqk74OdS1CXfQ" partWithPort="_T67KcEPdEeq4MezwNe_png" role="_58vfQEPeEeq4MezwNe_png">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5tZN4USdEeqk74OdS1CXfQ" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5tZN4kSdEeqk74OdS1CXfQ" value="1"/>
+          </end>
+        </ownedConnector>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_UQzIMESrEeqk74OdS1CXfQ" name="HeartAttack">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_qbQ34ESuEeqk74OdS1CXfQ" name="alarm_diseases"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_Wp8J0ESrEeqk74OdS1CXfQ" name="Arrythmia">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_wj64MESuEeqk74OdS1CXfQ" name="alarm_arrhythmia"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_qVggEESsEeqk74OdS1CXfQ" name="CardiacInsufficiency">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_11OZwESuEeqk74OdS1CXfQ" name="alarm_ci"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_vMe2EESsEeqk74OdS1CXfQ" name="CardiacArrest">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_4OTxAESuEeqk74OdS1CXfQ" name="cardiac_arrest"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_69HykESsEeqk74OdS1CXfQ" name="Tachycardia">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Bbn1IESvEeqk74OdS1CXfQ" name="alarm_tachycardia"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="__V80AESsEeqk74OdS1CXfQ" name="Bradycardia">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_HdPZUESvEeqk74OdS1CXfQ" name="alarm_bradycardia"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Component" xmi:id="_FHG6UEStEeqk74OdS1CXfQ" name="DetectDiseases"/>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_M-DBYEStEeqk74OdS1CXfQ" client="_FHG6UEStEeqk74OdS1CXfQ" supplier="_UQzIMESrEeqk74OdS1CXfQ"/>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_Nod3YEStEeqk74OdS1CXfQ" client="_FHG6UEStEeqk74OdS1CXfQ" supplier="_Wp8J0ESrEeqk74OdS1CXfQ"/>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_OSr5EEStEeqk74OdS1CXfQ" client="_FHG6UEStEeqk74OdS1CXfQ" supplier="_qVggEESsEeqk74OdS1CXfQ"/>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_O5n9QEStEeqk74OdS1CXfQ" client="_FHG6UEStEeqk74OdS1CXfQ" supplier="_vMe2EESsEeqk74OdS1CXfQ"/>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_PY-LsEStEeqk74OdS1CXfQ" client="_FHG6UEStEeqk74OdS1CXfQ" supplier="_69HykESsEeqk74OdS1CXfQ"/>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_Rt738EStEeqk74OdS1CXfQ" client="_FHG6UEStEeqk74OdS1CXfQ" supplier="__V80AESsEeqk74OdS1CXfQ"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_XqCqAEStEeqk74OdS1CXfQ" name="DetectDiseases_impl">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_LAMQwESxEeqk74OdS1CXfQ" name="receive_signal_to_detect" type="_wC0LsEStEeqk74OdS1CXfQ" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_TNtr0ESxEeqk74OdS1CXfQ" name="detect_heart_attack" type="_UQzIMESrEeqk74OdS1CXfQ" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_T3BukESxEeqk74OdS1CXfQ" name="detect_arrythmia" type="_Wp8J0ESrEeqk74OdS1CXfQ" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_UUE28ESxEeqk74OdS1CXfQ" name="detect_ci" type="_qVggEESsEeqk74OdS1CXfQ" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_VryQwESxEeqk74OdS1CXfQ" name="detect_cardiac_arrest" type="_vMe2EESsEeqk74OdS1CXfQ" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_WKx54ESxEeqk74OdS1CXfQ" name="detect_tachycardia" type="_69HykESsEeqk74OdS1CXfQ" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_WlOaMESxEeqk74OdS1CXfQ" name="detect_bradycardia" type="__V80AESsEeqk74OdS1CXfQ" aggregation="composite"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_lyImEEStEeqk74OdS1CXfQ" client="_XqCqAEStEeqk74OdS1CXfQ" supplier="_FHG6UEStEeqk74OdS1CXfQ"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_wC0LsEStEeqk74OdS1CXfQ" name="ReceiveSignal"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_EqCuYESuEeqk74OdS1CXfQ" client="_FHG6UEStEeqk74OdS1CXfQ" supplier="_wC0LsEStEeqk74OdS1CXfQ"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_HHfBMESuEeqk74OdS1CXfQ" name="ReaderSignal"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_Ry8eUESuEeqk74OdS1CXfQ" name="ReceiveSignal_impl">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_fGoQAESwEeqk74OdS1CXfQ" name="send_signal_to_detect" type="_wC0LsEStEeqk74OdS1CXfQ" aggregation="composite"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_YOwrMESuEeqk74OdS1CXfQ" client="_Ry8eUESuEeqk74OdS1CXfQ" supplier="_HHfBMESuEeqk74OdS1CXfQ"/>
+      <packagedElement xmi:type="uml:Realization" xmi:id="_Y5ZjoESuEeqk74OdS1CXfQ" client="_HHfBMESuEeqk74OdS1CXfQ" supplier="_wC0LsEStEeqk74OdS1CXfQ"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_u7eeQESvEeqk74OdS1CXfQ" name="DetectDiseasesSW">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_S_VHAESwEeqk74OdS1CXfQ" name="receiveSignal_impl" type="_Ry8eUESuEeqk74OdS1CXfQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_aTU5EESwEeqk74OdS1CXfQ" name="detectDiseases_impl" type="_XqCqAEStEeqk74OdS1CXfQ"/>
+      </packagedElement>
       <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_x20YcLieEem0EpkRGXzNFg">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_x20_gLieEem0EpkRGXzNFg" source="http://www.eclipse.org/uml2/2.0.0/UML">
           <references xmi:type="ecore:EPackage" href="http://CHESS#//ComponentModel"/>
@@ -1475,4 +1585,29 @@
   <HwDevice:HWSensor xmi:id="_9FrN4EMUEeqGwdou6dmXfA" base_Classifier="_9FRlQEMUEeqGwdou6dmXfA"/>
   <HwDevice:HWSensor xmi:id="_9hve0EMUEeqGwdou6dmXfA" base_Classifier="_9hVPIEMUEeqGwdou6dmXfA"/>
   <HwDevice:HWSensor xmi:id="_97pMkEMUEeqGwdou6dmXfA" base_Classifier="_97OV0EMUEeqGwdou6dmXfA"/>
+  <ComponentModel:ComponentType xmi:id="_UdRmYEPZEeq4MezwNe_png" base_Component="_Uc06cEPZEeq4MezwNe_png"/>
+  <ComponentModel:ComponentType xmi:id="_oO9oMEPZEeq4MezwNe_png" base_Component="_oOnC4EPZEeq4MezwNe_png"/>
+  <ComponentModel:ComponentImplementation xmi:id="_LWqxwEPaEeq4MezwNe_png" base_Component="_LWPT8EPaEeq4MezwNe_png"/>
+  <ComponentModel:ComponentType xmi:id="_hmhfIEPaEeq4MezwNe_png" base_Component="_hmHPcEPaEeq4MezwNe_png"/>
+  <ComponentModel:ComponentImplementation xmi:id="_iUqXgEPaEeq4MezwNe_png" base_Component="_iUZRwEPaEeq4MezwNe_png"/>
+  <ComponentModel:ComponentImplementation xmi:id="_J8TQEEPbEeq4MezwNe_png" base_Component="_J7y5wEPbEeq4MezwNe_png"/>
+  <GCM:FlowPort xmi:id="_3TaskEPeEeq4MezwNe_png" direction="in"/>
+  <GCM:FlowPort xmi:id="_4TPK0EPeEeq4MezwNe_png" direction="out" base_Port="_4Se84EPeEeq4MezwNe_png"/>
+  <GCM:FlowPort xmi:id="_41dHEEPeEeq4MezwNe_png" direction="in" base_Port="_41OdkEPeEeq4MezwNe_png"/>
+  <GCM:FlowPort xmi:id="_5cM-AEPeEeq4MezwNe_png" direction="out" base_Port="_5cB-4EPeEeq4MezwNe_png"/>
+  <GCM:FlowPort xmi:id="_59Ju8EPeEeq4MezwNe_png" direction="in" base_Port="_58vfQEPeEeq4MezwNe_png"/>
+  <GCM:FlowPort xmi:id="_movawESpEeqk74OdS1CXfQ" direction="out" base_Port="_moPrgESpEeqk74OdS1CXfQ"/>
+  <GCM:FlowPort xmi:id="_s3CJAESpEeqk74OdS1CXfQ" direction="out" base_Port="_s2kO8ESpEeqk74OdS1CXfQ"/>
+  <ComponentModel:ComponentType xmi:id="_FHps4EStEeqk74OdS1CXfQ" base_Component="_FHG6UEStEeqk74OdS1CXfQ"/>
+  <ComponentModel:ComponentImplementation xmi:id="_XqbrkEStEeqk74OdS1CXfQ" base_Component="_XqCqAEStEeqk74OdS1CXfQ"/>
+  <ComponentModel:ComponentType xmi:id="_HH538ESuEeqk74OdS1CXfQ" base_Component="_HHfBMESuEeqk74OdS1CXfQ"/>
+  <ComponentModel:ComponentImplementation xmi:id="_RzaYYESuEeqk74OdS1CXfQ" base_Component="_Ry8eUESuEeqk74OdS1CXfQ"/>
+  <GCM:FlowPort xmi:id="_fHAqgESwEeqk74OdS1CXfQ" direction="out" base_Port="_fGoQAESwEeqk74OdS1CXfQ"/>
+  <GCM:FlowPort xmi:id="_LBWHUESxEeqk74OdS1CXfQ" direction="in" base_Port="_LAMQwESxEeqk74OdS1CXfQ"/>
+  <GCM:FlowPort xmi:id="_TOGtYESxEeqk74OdS1CXfQ" direction="out" base_Port="_TNtr0ESxEeqk74OdS1CXfQ"/>
+  <GCM:FlowPort xmi:id="_T3bXMESxEeqk74OdS1CXfQ" direction="out" base_Port="_T3BukESxEeqk74OdS1CXfQ"/>
+  <GCM:FlowPort xmi:id="_UUa1MESxEeqk74OdS1CXfQ" direction="out" base_Port="_UUE28ESxEeqk74OdS1CXfQ"/>
+  <GCM:FlowPort xmi:id="_VsIPAESxEeqk74OdS1CXfQ" direction="out" base_Port="_VryQwESxEeqk74OdS1CXfQ"/>
+  <GCM:FlowPort xmi:id="_WLGqAESxEeqk74OdS1CXfQ" direction="out" base_Port="_WKx54ESxEeqk74OdS1CXfQ"/>
+  <GCM:FlowPort xmi:id="_WlVu8ESxEeqk74OdS1CXfQ" direction="out" base_Port="_WlOaMESxEeqk74OdS1CXfQ"/>
 </xmi:XMI>
