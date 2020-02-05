@@ -993,20 +993,43 @@
       <packagedElement xmi:type="uml:Realization" xmi:id="_VPdOsEXxEeq0vKOFzojccg" client="_yXw3EEXwEeq0vKOFzojccg" supplier="_vStKoEXwEeq0vKOFzojccg"/>
       <packagedElement xmi:type="uml:Realization" xmi:id="_Wk1GMEXxEeq0vKOFzojccg" client="_vStKoEXwEeq0vKOFzojccg" supplier="_Y8XiIEXtEeq0vKOFzojccg"/>
       <packagedElement xmi:type="uml:Realization" xmi:id="_g-iE8EXxEeq0vKOFzojccg" client="_v0L8gEXvEeq0vKOFzojccg" supplier="_ghMTkEXvEeq0vKOFzojccg"/>
-      <packagedElement xmi:type="uml:Interface" xmi:id="_6IBXYEbtEeqNCZfk4r81vQ" name="ElectrodesCotroller"/>
-      <packagedElement xmi:type="uml:Interface" xmi:id="_8wAtUEbtEeqNCZfk4r81vQ" name="Conversor"/>
-      <packagedElement xmi:type="uml:Interface" xmi:id="_9l2JIEbtEeqNCZfk4r81vQ" name="ApplyFilters"/>
-      <packagedElement xmi:type="uml:Interface" xmi:id="_da6dQEbuEeqNCZfk4r81vQ" name="Amplifier"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_6IBXYEbtEeqNCZfk4r81vQ" name="ElectrodesCotroller">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_06EkYEe0EeqFcrBZ95zbWQ" name="get_signal"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_5ccjYEe0EeqFcrBZ95zbWQ" name="send_signal_to_amplifier"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_8wAtUEbtEeqNCZfk4r81vQ" name="Conversor">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_cu3vMEe1EeqFcrBZ95zbWQ" name="converter_signal"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_n4BjAEe3EeqFcrBZ95zbWQ" name="send_signal_converted"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_9l2JIEbtEeqNCZfk4r81vQ" name="ApplyFilters">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_JwJbYEe1EeqFcrBZ95zbWQ" name="apply_pass_band_filter"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_MxyncEe1EeqFcrBZ95zbWQ" name="apply_pass_low_filter"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_OlGYIEe1EeqFcrBZ95zbWQ" name="apply_pass_high_filter"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_pfDLMEe3EeqFcrBZ95zbWQ" name="send_signal_filtered"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_da6dQEbuEeqNCZfk4r81vQ" name="Amplifier">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_F1x3kEe1EeqFcrBZ95zbWQ" name="amplifier_signal"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_F-3awEe4EeqFcrBZ95zbWQ" name="send_signal_amplified"/>
+      </packagedElement>
       <packagedElement xmi:type="uml:Component" xmi:id="_xL0mgEbvEeqNCZfk4r81vQ" name="ElectrodesControllerComponent"/>
-      <packagedElement xmi:type="uml:Interface" xmi:id="_YXYAAEbwEeqNCZfk4r81vQ" name="SignalECG"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_YXYAAEbwEeqNCZfk4r81vQ" name="SignalECG">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_iL-boEe2EeqFcrBZ95zbWQ" name="output_signal"/>
+      </packagedElement>
       <packagedElement xmi:type="uml:Component" xmi:id="_CSpvIEbxEeqNCZfk4r81vQ" name="ElectrodesController_impl">
         <ownedAttribute xmi:type="uml:Port" xmi:id="_d-h0wEb7EeqNCZfk4r81vQ" name="send_signal_to_ampl" type="_6IBXYEbtEeqNCZfk4r81vQ" aggregation="composite"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_3MsHQEe0EeqFcrBZ95zbWQ" name="get_signal"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Eb8W0Ee1EeqFcrBZ95zbWQ" name="send_signal"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_EPiyMEe4EeqFcrBZ95zbWQ" name="send_signal_to_amplifier"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Component" xmi:id="_HULIQEbxEeqNCZfk4r81vQ" name="AmplifierComponent"/>
       <packagedElement xmi:type="uml:Component" xmi:id="_NOyskEbxEeqNCZfk4r81vQ" name="FilterComponentType"/>
       <packagedElement xmi:type="uml:Component" xmi:id="_OnDgAEbxEeqNCZfk4r81vQ" name="ApplyFilters_impl">
         <ownedAttribute xmi:type="uml:Port" xmi:id="_gu98EEb7EeqNCZfk4r81vQ" name="receive_signal_amplified" type="_da6dQEbuEeqNCZfk4r81vQ" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_hPtRoEb7EeqNCZfk4r81vQ" name="send_signal_filtered" type="_9l2JIEbtEeqNCZfk4r81vQ" aggregation="composite"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_XE0WcEe1EeqFcrBZ95zbWQ" name="apply_pass_band_filter"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_ZC-sQEe1EeqFcrBZ95zbWQ" name="apply_pass_low_filter"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_a1qK0Ee1EeqFcrBZ95zbWQ" name="apply_pass_high_filter"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_sjqLsEe3EeqFcrBZ95zbWQ" name="send_signal_filtered"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Component" xmi:id="_Pm5zcEbxEeqNCZfk4r81vQ" name="ConversorComponentType">
         <ownedAttribute xmi:type="uml:Port" xmi:id="_h2yfwEb7EeqNCZfk4r81vQ" name="receive_signal_filtered" type="_9l2JIEbtEeqNCZfk4r81vQ" aggregation="composite"/>
@@ -1015,6 +1038,8 @@
       <packagedElement xmi:type="uml:Component" xmi:id="_QQKL0EbxEeqNCZfk4r81vQ" name="Conversor_impl">
         <ownedAttribute xmi:type="uml:Port" xmi:id="_h3dOIEb7EeqNCZfk4r81vQ" name="FlowPort1"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_i_OHcEb7EeqNCZfk4r81vQ" name="FlowPort2"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_KvUj8Ee2EeqFcrBZ95zbWQ" name="converter_signal"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_UIJpoEe4EeqFcrBZ95zbWQ" name="send_signal_converted"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Component" xmi:id="_g4cMsEbxEeqNCZfk4r81vQ" name="SignalECG_impl">
         <ownedAttribute xmi:type="uml:Port" xmi:id="_je7iQEb7EeqNCZfk4r81vQ" name="receive_signal_converted" type="_8wAtUEbtEeqNCZfk4r81vQ" aggregation="composite"/>
@@ -1037,6 +1062,8 @@
       <packagedElement xmi:type="uml:Component" xmi:id="_VdnV4Eb2EeqNCZfk4r81vQ" name="Amplifier_impl">
         <ownedAttribute xmi:type="uml:Port" xmi:id="_fhPksEb7EeqNCZfk4r81vQ" name="receive_signal" type="_6IBXYEbtEeqNCZfk4r81vQ" aggregation="composite"/>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_gJuhAEb7EeqNCZfk4r81vQ" name="send_signal_amplified" type="_da6dQEbuEeqNCZfk4r81vQ" aggregation="composite"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_IFB9YEe1EeqFcrBZ95zbWQ" name="amplifier_signal"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_OECyIEe4EeqFcrBZ95zbWQ" name="send_signal_amplified"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Realization" xmi:id="_YJ9nYEb2EeqNCZfk4r81vQ" client="_VdnV4Eb2EeqNCZfk4r81vQ" supplier="_HULIQEbxEeqNCZfk4r81vQ"/>
       <packagedElement xmi:type="uml:Component" xmi:id="_URK0EEb6EeqNCZfk4r81vQ" name="ECGSignalSW">
@@ -1790,8 +1817,6 @@
   <GCM:FlowPort xmi:id="_4FpDEEX0Eeq0vKOFzojccg" direction="out" base_Port="_4FG3kEX0Eeq0vKOFzojccg"/>
   <GCM:FlowPort xmi:id="_8rjeQEX0Eeq0vKOFzojccg" direction="in" base_Port="_8qLlQEX0Eeq0vKOFzojccg"/>
   <GCM:FlowPort xmi:id="_ACwqoEX1Eeq0vKOFzojccg" direction="out" base_Port="_ACPtQEX1Eeq0vKOFzojccg"/>
-  <GCM:FlowPort xmi:id="_Cmr_8EX1Eeq0vKOFzojccg" direction="in"/>
-  <GCM:FlowPort xmi:id="_EDriYEX1Eeq0vKOFzojccg" direction="in"/>
   <GCM:FlowPort xmi:id="_JH2m4EX1Eeq0vKOFzojccg" direction="in" base_Port="_JHOUwEX1Eeq0vKOFzojccg"/>
   <GCM:FlowPort xmi:id="_KHF2UEX1Eeq0vKOFzojccg" direction="out" base_Port="_KGn8QEX1Eeq0vKOFzojccg"/>
   <GCM:FlowPort xmi:id="_UpU-oEX4Eeq0vKOFzojccg" direction="in" base_Port="_Uo9yQEX4Eeq0vKOFzojccg"/>
