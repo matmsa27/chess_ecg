@@ -4598,7 +4598,7 @@
     <styles xmi:type="notation:StringValueStyle" xmi:id="_RF1BAUSrEeqk74OdS1CXfQ" name="diagram_compatibility_version" stringValue="1.0.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_RF1BAkSrEeqk74OdS1CXfQ"/>
     <styles xmi:type="style:PapyrusViewStyle" xmi:id="_RF1BA0SrEeqk74OdS1CXfQ">
-      <owner xmi:type="uml:Package" href="model.uml#_x2scoLieEem0EpkRGXzNFg"/>
+      <owner xmi:type="uml:Package" href="model.uml#_8rjC0Ex5Eeq3Cq-QLE8LQA"/>
     </styles>
     <element xmi:type="uml:Package" href="model.uml#_x2scoLieEem0EpkRGXzNFg"/>
     <edges xmi:type="notation:Connector" xmi:id="_M-SR8EStEeqk74OdS1CXfQ" type="4005" source="_FHWK4EStEeqk74OdS1CXfQ" target="_URHRQESrEeqk74OdS1CXfQ">
@@ -5256,7 +5256,7 @@
     <styles xmi:type="notation:StringValueStyle" xmi:id="_szM_IUXsEeq0vKOFzojccg" name="diagram_compatibility_version" stringValue="1.0.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_szM_IkXsEeq0vKOFzojccg"/>
     <styles xmi:type="style:PapyrusViewStyle" xmi:id="_szM_I0XsEeq0vKOFzojccg">
-      <owner xmi:type="uml:Package" href="model.uml#_x2scoLieEem0EpkRGXzNFg"/>
+      <owner xmi:type="uml:Package" href="model.uml#_Kj2Z8Ex7Eeq3Cq-QLE8LQA"/>
     </styles>
     <element xmi:type="uml:Package" href="model.uml#_x2scoLieEem0EpkRGXzNFg"/>
     <edges xmi:type="notation:Connector" xmi:id="_mkGRMEXvEeq0vKOFzojccg" type="4005" source="_ghaWAEXvEeq0vKOFzojccg" target="_VcTUsEXtEeq0vKOFzojccg">
@@ -5986,7 +5986,7 @@
     <styles xmi:type="notation:StringValueStyle" xmi:id="_1qPs8UYbEeq0vKOFzojccg" name="diagram_compatibility_version" stringValue="1.0.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_1qPs8kYbEeq0vKOFzojccg"/>
     <styles xmi:type="style:PapyrusViewStyle" xmi:id="_1qPs80YbEeq0vKOFzojccg">
-      <owner xmi:type="uml:Package" href="model.uml#_x2scoLieEem0EpkRGXzNFg"/>
+      <owner xmi:type="uml:Package" href="model.uml#_-49DoEx7Eeq3Cq-QLE8LQA"/>
     </styles>
     <element xmi:type="uml:Package" href="model.uml#_x2scoLieEem0EpkRGXzNFg"/>
     <edges xmi:type="notation:Connector" xmi:id="__7_kUEbxEeqNCZfk4r81vQ" type="4005" source="_kU0M8EbxEeqNCZfk4r81vQ" target="_YXoesEbwEeqNCZfk4r81vQ">
@@ -6556,11 +6556,11 @@
     </children>
     <children xmi:type="notation:Shape" xmi:id="_900XsEj6EeqGfqEoXePGdQ" type="2002" fillColor="8421504">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eAbpUElYEeqxlrCxaPgPew" source="Stereotype_Annotation">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eAbpUUlYEeqxlrCxaPgPew" key="StereotypeWithQualifiedNameList" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eAbpUklYEeqxlrCxaPgPew" key="StereotypeList" value="CHESS::Dependability::StateBased::StateBasedComponents::SimpleStochasticBehavior"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eAbpU0lYEeqxlrCxaPgPew" key="Stereotype_Presentation_Kind" value="HorizontalStereo"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eAcQYElYEeqxlrCxaPgPew" key="PropStereoDisplay" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eAcQYUlYEeqxlrCxaPgPew" key="StereotypePropertyLocation" value="Compartment"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1P8skEx8Eeq3Cq-QLE8LQA" key="StereotypeWithQualifiedNameList" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1P8skUx8Eeq3Cq-QLE8LQA" key="StereotypeList" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1P8skkx8Eeq3Cq-QLE8LQA" key="Stereotype_Presentation_Kind" value="HorizontalStereo"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1P8sk0x8Eeq3Cq-QLE8LQA" key="PropStereoDisplay" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1P8slEx8Eeq3Cq-QLE8LQA" key="StereotypePropertyLocation" value="Compartment"/>
       </eAnnotations>
       <children xmi:type="notation:DecorationNode" xmi:id="_902M4Ej6EeqGfqEoXePGdQ" type="5005"/>
       <children xmi:type="notation:BasicCompartment" xmi:id="_902z8Ej6EeqGfqEoXePGdQ" type="7002">
@@ -6586,11 +6586,11 @@
     </children>
     <children xmi:type="notation:Shape" xmi:id="_PZH78Ej7EeqGfqEoXePGdQ" type="2002" fillColor="8421504">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Xz51oElYEeqxlrCxaPgPew" source="Stereotype_Annotation">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Xz51oUlYEeqxlrCxaPgPew" key="StereotypeWithQualifiedNameList" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Xz51oklYEeqxlrCxaPgPew" key="StereotypeList" value="CHESS::Dependability::StateBased::StateBasedComponents::SimpleStochasticBehavior"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Xz6csElYEeqxlrCxaPgPew" key="Stereotype_Presentation_Kind" value="HorizontalStereo"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Xz6csUlYEeqxlrCxaPgPew" key="PropStereoDisplay" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Xz6csklYEeqxlrCxaPgPew" key="StereotypePropertyLocation" value="Compartment"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1QDaQEx8Eeq3Cq-QLE8LQA" key="StereotypeWithQualifiedNameList" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1QDaQUx8Eeq3Cq-QLE8LQA" key="StereotypeList" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1QDaQkx8Eeq3Cq-QLE8LQA" key="Stereotype_Presentation_Kind" value="HorizontalStereo"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1QDaQ0x8Eeq3Cq-QLE8LQA" key="PropStereoDisplay" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1QDaREx8Eeq3Cq-QLE8LQA" key="StereotypePropertyLocation" value="Compartment"/>
       </eAnnotations>
       <children xmi:type="notation:DecorationNode" xmi:id="_PZMNYEj7EeqGfqEoXePGdQ" type="5005"/>
       <children xmi:type="notation:BasicCompartment" xmi:id="_PZMNYUj7EeqGfqEoXePGdQ" type="7002">
@@ -6617,7 +6617,7 @@
     <styles xmi:type="notation:StringValueStyle" xmi:id="_H8bHAUiREeqlLeFVCaai1w" name="diagram_compatibility_version" stringValue="1.0.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_H8bHAkiREeqlLeFVCaai1w"/>
     <styles xmi:type="style:PapyrusViewStyle" xmi:id="_H8bHA0iREeqlLeFVCaai1w">
-      <owner xmi:type="uml:Package" href="model.uml#_x2scoLieEem0EpkRGXzNFg"/>
+      <owner xmi:type="uml:Package" href="model.uml#_xzZGIEx8Eeq3Cq-QLE8LQA"/>
     </styles>
     <element xmi:type="uml:Package" href="model.uml#_x2scoLieEem0EpkRGXzNFg"/>
   </notation:Diagram>
