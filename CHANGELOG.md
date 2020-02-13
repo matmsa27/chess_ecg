@@ -1,6 +1,6 @@
 # CHANGELOG FOR ZIP_FILES
 
-v0.5 UnStable version 13-02-2020
+v0.6 UnStable version 13-02-2020
 ----------
  * Refactor models and organize the architecture models
 
