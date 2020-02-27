@@ -1,5 +1,11 @@
 # CHANGELOG FOR ZIP_FILES
 
+v0.7 Stable version 27-02-2020
+----------
+ * Create another project only with SystemView, contains modelling to AlarmBattery, Screen Results and ECG Signal Flow
+ * Refactor SystemView and run analysis on SystemView
+
+
 v0.6 UnStable version 13-02-2020
 ----------
  * Refactor models and organize the architecture models
