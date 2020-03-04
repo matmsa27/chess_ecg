@@ -1,6 +1,12 @@
 # CHANGELOG FOR ZIP_FILES
 
-v0.8 Stable version 28-02-2020
+v0.8 Stable version 04-03-2020
+----------
+ * Modelling ScreeResults
+ * Running Analysis to ScreenResults
+ * PS: I cannot runned yet the analysis for each modelling. I runned the analysis for each modelling time by time
+
+v0.8 Stable version 04-03-2020
 ----------
  * Modelling AlarmBattery and DetecteDiseases in a new project
  * Analysis runned and tested for AlarmBattery, will running on DetecteDiseases yet
