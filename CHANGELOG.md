@@ -1,5 +1,10 @@
 # CHANGELOG FOR ZIP_FILES
 
+v0.8 Stable version 28-02-2020
+----------
+ * Modelling AlarmBattery and DetecteDiseases in a new project
+ * Analysis runned and tested for AlarmBattery, will running on DetecteDiseases yet
+
 v0.7 Stable version 27-02-2020
 ----------
  * Create another project only with SystemView, contains modelling to AlarmBattery, Screen Results and ECG Signal Flow
