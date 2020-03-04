@@ -1,6 +1,12 @@
 # CHANGELOG FOR ZIP_FILES
 
-v0.8 Stable version 04-03-2020
+v0.10 Stable version 04-03-2020
+----------
+ * Modelling ECGSignalFlow
+ * Running Analysis to ECGSignalFlow
+
+
+v0.9 Stable version 04-03-2020
 ----------
  * Modelling ScreeResults
  * Running Analysis to ScreenResults
