@@ -1,5 +1,10 @@
 # CHANGELOG FOR ZIP_FILES
 
+v0.11 Stable version 15-03-2020
+----------
+ * Modelling General ICU Environment
+ * Is missing component that represent each modelling
+
 v0.10 Stable version 04-03-2020
 ----------
  * Modelling ECGSignalFlow
