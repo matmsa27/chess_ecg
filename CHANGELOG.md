@@ -1,5 +1,11 @@
 # CHANGELOG FOR ZIP_FILES
 
+v0.11 Stable version 24-03-2020
+----------
+ * Modelling General ICU with Multiparametric Editor
+ * Add more components to modelling Mulparametric Monitor
+ * Running alanysis
+
 v0.11 Stable version 15-03-2020
 ----------
  * Modelling General ICU Environment
