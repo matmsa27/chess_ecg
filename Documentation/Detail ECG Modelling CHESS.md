@@ -1,4 +1,5 @@
-﻿# Modelagem de um ECG com o framework CHESS
+﻿
+# Modelagem de um ECG com o framework CHESS
 
 Este documento contém de forma detalhada o processo de modelagem e análise dos resultados de confiabilidade e disponibilidade de um ECG para um ambiente de UTI cardíaca. 
 
@@ -12,12 +13,18 @@ a descrever...
 A visão de *software* é responsável por proporciar que o modelador realize abstrações do que se pretende modelar a nível de *software*. Para o ECG foram realizadas 5 abstrações para modelagem, que são:
 
  1. Detecção de doenças;
- 2. Captura de sinal com os eletrodos;
- 3. Alarme de bateria e detecção de carga;
- 4. Fluxo do sinal capturado dentro do ECG;
- 5. Tela de resultados que o ECG coletou de um ou mais pacientes.
+ 2. Bateria;
+ 3. Fluxo do sinal capturado dentro do ECG;
+ 4. Tela de resultados que o ECG coletou de um ou mais pacientes.
+ 5. Monitor multiparametrico
 
-A partir dessas modelagens, foi desenvolvida uma modelagem de nível superior conectando todas essas modelagens, e definindo um fluxo para as modelagens definidas de nível inferior.
+Durante a modelagem foram definidos alguns padrões para facilitar a legibilidade dos diagramas. Os *ComponentTypes* são os blocos de cor vermelha, os *ComponentImplementations* são os blocos de cor verde, já as interfaces possuem a cor amarela, e os *Component* que possuem um diagrama de composição representando o fluxo de todo o diagrama de classe possui a cor cinza.
+
+Cada *ComponentType* deve possuir um *ComponentImplementation* associado a ele. Cada *ComponentType* podem possuir relação com interfaces, sendo essas interfaces categorizadas em prover (saída) ou requerer (entrada). Se um *ComponentType* requer uma interface, é criado um relacionamento de realização e esse relacionamento, já se um *ComponentType* prover uma interface, é criado um relacionamento de dependência o *ComponentType* e a interface. Os relacionamentos criados a partir das portas de comunicação entre os ComponentTypes e as Interfaces é possível observar nos diagramas de classes. Para criar o relacionamento entre um *ComponentType* e uma interface, é necessário criar em cada *ComponentType* um diagrama de composição, e então neste diagrama de composição, criar portas do esteriótipo *ClientServerPort*, onde na porta defini-se o nome da porta, o tipo que é a interface, e se ela é uma interface *required*(entrada) ou *provided*(saída). Ao definir as portas em cada ComponentType atribuindo as interfaces, os relacionamentos de realização ou dependência são criados.
+
+Em cada diagrama de classe existe um componente do tipo *Component* na cor cinza que representa toda a comunicação definida entre os *Components* e os tipos de interface no diagrama de classes. Como em todos os componetes do tipo *ComponentType* possuem um diagrama de composição onde são definidos as portas de comunicação utilizando as interfaces. Como já mencionado no paragrafo anterior, ao definir essas portas, são criadas os relacionamentos de dependencia e realização no diagrama de classes. Outro ponto importante para ser detalhado, no diagrama de classes, para cada *ComponentType* é necessário definir um *ComponentImplementation*. Ao definir um *ComponentImplementation* deve-se criar manualmente um relacionamento de realização do *ComponentImplementation* para o *ComponentType*. Ao criar o relacionamento de realização entre um *ComponentType* e um *ComponentImplementation*, ele herda definições do *ComponentType*, como métodos, operações, portas de comunicação e etc.
+
+Após definir o diagrama de classe com todos os componentes e interfaces necessários, deve-se criar um diagrama de composição utilizando um componente do tipo *Component* que irá representar toda a comunicação dos componentes e interfaces definidos no diagrama de classes. Neste diagrama de composição que representa o diagrama de classes são utilizados os *ComponentImplementations* que herdam as informações dos *ComponentTypes* que estão associados. Os *ComponentImplementations* possuem as portas herdadas do *ComponentType* associado, e assim elas podem ser utilizadas no diagrama de composição para realizar a comunicação entre os componentes.
 
 ## Estrutura da modelagem
 
@@ -30,10 +37,26 @@ Dentro de cada modelagem, todos possuem o mesmo padrão. Ao explorar uma modelag
 ![enter image description here](https://i.imgur.com/GzSOiBn.png)
 
 ## Detecção de doenças
+
+No diagrama de classes para a modelagem de um detector de doenças que trabalha em conjunto com o ECG, foi necessário definir dois ComponentsTypes, um responsável por receber o sinal, e um outro por realizar a detecção de doença. O primeiro ComponentType definido chamado de ReceiveSignal em seu diagrama de composição possui uma porta de comunicação, onde o seu direcionamento é prover a interface ReceiveSignal. Essa definição é possível observar na imagem a seguir.
+
+![enter image description here](https://i.imgur.com/HUoS8YU.png)
+
+Após definir o diagrama de composição para o *ComponentType* *ReceiveSignal*, é necessário definir o diagrama de composição para o *ComponentType* *DetectDiseases*. O *ComponentType* *DetectDiseases* possui 7 portas de comunicação com as interfaces definidas no diagrama de classes. A primeira porta é uma porta de entrada, onde o ComponentType DetectDiseases requer uma interface para iniciar o seu funcionamento. Esta interface requerida é a interface ReceiveSignal, onde o *ComponentType* *ReceiveSignal* prover a mesma. Após o *ComponentType* DetectDiseases receber a interface ReceiveSignal, o componente está pronto para poder encaminhar para uma de suas portas de saída a doença detectada. O diagrama de composição para o ComponentType DetectDiseases, pode ser observado na imagem abaixo.
+
+![enter image description here](https://i.imgur.com/xROa2iD.png)
+
+Cada interface que o ComponentType DetectDiseases possui um relacionamento de realização, representa uma doença detectada, que são: ataque cardíaco, arritimia, insuficiencia cardíaco, parada cardíaca, taquicardia e bradicardia. Essas anomalias cardiacas, são anomalias que um ECG pode detectar em um ambiente de UTI.
+
+Com a definição dos Interfaces, ComponentTypes e ComponentsImplementations, o diagrama de classes para detecão de doenças com os componentes e seus relacionamentos entre eles pode ser observado na imagem a seguir.
+
+![enter image description here](https://i.imgur.com/lAkVGiZ.png)
+
+
 Para a modelagem de detecção de doenças a nível de software, foi necessário primeiro criar um diagrama de classes para poder definir as *interfaces*, *components*, *componentsimplementations* e também as relações.
 As interfaces definidas representam a recepção do sinal para o software que irá detectar as doenças cardíacas, e também as interfaces representam quais doenças cardíacas esse software pode detectar. Assim existe um component para a detecção de doenças e assim uma implementação para ele, e também um component para receber o sinal que também possui uma implementação. Isso é possível observar na imagem.
 
-![Diagrama de classes para detecção de dooenças](https://i.imgur.com/H7V3yk4.png)
+![enter image description here](https://i.imgur.com/lAkVGiZ.png)
 
 Após definir o diagrama de classes para a detecção de doenças na visão de *software*, é necessário criar um diagrama de composição. Para isso é necessário definir no diagrama de classes um *component* que representa  de um nível superior essa modelagem. Esse component definido foi nomeado de *DetectDiseasesSW*. No diagrama de composição este *component* possui os *component implementations*, que estão relacionados com os seus respectivos *components* e interfaces. Os *component implementations* definidos no diagrama de classes são adicionados como *part* dentro do diagrama de composição, assim o mesmo *component implementation* definido no diagrama de classe, é alocado no diagrama de composição possuindo uma referência ao diagrama de classes onde foi definido originalmente.
 
@@ -43,30 +66,33 @@ A modelagem para detecção de doenças possui dois *components implementations*
 
 O *component implementation* *ReceiveSignal_impl* possui uma porta de saída com a interface *ReceiveSignal* que ele está diretamente ligado, que é a *send_signal_to_detect* . Esta porta de saída tem conexão direta com uma porta de entrada do *component implementation DetectDiseases_impl*, que também é do tipo *ReceiveSignal*. O *component implementation DetectDiseases_impl* ao receber em uma porta de entrada o *ReceiveSignal*, é possível realizar a detecção de doenças cardíacas, e de acordo com a doença cardíaca detectada, cada uma pode ir para a sua porta de saída específica. Cada porta de saída do *DetectDiseases_impl* representa uma doença cardíaca detectada.
 
-## Eletrodos e captura de sinal
 
-Modelagem em desenvolvimento...
+## Bateria
 
-## Alarme da dateria e detecção de carga
+Para a utilização do ECG e de outros componentes, inicialmente é preciso veerificar se a bateria possui uma carga suficiente para que o ECG inicie a captura do sinal, se a bateria estiver com uma carga abaixo do aceitável, o ECG não deve iniciar o procedimento de captura de sinal e deve emitir um alarme informando que a bateria possui um baixo nível de carga. Se a bateria possuir uma carga aceitável para iniciar o procedimento, o ECG deve informar a carga da bateria atual e então iniciar o procedimento de captura de sinal normalmente.
 
-Para a utilização do ECG, inicialmente o mesmo precisa verificar se a bateria possui uma carga suficiente para que o ECG inicie a captura do sinal, se a bateria estiver com uma carga abaixo do aceitável, o ECG não deve iniciar o procedimento de captura de sinal e deve soar um alarme informando que a bateria possui um baixo nível de carga. Se a bateria possuir uma carga aceitável para iniciar o procedimento, o ECG deve informar a carga da bateria e então iniciar o procedimento de captura de sinal normalmente.
+A detecção de carga de bateria e o alarme de pouca carga foi modelada da forma que, é necessário receber uma entrada com um valor de carga da bateria através do *ComponentType* *InputBatteryCharge*, que deve processar este valor de carga utilizando o *ComponentType* *ProcessBatteryCharge*, e então ser enviado para um supervisor. O supervisor é representado pelo *ComponentType* *Supervisor*, responsável por identificar se a carga da bateria recebida esta abaixo do normal, e caso esteja, impeça que o ECG e os componentes que utilizarão a energia fornecida pela bateria não funcione de forma correta e emita um alarme informando que a bateria está com pouca carga. Caso a bateria possua carga suficiente, deve ser ser informado ao ECG e aos outros componentes a quantidade da carga e que devem funcionar normalmente.
 
-A detecção de carga de bateria ou alarme de bateria foi modelada da forma que, é necessário receber uma entrada com um valor de carga da bateria, processar esse valor de carga e então um supervisor fica responsável em identificar se a carga da bateria recebida e analisada é abaixo do normal para que o ECG não incie o procedimento de captura de sinal do paciente e emita um alarme informando que a bateria está com pouca carga, ou apenas informe que a bateria tem uma carga suficiente para que o ECG inicie o procedimento e então realiza a captura de sinal do paciente.
+![enter image description here](https://i.imgur.com/puP4a88.png)
 
-![enter image description here](https://i.imgur.com/lBYlFwe.png)
+Cada *ComponentType* precisa ter um diagrama de composição associado para que as portas de comunicação com as interfaces possam ser definidas. Assim o primeiro ComponentType deifnido chamado de InputBatteryCharge possui uma porta de saída, fornecendo a interface InputBatteryCharge como saída, como é possível observar na imagem abaixo.
 
-Foram definidas 4 interfaces para esta modelagem:
+![enter image description here](https://i.imgur.com/G6c1pqu.png)
 
- 1. InputBatteryCharge
- 2. ProccessBatteryCharge
- 3. OutputBatteryCharge
- 4. BatteryAlarm
+Após ser definido o diagrama de composição para o *ComponentType* *InputBatteryCharge* que prover a interface *InputBatteryCharge*, foi definido um diagrama de composição para o segundo *ComponentType* criado, chamado de *ProcessBatteryCharge*. O diagrama de composição do componente *ProcessBatteryCharge*, possui duas portas de comunicação, a primeira é uma porta de entrada onde o componente precisa da interface *InputBatteryCharge* fornecida pelo componente *InputBatteryCharge*. A partir da interface requerida, o componente *ProcessBatteryCharge* prover a interface *ProcessBatteryCharge*, como é possível observar na imagem abaixo.
 
-A interface *InputBatteryCharge* possui o seu *ComponentType* sua Implementação associadas diretamente, esse é o primeiro passo para que este fluxo seja executado. A interface *ProccessBatteryCharge* através do seu component e implementação recebem o valor da carga da bateria e realizam a verificação dessa carga para então informar ao supervisor que está relacionado as duas interfaces *OutputBatteryCharge* e *BatteryAlarm*, através da implementação será informado se a bateria possui carga suficiente para realizar o exame ou se é necessario emitir um alarme. O component *AlarmSW* é responsável por definir um diagrama de composição e então demonstrar a comunicação entre as implementações e as suas portas.
+![enter image description here](https://i.imgur.com/ha1TVCs.png)
 
-![Diagrama de Composição para a detecção de carga da bateria ou alarme em nível baixo](https://i.imgur.com/FcXnZSD.png)
+Após a definição das portas do componente *ProcessBatteryCharge*, foi definido a composição do componente Supervisor. O diagrama de composição do componente supervisor possui três portas de comunicação. A primeira porta é requerida a interface *ProcessBatteryCharge*, fornecida pelo componente *ProcessBatteryCharge*. Assim o *ComponentType* Supervisor prover duas interfaces através de duas portas. As interfaces providas pelo *ComponentType* Supervisor são: *AlarmBattery* e *Voltage*. É possível observar o diagrama de composição do *ComponentType* na figura abaixo.
 
-O diagrama de composição do *AlarmSW* inicia-se através do *inputBatteryChargeImpl* recebendo um valor de carga da bateria e enviando esse valor para a porta de saída nomeada de *send_charge* do tipo *InputBatteryCharge*, esta porta de saída possui uma comunicação direta com a porta *receive_charge* do mesmo tipo no *processBatteryCharge_impl*. O *processBatteryCharge_impl* ao receber o valor através da sua porta de entrada, pode aplicar suas operações nesse valor recebido e então encaminhar para a sua porta de saída *send_to_super* do tipo *ProcessBatteryCharge* e que possui comunicação direta com o *Supervisor_impl* através da porta *get_charge_from_proc*. Dentro do *Supervisor_imp*, ele irá decidir para onde encaminhar a informação, se será um alarme de pouca bateria emitido através da porta *sound_alarm* do tipo *BatteryAlarm* ou uma informação para a porta *show_charge* do tipo *OutputBatteryCharge*.
+![enter image description here](https://i.imgur.com/jJybeGi.png)
+
+Após definir todos os diagramas de composição para cada ComponentType, nós podemos observar as relações de dependencia e realização criadas no diagrama de classes. No diagrama de classes também podemos observar um componente do tipo *Component* chamado BatterySW. Este componente possui um diagrama de composição, que representa todo o fluxo dos componentes e interfaces do diagrama de classes. No diagrama de composição do BatterySW são utilizados os ComponentImplementations que possui um relacionamento de realização com cada ComponentType associado. O diagrama de composição que representa todo o fluxo da bateria pode ser observado na imagem a seguir.
+
+![enter image description here](https://i.imgur.com/68lAQXU.png)
+
+
+O diagrama de composição do *BatterySW* inicia-se através do *InputBatteryCharge_impl* recebendo um valor de carga da bateria e enviando esse valor para a porta de saída nomeada do tipo *InputBatteryCharge*. Esta porta de saída possui uma comunicação direta com a porta *in_bc* do mesmo tipo no *PBC_impl*. O *PBC_impl* ao receber o valor através da sua porta de entrada, o *ComponentImplementation* entra em funcionamento e então pode pode retornar uma informação para a sua porta de saída *PBC* do tipo *ProcessBatteryCharge* e que possui comunicação direta com o *Supervisor_impl* através da porta *pb_c*. Dentro do *Supervisor_imp*, ele irá decidir para onde encaminhar a informação, se será um alarme de pouca carga de bateria emitido através da porta *alarm* do tipo *AlarmBattery* ou uma informação para a porta *output_charge* do tipo *Voltage*.
 
 
 ## Fluxo do sinal capturado
@@ -120,3 +146,84 @@ Após adicionar os components de maior nível superior de cada modelagem, e que 
 ![Diagrama de composição de visão Geral do ECG](https://i.imgur.com/86RX9RX.png)
 
 O diagrama de composição da visão geral do ECG representa as saídas que cada modelagem apresenta e possui a função de conectar uma modelagem com a outra. O inicio do fluxo inicia através da modelagem do *AlarmSW*, onde as saídas são um alarme caso a bateria seja baixa, ou uma informação com o valor de carga da bateria que logo é passada para o fluxo de sinal do ECG. A saída do fluxo de sinal do ECG podem ter dois caminhos, o primeiro é, caso alguma anomalia seja detectada, essa informação é enviada para a modelagem que é responsável por tratar doenças cardíacas e assim emitir um alarme para a doença cardíaca detectada, caso não o *ECGSignalSW* pode transmitir o sinal para a modelagem da tela de resultados, que então pode exibir os resultados em uma tela para os profissionais responsáveis por monitorar e analisar.
+
+
+## Monitor Multiparametrico
+
+A modelagem de um monitor multiparametrico, representa um ambiente de uma UTI de um leito para um paciente. Um monitor multiparametrico em uma UTI é capaz de coletar dados de respiração, temperatura, oxigenação e também dados cardíacos de um paciente (por link do artigo). Assim um monitor multiparametrico possui componentes de ECG para leitura de sinais cardiacos, oximetro de pulso para medir a quantidade de oxigênio no sangue do paciente, termômetro para medir a temperatura do corpo do paciente e também um componente para medir a taxa de respiração. Além desses componentes, um monitor multiparametrico é composto por uma bateria e também por eletrodos para captar as informações e enviar ao monitor multiparametrico.
+
+Com o CHESS essa modelagem foi desenvolvida definindo os componentes do tipo *ComponentType* de Bateria, Eletrodos, Detecção de Doenças, Eletrocardiograma, Oximetro de Pulso, Processamento de Sistema, Servidor de Resultados, Taxa Respiratória, Termomêtro e Resultados. O primeiro passo para a modelagem do monitor multiparametrico foi criar um diagrama de classes onde é possível definir todos os *ComponentTypes*, ComponentImplementations e Interfaces. É possível observar o diagrama de classes para o monitor multiparametrico com todas as *Interfaces*, *CompononentsTypes* e *ComponentsImplementations* definidos na imagem a seguir.
+
+![enter image description here](https://i.imgur.com/vbqszBU.png)
+
+
+### Bateria
+O *componentType* que representa a bateria possui relacionamento com duas interfaces. Os relacionamentos do component que representa a bateria se dão através de duas portas que prover duas interfaces, uma interface que representa o alarme de bateria em momentos que a bateria não possui carga suficiente para operar, e a outra interface é para energia, chamada de *Voltage*, onde caso a bateria possua carga suficiente para operar, a saída se dar através dessa interface para comunicar com os outros componentes que necessitam dessa interface para funcionar.
+
+![enter image description here](https://i.imgur.com/k41j2gF.png)
+
+### Eletrodos
+
+Os eletrodos possui um ComponentType que representa-o. Este ComponentType que é possível observar na Imagem abaixo, possui relacionamento com duas interfaces. O primeiro relacionamento é com a Interface de *Voltage*, onde os eletrodos necessitam da comunicação com a interface de *Voltage* para funcionar perfeitamente fornecida pelo *ComponentType* de bateria, e então os *ComponentType* de eletrodos prover a interface de impedância.
+
+![enter image description here](https://i.imgur.com/lQimz50.png)
+
+### Eletrocardiograma
+
+Para representar o ECG dentro do monitor multiparametrico, foi necessário definir um ComponentTpe chamado de Electrocardiogram e então, definir para este component um diagrama de composição, para assim criar os relacionamentos desse componente com as interfaces. O ComponentType do ECG possui três portas de comunicação. As duas primeiras portas requeridas para o funcionamento do ECG, essas portas possuem comunicação direta com a interface de Voltage e de Impedancia. A interface de Voltage é fornecida através do component da bateria e a interface de impedância é fornecida através do componente dos eletrodos. Com essas duas portas definidas, o componente pode se comportar corretamente e então prover a interface de sinal através da sua porta de saída.
+
+![enter image description here](https://i.imgur.com/l1HMc8I.png)
+
+### Detecção de Doenças
+
+No monitor multiparametrico, é necessário analisar o sinal que o ECG capta para que se possa retornar resultados, e informar se o paciente está passando por alguma anomalia cardíaca ou não. Assim o compononente detecção de doenças responsável por detectar as anomalias cardiacas do paciente, possui duas portas de comunicação. Uma porta ele necessita da interface Sinal fornecida pelo componente ECG, e a outra porta de comunicação, é fornecida a interface doença detectada, como é possível observar na imagem abaixo.
+
+![enter image description here](https://i.imgur.com/bB7ILnp.png)
+
+### Oximetro de Pulso
+
+O oximetro de pulso é representado através do *ComponentType* *PulseOximeter*. Definindo o diagrama de composição deste componente, foram atribuidas três portas de comunicação. A primeira porta é para a interface de Voltage fornecida pelo componente da bateria, é uma porta onde é necessário ter a interface de Voltage para funcionar. As outras duas portas do componente do oximetro de pulso, são portas de saídas, onde o componente de oximetro de pulso prover duas interfaces, que são: medição de pulso e alarme para medição do pulso. O diagrama de composição do oximetro de pulso é possível observar na imagem abaixo.
+
+![enter image description here](https://i.imgur.com/qh9bTRU.png)
+
+### Taxa Respiratória
+
+A taxa respiratória é representada através do componente *RateRespiratory*, onde poderá ser medido a taxa respiratória do paciente e assim essas informações serem processadas e enviadas ao monitor multiparametrico. O diagrama de composição da taxa respiratória é semelhante ao diagrama de composição do oximetro de pulso. São três portas de comunicação, onde uma requer a interface de *Voltage* e as outras duas prover interfaces de alarme para respiração fora do comum, e também prover uma interface com o resultado sobre a respiração do paciente. As interfaces providas são *RespiratoryAlarm* e *RespiratoryFrequency*, como é possível observar na imagem abaixo.
+
+![enter image description here](https://i.imgur.com/IM0ah3E.png)
+
+### Termômetro
+
+O componente para o termometro, possui relacionamento com duas interfaces em seu diagrama de composição. O componente requer a interface de *Voltage* para funcionar semelhante a outros componentes ja mecionados até aqui. O componente de termometro prover uma interface de temperatura para representar a informação de saída que esse componente fornece. Esta descrição do componente termometro pode ser observada na imagem abaixo.![enter image description here](https://i.imgur.com/UZeABor.png)
+
+### Processador do Sistema
+
+Após capturar todas as informações através dos componentes de ECG, termometro, taxa de respiração, oximetro de pulso e etc, o componente processador de sistema é responsável por capturar as informações dos outros componentes e enviar para o monitor multiparametrico mostrar os resultados, e também enviar para um servidor de resultados onde os profissionais da UTI possam acompanhar.
+
+O processador do sistema requer algumas interfaces para que possa funcionar. As interfaces que o processador do sistema requer são: *BatteryAlarm* e *Voltage*, ambas fornecidas pelo componente de bateria. A interface Signal fornecida pelo componente do ECG. PulseMeasurement e PulseAlarm fornecidas pelo componente de Oximetro de Pulso. RespiratoryFrequency e RespiratoryAlarm fornecidas através do componente Taxa Respiratória. Temperature fornecida através do componente Termometro. Ao receber essas interfaces como entrada através das portas criadas para cada interface, o componente processador do sistema deve prosseguir o fluxo e fornecer algumas interfaces como saída, que são: BatteryAlarm, PulseAlarm, RespitaroryAlarm e Results. Essas interfaces de saída devem ser consumidas pelos componentes servidor de resultados e resultados.
+
+
+![enter image description here](https://i.imgur.com/ipYfamr.png)
+
+
+### Servidor de Resultados
+
+O componente de servidor de resultados, é responsável por captar as informações providas pelo monitor multiparamétrico e enviar para um servidor de resultados, onde os profissionais como médicos e enfermeiros possam ter acesso, e que também possam receber alarmes caso alguma anomalia esteja acontecendo com o paciente.
+
+O componente requer algumas interfaces, que são: *DiseasesDetected*, provida pelo componente de detecção de doenças. Signal, provida pelo componente ECG. *RespiratoryAlarm* provida pelo componente *RateRespiratory*. *PulseAlarm* provida pelo componente oximetro de pulso. BatteryAlarm provida pelo component de bateria, e por fim a interface *Results* provida pelo componente *ProcessSystem*. Ao receber essas interfaces, o servidor de resultados é capaz de prover a interface *ServerResultsStream*, onde é possível observar na imagem abaixo.
+
+![enter image description here](https://i.imgur.com/ZoZVgWZ.png)
+
+### Resultados
+
+O componente de resultados, é o componente que simula as informações que o monitor multiparametrico é capaz de informar. Este componente recebe informações providas de outros componentes e então prover essas informações através de uma interface definida para os resultados finais.
+
+O componente de resultados em seu diagrama de composição requer uma interface *Results* fornecida pelo componente *ProcessSystem*, e então o componente *Results* fornece a interface *StreamResults*, representando todas as informações coletadas dos outros componentes que o *ProcessSystem* forneceu. O diagrama de composição do *Results* pode ser observado na imagem a seguir.
+
+![enter image description here](https://i.imgur.com/XXj50gr.png)
+
+Após definir todos os diagramas de composição para cada *ComponentType*, atribuindo as *Interfaces* nas portas, e então possuindo as relações de realização e dependência como é possivel observar na imagem do diagrama de classes, é necessário criar um *Component* sem esteriótipo, e então nele criar um diagrama de composição que represente todo o fluxo de informações de um monitor multiparametrico definido no diagrama de classes. Dentro do diagrama de composição para o monitor multiparamétrico, será utilizado todos os *ComponentImplementations* definidos no diagrama de classes, e que possuem relações com cada *CompononentType*.
+
+O *Component* criado para definir o diagrama de composição é o component chamado de General_ICU. É possível observar a definição dele no diagrama de classes na cor cinza. Na imagem a seguir, é possível observar o diagrama de composição para o *Component* General_ICU, contendo os *ComponentImplementations*, as portas definidas em cada *ComponentType* e seus tipos. No diagrama de composição utilizando os *ComponentImplementations*, foi definido os conectores entre as portas para representar a comunicação entre os compononentes e as portas.
+
+![enter image description here](https://i.imgur.com/oWJok9q.png)
