@@ -46,26 +46,17 @@ Após definir o diagrama de composição para o *ComponentType* *ReceiveSignal*,
 
 ![enter image description here](https://i.imgur.com/xROa2iD.png)
 
-Cada interface que o ComponentType DetectDiseases possui um relacionamento de realização, representa uma doença detectada, que são: ataque cardíaco, arritimia, insuficiencia cardíaco, parada cardíaca, taquicardia e bradicardia. Essas anomalias cardiacas, são anomalias que um ECG pode detectar em um ambiente de UTI.
+Cada interface que o ComponentType DetectDiseases possui um relacionamento de realização, representa uma doença detectada, que são: ataque cardíaco, arritimia, insuficiência cardíaca, parada cardíaca, taquicardia e bradicardia. Essas anomalias cardíacas, são anomalias que um ECG pode detectar em um ambiente de UTI.
 
-Com a definição dos Interfaces, ComponentTypes e ComponentsImplementations, o diagrama de classes para detecão de doenças com os componentes e seus relacionamentos entre eles pode ser observado na imagem a seguir.
-
-![enter image description here](https://i.imgur.com/lAkVGiZ.png)
-
-
-Para a modelagem de detecção de doenças a nível de software, foi necessário primeiro criar um diagrama de classes para poder definir as *interfaces*, *components*, *componentsimplementations* e também as relações.
-As interfaces definidas representam a recepção do sinal para o software que irá detectar as doenças cardíacas, e também as interfaces representam quais doenças cardíacas esse software pode detectar. Assim existe um component para a detecção de doenças e assim uma implementação para ele, e também um component para receber o sinal que também possui uma implementação. Isso é possível observar na imagem.
+Com a definição das Interfaces, ComponentTypes e ComponentsImplementations, o diagrama de classes para detecão de doenças com os componentes e seus relacionamentos entre eles pode ser observado na imagem a seguir.
 
 ![enter image description here](https://i.imgur.com/lAkVGiZ.png)
 
-Após definir o diagrama de classes para a detecção de doenças na visão de *software*, é necessário criar um diagrama de composição. Para isso é necessário definir no diagrama de classes um *component* que representa  de um nível superior essa modelagem. Esse component definido foi nomeado de *DetectDiseasesSW*. No diagrama de composição este *component* possui os *component implementations*, que estão relacionados com os seus respectivos *components* e interfaces. Os *component implementations* definidos no diagrama de classes são adicionados como *part* dentro do diagrama de composição, assim o mesmo *component implementation* definido no diagrama de classe, é alocado no diagrama de composição possuindo uma referência ao diagrama de classes onde foi definido originalmente.
+Após definir o diagrama de classes para a detecção de doenças, é necessário criar um diagrama de composição. É necessário definir no diagrama de classes um componente do tipo *Component* que representa o fluxo e interações dos componentes definidos no diagrama de classes. Esse component definido foi nomeado de *DetectDiseasesSW*, e é possível observar ele na cor cinza no diagrama de classes. 
 
-![Diagrama de composição para detecção de doenças](https://i.imgur.com/MuzQejL.png)
+O *ComponentImplementation* *ReceiveSignal_impl* prover uma porta de saída nomeada de *send_signal_to_detect* do tipo *ReceiveSignal*. Esta porta realiza uma comunicação com a porta *r_signal* do *ComponentImplementation* *DetectDiseases_impl* que possui o mesmo tipo de interface *ReceiveSignal*. O *ComponentImplementation* *DetectDiseases_impl* ao receber em uma porta de entrada o *ReceiveSignal*, tem a função de realizar a detecção de anomalias cardíacas, e de acordo com a anomalia cardíaca detectada, cada uma pode ir para a sua porta de saída específica. Cada porta de saída do *DetectDiseases_impl* representa uma anomalia cardíaca detectada. O diagrama de composição para o Component DetectDiseases pode ser observado na figura a seguir.
 
-A modelagem para detecção de doenças possui dois *components implementations*, *ReceiveSignal_impl* e *DetectDiseases_impl*. Esses *components implementations* estão diretamente ligados com os mesmos *component implementations* definidos no diagrama de classes, pois no diagrama de composição eles são *parts*, logo no diagrama de composição eles também herdam os relacionamentos com as interfaces e *components* do diagrama de classes. 
-
-O *component implementation* *ReceiveSignal_impl* possui uma porta de saída com a interface *ReceiveSignal* que ele está diretamente ligado, que é a *send_signal_to_detect* . Esta porta de saída tem conexão direta com uma porta de entrada do *component implementation DetectDiseases_impl*, que também é do tipo *ReceiveSignal*. O *component implementation DetectDiseases_impl* ao receber em uma porta de entrada o *ReceiveSignal*, é possível realizar a detecção de doenças cardíacas, e de acordo com a doença cardíaca detectada, cada uma pode ir para a sua porta de saída específica. Cada porta de saída do *DetectDiseases_impl* representa uma doença cardíaca detectada.
-
+![Diagrama de composição para detecção de doenças](https://i.imgur.com/x0WIzxg.png)
 
 ## Bateria
 
