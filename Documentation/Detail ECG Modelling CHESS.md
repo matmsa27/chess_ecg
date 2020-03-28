@@ -86,22 +86,42 @@ Após definir todos os diagramas de composição para cada ComponentType, nós p
 O diagrama de composição do *BatterySW* inicia-se através do *InputBatteryCharge_impl* recebendo um valor de carga da bateria e enviando esse valor para a porta de saída nomeada do tipo *InputBatteryCharge*. Esta porta de saída possui uma comunicação direta com a porta *in_bc* do mesmo tipo no *PBC_impl*. O *PBC_impl* ao receber o valor através da sua porta de entrada, o *ComponentImplementation* entra em funcionamento e então pode pode retornar uma informação para a sua porta de saída *PBC* do tipo *ProcessBatteryCharge* e que possui comunicação direta com o *Supervisor_impl* através da porta *pb_c*. Dentro do *Supervisor_imp*, ele irá decidir para onde encaminhar a informação, se será um alarme de pouca carga de bateria emitido através da porta *alarm* do tipo *AlarmBattery* ou uma informação para a porta *output_charge* do tipo *Voltage*.
 
 
-## Fluxo do sinal capturado
-Assim como nas outras modelagens a nível de *software*, foi necessário definir um diagrama de classes e um diagrama de composição. Foi necessário definir 5 interfaces, e assim seus respectivos *components* e *components implementations*. As interfaces definidas foram as seguintes:
+## Eletrocardiograma
 
- 1. ElectrodesController
- 2. Amplifier
- 3. ApplyFilters
- 4. Conversor
- 5. SignalECG
+No diagrama de classes do eletrocardiograma, foram definidos seis *ComponentTypes*, esses ComponentTypes são: *SetupElectrodes*, *Electrodes*, *Amplifier*, *ApplyFilters*, *Conversor* e ECG. Cada *ComponentTypes* possui um relacionamentos de realização ou dependencia com algumas interfaces definidos através do diagrama de composição de cada, e também cada *ComponentTypes* possui um relacionamento de realização com um *ComponentImplementation*.
 
-![Diagrama de classes para a modelagem do fluxo do sinal capturado](https://i.imgur.com/U2VvhC6.png)
+O primeiro *ComponentTypes* é *SetupElectrodes*. Este componente representa a configuração dos eletrodos no corpo do paciente e verificação se os eletrodos estão alocados corretamente retornando uma verificação de impedância para o ECG informando que os eletrodos estão configurados de forma correta. Assim o *ComponentType* *SetupElectrodes* possui uma porta que prover a interface *ElectrodeImpedance*. É possível observar o diagrama de composição do *ComponentType* *SetupElectrodes* na imagem a seguir.
 
-Todas essas interfaces possuem seus components e components implementations. A interface que gerencia todas as outras e que tem um nível hierárquico é a *SignalECG*, ela é a de nível mais alto nessa abstração, pois quando sua implementação é executada, ela irá precisar da implementação do conversor que por si só depdende da implementação do *ApplyFilter*, que depende da implementação do *Amplifier* e que por fim depende da implementação do *ElectrodesController*, e então o fluxo pode ser bem executado. Para representar melhor esse fluxo de depedências, foi definido um component nomeado de *ECGSignalSW*. Nesse component foi criado um diagrama de composição.
+![enter image description here](https://i.imgur.com/fTMHiA8.png)
 
-![Diagrama de composição para o fluxo do sinal capturado dentro do ECG](https://i.imgur.com/JdfLHGw.png)
+O próximo *ComponentType* é o *ComponentType* *Electrodes*, que em seu diagrama de composição possui duas portas de comunicação. Uma porta de entrada onde requer a interface *ElectrodeImpedance* fornecida pelo *ComponentType* *SetupElectrodes*, e a outra porta de comunicação, onde o *ComponentType* *Electrodes* prover a interface *Signal*. Este componente representa a necessidade da configuração correta dos eletrodos recebendo uma impedância, e então retornando fornecendo o sinal como saída. Pode-se observar diagrama de composição do *ComponentType* *Electrodes* na imagem a seguir.
 
-No diagrama de composição *ECGSignalSW* foram adicionados os *components implementations* como *parts* possuindo uma referência direta com o que foi definido originalmente no diagrama de classes. Assim como a ordem de dependência explicada no diagrama anterior, no diagrama de composição isso é mais legível e mais fácil de compreender. O fluxo se inicia através do *electrodesController_impl* que possui uma porta de saída nomeada de *seng_signal_to_ampl* do tipo *ElectrodesController*, essa porta se comunica diratamente com a porta de entrada *receive_signal* do tipo *ElectrodesController* do *Amplifier_impl*. Dentro do *Amplifier_impl*, ele realiza as operações necessárias e então envia o sinal para uma porta de saída nomeada de *send_signal_amplified* que se comunica com a porta de entrada *receive_signal_amplified* do *ApplyFilters_impl*, possuindo o tipo *Amplifier*. O *ApplyFilters_impl* realiza algumas operações dentro do *component* e utiliza a porta de saída *send_signal_filtered* do tipo *ApplyFilters* para a porta de entrada *receive_signal_filtered* possuindo o tipo *ApplyFilters* no *Conversor_impl*. O *Conversor_impl* realiza a conversão do sinal e então permite que o sinal utilize sua porta de saída *send_signal_converted* do tipo *Conversor* para se comunicar com a porta de entrada *receive_signal_converted* do tipo *Conversor* do *SignalECG_impl*. O *SignalECG_impl* por fim possui uma porta de saída nomeada de *show_ecg_signal* do tipo *SignalECG* que representa o resultado dos sinais capturados por um ECG.
+![enter image description here](https://i.imgur.com/QW9Fa9o.png)
+
+Após os eletrodos, o *ComponentType* *Amplifier* recebe a *Interface* *ElectrodeSignal* que o *ComponentType* *Electrodes* fornece. Assim o componente que representa o amplificador de signal amplifica o sinal e prover a interface *AmplifiedSignal*. Este fluxo é representado em duas portas de comunicação no diagrama de composição do *ComponentType* *Amplifier*, onde a primeira porta requer a *Interface* *ElectrodeSignal* fornecida pelo *ComponentType* *Electrodes*, e a segunda porta fornece a interface *AmplifiedSignal*. Esse diagrama de composição é possível observar na imagem a seguir.
+
+![enter image description here](https://i.imgur.com/DaIDIIi.png)
+
+Após o *ComponentType* *Amplifier* prover a interface *AmplifiedSignal*, o *ComponentType* *ApplyFilters*, possui uma porta de comunicação, onde é requerida a *Interface* *AmplifiedSignal*, fornecida pelo *ComponentType* *Amplifier*. Após receber esta Interface, o *ComponentType* *ApplyFilters* fornece a *Interface* *FilteredSignal*, onde representa a recepção de um sinal, e a aplicação dos filtros de passa baixa, passa alta e passa banda. O diagrama de composição do *ComponentType* *ApplyFilters* pode ser observado na imagem a seguir.
+
+![enter image description here](https://i.imgur.com/EEqo2bR.png)
+
+Após o *ComponentType* *ApplyFilters* fornecer a interface *FilteredSignal*, o sinal segue seu fluxo e agora o *ComponentType* *Conversor* requer em uma de suas portas de comunicação a *Interface* *FilteredSignal*. Após esta *Interface* obtida pelo *ComponentType* *Conversor*, o mesmo agora fornece uma *Interface* chamada de *ConversorSignal*, que representa a conversão do sinal capturado. O diagrama de composição do *ComponentType* *Conversor* pode ser observado na imagem a seguir.
+
+![enter image description here](https://i.imgur.com/PlrJAf2.png)
+
+Após o sinal capturado pelos eletrodos passar por todos esses componentes citados anteriormente dentro do diagrama de classes, o fluxo do sinal dentro do ECG pôde ser representado. Então o ComponentType Conversor prover a Interface ConversorSignal, e assim o último ComponentType deste diagrama que representa o ECG, chamado de ECG possui uma porta de comunicação onde requer a interface ConversorSignal, e então ele retorna o sinal como resultado provendo a interface ECG. Assim, o diagrama de composição do ComponentType ECG pode ser representado na imagem a seguir.
+
+![enter image description here](https://i.imgur.com/NCYu6PP.png)
+
+Com a definição de todos os ComponentTypes e seus diagramas de composição adicionando portas de comunicação, e também a criação dos ComponentsImplementations, onde cada ComponentType possui um com relacionamento de realização, o diagrama de classe para o eletrocardiograma pode ser observado na imagem a seguir.
+
+![enter image description here](https://i.imgur.com/1YMYiYT.png)
+
+
+![Diagrama de composição para o fluxo do sinal capturado dentro do ECG](https://i.imgur.com/o3PDQnz.png)
+
+No diagrama de composição *ECGSignalSW* foram adicionados os *ComponentsImplementations* onde cada um representa um *ComponentType*. O fluxo se inicia através do *setupElectrodes_impl* que possui uma porta de saída nomeada de *impedance* do tipo *ElectrodeImpedance*. Esta porta fornece a *Interface* *ElectrodeImpedance* para a porta *impedance_in* do *ComponentImplementation* *electrodes_impl*. Assim a porta *signal_out* do tipo *ElectrodesSignal*, realiza uma comunicação direta com a porta de entrada *signal_in* do tipo *ElectrodesSignal* no *ComponentImplementation* *Amplifier_impl*. Dentro do *Amplifier_impl*, ele realiza as operações de amplificação de sinal e então envia o sinal para uma porta de saída que se comunica com a porta de entrada *ampl* do *ApplyFilter_impl*, possuindo o tipo *Amplifier*. O *applyFilter_impl* aplica os filtros de passa baixa, passa alta e passa banda e então utiliza a porta de saída *apply_filter* do tipo *FilteredSignal* para a porta de entrada *appl* possuindo o tipo *FilteredSignal* no *conversor_impl*. O *conversor_impl* realiza a conversão do sinal, e então permite que o sinal utilize sua porta de saída *conversor* do tipo *ConversorSignal* para se comunicar com a porta de entrada *cnv* do tipo *ConversorSignal* do ComponentImplementation *eCG_impl*. O *eCG_impl* por fim possui uma porta de saída nomeada de *ecg* do tipo *ECG* que representa o resultado dos sinais capturados por um ECG.
 
 ## Tela de resultados
 
