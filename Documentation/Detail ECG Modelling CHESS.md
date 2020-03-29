@@ -119,27 +119,37 @@ Com a definição de todos os ComponentTypes e seus diagramas de composição ad
 ![enter image description here](https://i.imgur.com/1YMYiYT.png)
 
 
+
+
 ![Diagrama de composição para o fluxo do sinal capturado dentro do ECG](https://i.imgur.com/o3PDQnz.png)
 
 No diagrama de composição *ECGSignalSW* foram adicionados os *ComponentsImplementations* onde cada um representa um *ComponentType*. O fluxo se inicia através do *setupElectrodes_impl* que possui uma porta de saída nomeada de *impedance* do tipo *ElectrodeImpedance*. Esta porta fornece a *Interface* *ElectrodeImpedance* para a porta *impedance_in* do *ComponentImplementation* *electrodes_impl*. Assim a porta *signal_out* do tipo *ElectrodesSignal*, realiza uma comunicação direta com a porta de entrada *signal_in* do tipo *ElectrodesSignal* no *ComponentImplementation* *Amplifier_impl*. Dentro do *Amplifier_impl*, ele realiza as operações de amplificação de sinal e então envia o sinal para uma porta de saída que se comunica com a porta de entrada *ampl* do *ApplyFilter_impl*, possuindo o tipo *Amplifier*. O *applyFilter_impl* aplica os filtros de passa baixa, passa alta e passa banda e então utiliza a porta de saída *apply_filter* do tipo *FilteredSignal* para a porta de entrada *appl* possuindo o tipo *FilteredSignal* no *conversor_impl*. O *conversor_impl* realiza a conversão do sinal, e então permite que o sinal utilize sua porta de saída *conversor* do tipo *ConversorSignal* para se comunicar com a porta de entrada *cnv* do tipo *ConversorSignal* do ComponentImplementation *eCG_impl*. O *eCG_impl* por fim possui uma porta de saída nomeada de *ecg* do tipo *ECG* que representa o resultado dos sinais capturados por um ECG.
 
-## Tela de resultados
+## Servidor de resultados
 
-Em um ambiente de UTI cardíaca, os pacientes devem ser monitorados. Para facilitiar esse processo de monitoramento, os leitos possuem canais para a utilização do ECG, e o ECG coleta as informações cardíacas do paciente e envia para um servidor, onde os profissionais responsáveis pelo monitoramento como, por exemplo, enfermeiros e médicos podem monitorar, analisar e tomar decisão. Este servidor deve possuir uma tela de resultados com informações dos pacientes, salvar informações do paciente e recupera-las, analisar o sinal em tempo real, e ser capaz de emitir alarmes caso alguma anomalia urgente seja detectada naquele momento.
+Em um ambiente de UTI cardíaca, os pacientes devem ser monitorados. Para facilitiar esse processo de monitoramento, existe um servidor que capta, armazena e prover essas informações para os profissionais que precisam acompanhar os pacientes. Este servidor deve possuir uma tela de resultados com informações dos pacientes, salvar informações do paciente e recupera-las, analisar o sinal em tempo real, e ser capaz de emitir alarmes caso alguma anomalia urgente seja detectada naquele momento. 
 
-![Diagrama de classes para a tela de resultados capturadas do ECG](https://i.imgur.com/4Id4ONr.png)
+Assim, o diagrama de classes para o servidor de resultados contem três ComponentTypes. O primeiro ComponentType chamado de ReceiveSignal, é representa a recepção de um sinal e então prover a interface ReceiveSignal através de uma porta de comunicação criada em seu diagrama de composição que é possível observar na imagem abaixo.
 
-Para a tela de resultados, no diagrama de classes foram definidas 3 interfaces:
+![enter image description here](https://i.imgur.com/9sLFT6U.png)
 
- 1. ReceiveSignal
- 2. CentralSystem
- 3. Stream
+Um outro *ComponentType* definido para a modelagem do servidor de resultados, é o *ComponentType* *CentralSystem*, que representa um processador e centralizador de informações. Este *ComponentType* requer como entrada em uma de suas portas de comunicação a Interface *ReceiveSignal* e prover como saída a interface *CentralSystem*. Estas duas portas de comunicação do *ComponentType* *CentralSystem* é possível observar na imagem a seguir.
 
-Após o ECG realizar todo o processo de captura de sinal, a interface *ReceiveSignal* é capaz de receber esse sinal e através da sua implementação poder ler e receber o sinal. A interface *CentralSystem* representa o servidor de fato, e é responsável por salvar o sinal em um banco de dados, obter informações do paciente, enviar informações do paciente e realizar análises em tempo real. Com o *CentralSystem* possuindo controle disso, a interface *Stream* possui relação de dependência com a *CentralSystem* para assim poder mostrar os resultados na tela de resultados. Um component *ScreenResultsSW* foi definido para ser responsável por representar todo esse fluxo através de um diagrama de composição.
+![enter image description here](https://i.imgur.com/zDlbNvl.png)
 
-![Diagrama de composição](https://i.imgur.com/GbNvW0h.png)
+O terceiro *ComponentType* definido no diagrama de classe para a tela de resultados, foi o *ComponentType* *Stream*. Este ComponentType é resposável por entregar as informações no servidor de resultados para os profissionais do ambiente de UTI que estão acompanhando. No diagrama de composição do ComponentType Stream, existem duas portas de comunicação. A primeira porta requer a interface CentralSystem de entrada, provida pelo ComponentType CentralSystem. Com isso, o ComponentType Stream prover em sua porta de saída a interface Stream, representando os resultados e informações coletados do paciente. Pode-se observar o diagrama de composição para o ComponentType Stream na imagem a seguir.
 
-O diagrama de composição inicia seu processo através do *receiveSignal_impl*, onde possui uma porta de saída *send_signal_to_analysis* do tipo *ReceiveSignal* em comunicação direta com a porta *receive_signal* no *centralSystem_impl*. A partir do *CentralSystem_impl*, existe o envio das informações para a tela de resultados final, esse envio é representado através da comunicação entre as portas *send_informations_to_stream* no *CentralSystem_impl* para a porta *receive_signal_from_central_system* em *Stream_impl*, e então essa implementação é responsável por exibir as informações do paciente.
+![enter image description here](https://i.imgur.com/RlzyLbx.png)
+
+Definindo o diagrama de classes para o servidor de resultados com Interfaces, ComponentTypes e seus diagramas de composição, e também os ComponentImplementations, nós podemos observar na imagem a seguir como ficou o diagrama de classes e os relacionamentos de realização e dependencia entre os ComponentTypes e as Interfaces. O diagrama de classes para o servidor de resultados, é possível observa na imagem a seguir.
+
+![enter image description here](https://i.imgur.com/GASUSHC.png)
+
+Para representar todo o diagrama de classes do servidor de resultados em um diagrama de composição, foi necessário definir um *Component* chamado *ScreenResultsSW*. Dentro deste diagrama de composição, são utilizados os ComponentImplementations e as portas aos quais os diagramas de composição que os componentes que estão associados possuem. O diagrama de composição inicia seu processo através do *receiveSignal_impl*, onde possui uma porta de saída *rs* do tipo *ReceiveSignal* em comunicação direta com a porta *rs* no *centralSystem_impl*. A partir do *centralSystem_impl*, existe o envio das informações para a tela de resultados final. Este envio é representado através da comunicação entre as portas *cs* no *CentralSystem_impl* para a porta *c_s* em *stream_impl*, e então essa implementação é responsável por exibir as informações do paciente através da porta *stream* do tipo *Stream*.
+
+![Diagrama de composição](https://i.imgur.com/NZFpfdw.png)
+
+
 
 ## Visão geral do ECGSW
 
