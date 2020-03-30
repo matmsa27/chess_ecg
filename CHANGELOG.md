@@ -1,6 +1,13 @@
 # CHANGELOG FOR ZIP_FILES
 
-v0.11 Stable version 24-03-2020
+
+v0.13 Stable version 30-03-2020
+----------
+ * Create a new class diagram to Integrate 4 modelling(battery, screen results, detect diseases and ecg)
+ * Create a new compose for integrate 4 modelling(battery, screen results, detect diseases and ecg)
+ * Running analysis for integrated modelling, works perfectly
+
+v0.12 Stable version 24-03-2020
 ----------
  * Modelling General ICU with Multiparametric Editor
  * Add more components to modelling Mulparametric Monitor
