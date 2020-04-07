@@ -1,6 +1,15 @@
 # CHANGELOG FOR ZIP_FILES
 
 
+ICU - v0.1 Unstable version 07-04-2020
+----------
+ * Refactor all the project
+ * Is missing the general integrations
+ * Link pre cofinguration with models (ecg, term, oximeter and resp)
+ * Is missing finish the server results with alarms and signals provided another models
+ * Is missing configuration the analysis and running
+
+
 v0.13 Stable version 30-03-2020
 ----------
  * Create a new class diagram to Integrate 4 modelling(battery, screen results, detect diseases and ecg)
