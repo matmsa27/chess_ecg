@@ -1,5 +1,12 @@
 # CHANGELOG FOR ZIP_FILES
 
+ICU - v0.1 Unstable version 07-04-2020
+----------
+ * Link alarms to all dispostives(ecg, termometer, pulse oximeter and rate respiratory)
+ * Link pre configurations to dispositives models
+ * Finish the class diagram to server results
+ * Is missing general linking
+ * Is missing composite for ServerResults
 
 ICU - v0.1 Unstable version 07-04-2020
 ----------
