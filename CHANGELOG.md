@@ -1,6 +1,13 @@
-# CHANGELOG FOR ZIP_FILES
+# CHANGELOG FOR BACKUP ZIP_FILES
 
-ICU - v0.1 Unstable version 07-04-2020
+ICU - v0.3 Unstable version 08-04-2020
+----------
+ * Finish Link general modelling
+ * Finish Composite for ServerResults
+ * Is missing generate instances and Running Analysis
+
+
+ICU - v0.2 Unstable version 07-04-2020
 ----------
  * Link alarms to all dispostives(ecg, termometer, pulse oximeter and rate respiratory)
  * Link pre configurations to dispositives models
