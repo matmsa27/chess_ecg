@@ -1,5 +1,10 @@
 # CHANGELOG FOR BACKUP ZIP_FILES
 
+ICU - v0.4 Unstable version 12-04-2020
+----------
+ * Make improvements on general modelling and finish the general modelling
+
+
 ICU - v0.3 Unstable version 08-04-2020
 ----------
  * Finish Link general modelling
