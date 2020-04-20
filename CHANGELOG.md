@@ -1,5 +1,19 @@
 # CHANGELOG FOR BACKUP ZIP_FILES
 
+ICU - v0.5 Unstable version 19-04-2020
+----------
+ * Remove CPU from each modelling
+ * Create a new Interface for Voltage representing 5V inside the modelling
+ * Add energy on sensor
+ * Remove NoCardiacAnomalyDetected from DetectAomalies
+ * Create a CentralProcess to receive OximeterPulse, Termometer and RateRespiratory config and Signals
+ * Change name ElectricSignalDC interface to ElectricSignalAC
+ * Change name Voltage intarface to VoltageDC
+ * Is missing: 
+    * ErrorModelBehavior modelling to ManageBattery
+    * Running Analyses
+    * To refine DEEM Server parameters
+
 ICU - v0.4 Unstable version 12-04-2020
 ----------
  * Make improvements on general modelling and finish the general modelling
