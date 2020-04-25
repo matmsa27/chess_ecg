@@ -1,5 +1,14 @@
 # CHANGELOG FOR BACKUP ZIP_FILES
 
+ICU - v0.6 Stable version 25-04-2020
+----------
+ * ErrorModelBehavior modelling to ManageBattery, but didn't work for the running the analysis
+ * Running analysis for the models, but deem server did not behave well
+ * Is missing: 
+    * Get better results running Analyses
+    * Test the analysis define DEEM Server parameters
+
+
 ICU - v0.5 Unstable version 19-04-2020
 ----------
  * Remove CPU from each modelling
