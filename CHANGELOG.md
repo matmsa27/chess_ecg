@@ -1,5 +1,13 @@
 # CHANGELOG FOR BACKUP ZIP_FILES
 
+ICU - v0.7 Stable version 03-05-2020
+----------
+ * Running analysis for the all models, including the MonitorMulparametric Model(integrated)
+ * Is missing: 
+    * Running analysis with redundance
+    * Add sterotype for battery and running analysis
+
+
 ICU - v0.6 Stable version 25-04-2020
 ----------
  * ErrorModelBehavior modelling to ManageBattery, but didn't work for the running the analysis
